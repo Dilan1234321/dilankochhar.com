@@ -4,7 +4,7 @@ Personal portfolio site — full-stack and AI projects, client work, and contact
 
 ## Stack
 
-- HTML, CSS, JavaScript (no framework)
+- Single-file HTML: CSS and JS inlined in `index.html`
 - [Fraunces](https://fonts.google.com/specimen/Fraunces) + [DM Sans](https://fonts.google.com/specimen/DM+Sans) via Google Fonts
 
 ## Run locally
