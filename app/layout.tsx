@@ -4,12 +4,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Dilan Kochhar — Founder, Engineer, 20",
+  title: "Dilan Kochhar, Founder, Engineer, 20",
   description:
     "Dilan Kochhar is the founder of Dilly and a self-taught engineer building the tools that should already exist. Long Island → Tampa.",
   metadataBase: new URL("https://dilankochhar.com"),
   openGraph: {
-    title: "Dilan Kochhar — Founder, Engineer, 20",
+    title: "Dilan Kochhar, Founder, Engineer, 20",
     description:
       "Founder of Dilly. 5 sites shipped. 0 funding. Building the things colleges should have built years ago.",
     url: "https://dilankochhar.com",

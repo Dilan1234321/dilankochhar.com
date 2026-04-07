@@ -6,7 +6,7 @@ const timeline = [
   { y: "2005", t: "Born on Long Island, NY." },
   { y: "School", t: "First learned how to code in a classroom. Didn't think much of it at the time." },
   { y: "2022", t: "Started getting actually good at web development." },
-  { y: "2025", t: "Built the site for Alpha Kappa Psi at UTampa — my first real shipped project." },
+  { y: "2025", t: "Built the site for Alpha Kappa Psi at UTampa. My first real shipped project." },
   { y: "2026", t: "First paid client site. Then Dilly. Then everything else. The last two months are the entire story." },
 ];
 
@@ -16,7 +16,7 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-10 pt-40 pb-20 overflow-hidden">
         <div className="glow absolute inset-0 -z-10" />
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40 font-mono">N° 003 — About</p>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40 font-mono">N° 003 · About</p>
           <h1 className="mt-8 font-display text-[12vw] md:text-[10rem] leading-[0.85] tracking-tight">
             About.
           </h1>
@@ -51,13 +51,13 @@ export default function AboutPage() {
               company, so I started one anyway.
             </p>
             <p>
-              I got into this because I watched friends — smart, capable, hardworking friends —
+              I got into this because I watched friends, smart, capable, hardworking friends,
               flounder trying to find their first real job out of college. Career centers were
               useless. LinkedIn was a popularity contest. The advice was either generic or
               gatekept. I figured someone should fix it. Then I figured: why not me.
             </p>
             <p>
-              I design and code everything I ship. I don't outsource the parts I'm bad at — I
+              I design and code everything I ship. I don't outsource the parts I'm bad at. I
               get less bad at them. The way to be the smartest person in the room is to be the
               one who actually built the thing.
             </p>

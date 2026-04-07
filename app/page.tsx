@@ -15,8 +15,8 @@ const work = [
   { title: "Dilly", role: "Founder · Engineer · Designer", url: "hellodilly.com", tag: "SaaS · Stealth" },
   { title: "UTampa AKPSI", role: "Lead Developer", url: "utampaakpsi.com", tag: "Org Site" },
   { title: "Erickson Flooring", role: "Full build", url: "erickson-flooring.com", tag: "Small Business" },
-  { title: "Puchalski Performance", role: "In progress", url: "—", tag: "Coming soon" },
-  { title: "Taken Time to Design", role: "In progress", url: "—", tag: "Coming soon" },
+  { title: "Puchalski Performance", role: "In progress", url: "tba", tag: "Coming soon" },
+  { title: "Taken Time to Design", role: "In progress", url: "tba", tag: "Coming soon" },
 ];
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
             className="flex items-center gap-3 text-[11px] uppercase tracking-[0.25em] text-bone/50 mb-8"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulseDot" />
-            <span className="font-mono">{time || "—"} · Tampa, FL</span>
+            <span className="font-mono">{time || "..."} · Tampa, FL</span>
             <span className="hidden md:inline">· Currently building Dilly</span>
           </motion.div>
 
@@ -80,7 +80,7 @@ export default function Home() {
             className="mt-10 max-w-2xl text-xl md:text-2xl text-bone/70 text-balance leading-snug"
           >
             Founder of <Link href="/dilly" className="text-bone underline decoration-accent decoration-2 underline-offset-4 hover:text-accent">Dilly</Link>. Self-taught engineer.
-            Building the tools colleges should have built years ago — out of a dorm room, with no funding, no team, and no permission.
+            Building the tools colleges should have built years ago, out of a dorm room, with no funding, no team, and no permission.
           </motion.p>
 
           <motion.div
@@ -113,7 +113,7 @@ export default function Home() {
         >
           <div className="mx-auto max-w-7xl flex items-end justify-between text-[10px] uppercase tracking-[0.22em] text-bone/40 font-mono">
             <span>↓ Scroll</span>
-            <span className="hidden md:inline">N° 001 — Index</span>
+            <span className="hidden md:inline">N° 001 · Index</span>
           </div>
         </motion.div>
       </section>
@@ -140,7 +140,7 @@ export default function Home() {
       <section className="relative px-6 md:px-10 py-32 md:py-48">
         <div className="mx-auto max-w-7xl grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
-            <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">N° 002 — The Company</p>
+            <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">N° 002 · The Company</p>
             <Link
               href="/dilly"
               className="mt-6 inline-flex items-center gap-2 text-bone/70 hover:text-accent transition-colors text-sm"
@@ -166,14 +166,14 @@ export default function Home() {
       {/* MANIFESTO */}
       <section className="relative border-y border-bone/5 bg-ink overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-32 md:py-48">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono mb-10">N° 003 — Manifesto</p>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono mb-10">N° 003 · Manifesto</p>
           <p className="font-display text-4xl md:text-7xl leading-[1.02] text-balance">
             “LinkedIn does not help you get a job.
             <span className="text-accent"> No one does.</span>
             <br />
             So I'm building the thing that will.”
           </p>
-          <p className="mt-10 text-bone/40 text-sm font-mono">— D.K., 2026</p>
+          <p className="mt-10 text-bone/40 text-sm font-mono">D.K., 2026</p>
         </div>
       </section>
 
@@ -182,7 +182,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between mb-14">
             <div>
-              <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">N° 004 — Selected Work</p>
+              <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">N° 004 · Selected Work</p>
               <h2 className="mt-4 font-display text-5xl md:text-6xl">Things I've shipped.</h2>
             </div>
             <Link href="/work" className="hidden md:inline text-sm text-bone/60 hover:text-accent transition-colors">
@@ -218,7 +218,7 @@ export default function Home() {
       {/* CTA */}
       <section className="px-6 md:px-10 pb-32">
         <div className="mx-auto max-w-7xl rounded-3xl border border-bone/10 bg-gradient-to-br from-bone/[0.04] to-transparent p-10 md:p-20 text-center">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">N° 005 — The Ask</p>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">N° 005 · The Ask</p>
           <h2 className="mt-6 font-display text-5xl md:text-7xl leading-[0.95] text-balance">
             If you're building something <span className="italic text-accent">hard</span>,
             <br className="hidden md:block" /> we should talk.

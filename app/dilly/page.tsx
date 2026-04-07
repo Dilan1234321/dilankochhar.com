@@ -12,7 +12,7 @@ const principles = [
   {
     n: "02",
     t: "The score updates in real time.",
-    d: "Add a project, take a course, change your goal — the readiness number moves. Career prep stops being a guessing game.",
+    d: "Add a project, take a course, change your goal, the readiness number moves. Career prep stops being a guessing game.",
   },
   {
     n: "03",
@@ -33,7 +33,7 @@ export default function DillyPage() {
         <div className="glow absolute inset-0 -z-10" />
         <div className="mx-auto max-w-7xl">
           <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40 font-mono">
-            N° 002 — The Company
+            N° 002 · The Company
           </p>
           <h1 className="mt-8 font-display text-[12vw] md:text-[10rem] leading-[0.85] tracking-tight">
             Dilly.
@@ -66,7 +66,7 @@ export default function DillyPage() {
             </h2>
             <div className="mt-10 grid md:grid-cols-2 gap-x-10 gap-y-6 text-bone/65 text-lg leading-relaxed max-w-3xl">
               <p>$200K of tuition. A 30-minute résumé review with someone who hasn't job-hunted in 20 years.</p>
-              <p>LinkedIn was supposed to fix this. It made it worse — now everyone has the same template and no one gets seen.</p>
+              <p>LinkedIn was supposed to fix this. It made it worse. Now everyone has the same template and no one gets seen.</p>
               <p>Students don't need motivation. They need a number that tells them, today, whether they're going to make it.</p>
               <p>And then they need the next move. Not a list of 40 things. The one move that matters this week.</p>
             </div>

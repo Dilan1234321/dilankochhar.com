@@ -7,7 +7,7 @@ const projects = [
     n: "01",
     title: "Dilly",
     role: "Founder, Engineer, Designer",
-    year: "2025 — present",
+    year: "2025 to present",
     url: "hellodilly.com",
     href: "https://hellodilly.com",
     tag: "SaaS · Stealth",
@@ -41,7 +41,7 @@ const projects = [
     title: "Puchalski Performance",
     role: "Full build",
     year: "2026",
-    url: "—",
+    url: "tba",
     href: null,
     tag: "Coming soon",
     body: "Athletic performance brand. Currently in design.",
@@ -52,7 +52,7 @@ const projects = [
     title: "Taken Time to Design",
     role: "Full build",
     year: "2026",
-    url: "—",
+    url: "tba",
     href: null,
     tag: "Coming soon",
     body: "Studio site. In progress.",
@@ -65,7 +65,7 @@ export default function WorkPage() {
     <>
       <section className="px-6 md:px-10 pt-40 pb-16">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40 font-mono">N° 004 — Selected Work</p>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40 font-mono">N° 004 · Selected Work</p>
           <h1 className="mt-8 font-display text-[12vw] md:text-[10rem] leading-[0.85] tracking-tight">
             Work.
           </h1>

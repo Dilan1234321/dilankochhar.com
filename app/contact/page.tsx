@@ -29,7 +29,7 @@ export default function ContactPage() {
       <section className="relative px-6 md:px-10 pt-40 pb-24 overflow-hidden">
         <div className="glow absolute inset-0 -z-10" />
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40 font-mono">N° 005 — Contact</p>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40 font-mono">N° 005 · Contact</p>
           <h1 className="mt-8 font-display text-[12vw] md:text-[10rem] leading-[0.85] tracking-tight">
             Let's talk.
           </h1>
@@ -75,10 +75,10 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl">
           <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono mb-8">A small dare</p>
           <p className="font-display text-4xl md:text-7xl leading-[1.02] text-balance max-w-5xl">
-            If you're building something <span className="italic text-accent">hard</span> —
-            something nobody else thinks will work — write me first.
+            If you're building something <span className="italic text-accent">hard</span>.
+            Something nobody else thinks will work. Write me first.
           </p>
-          <p className="mt-10 text-bone/40 text-sm font-mono">— D.K.</p>
+          <p className="mt-10 text-bone/40 text-sm font-mono">D.K.</p>
         </div>
       </section>
     </>

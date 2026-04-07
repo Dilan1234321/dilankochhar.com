@@ -1,15 +1,15 @@
 # dilankochhar.com
 
-Personal flagship site for Dilan Kochhar — founder of Dilly.
+Personal flagship site for Dilan Kochhar, founder of Dilly.
 
 Stack: **Next.js 14 (App Router) · TypeScript · Tailwind · Framer Motion**
 
 ## Pages
-- `/` — Index (hero, stats, Dilly teaser, manifesto, work peek, CTA)
-- `/dilly` — Founder memo for Dilly
-- `/work` — Selected work (5 sites)
-- `/about` — Origin, timeline, beliefs
-- `/contact` — Channels (no form)
+- `/` · Index (hero, stats, Dilly teaser, manifesto, work peek, CTA)
+- `/dilly` · Founder memo for Dilly
+- `/work` · Selected work (5 sites)
+- `/about` · Origin, timeline, beliefs
+- `/contact` · Channels (no form)
 
 ## Run locally
 ```bash
@@ -27,8 +27,8 @@ Open http://localhost:3000
 ## What to edit before launch
 - **Photo:** drop a JPG at `public/dilan.jpg` and replace the placeholder block in `app/about/page.tsx`.
 - **Email:** currently `ceo@hellodilly.com`. Search & replace if you change it.
-- **GitHub handle:** `dilan1234321` — same.
-- **Manifesto pull-quote:** `app/page.tsx` → section "N° 003 — Manifesto".
+- **GitHub handle:** `dilan1234321`, same.
+- **Manifesto pull-quote:** `app/page.tsx` → section "N° 003 · Manifesto".
 - **Stats:** `app/page.tsx` → `stats` array.
 
 ## Notes on the design
