@@ -48,7 +48,12 @@ export default function AboutPage() {
             <p>
               I grew up on Long Island and now I live in Tampa, where I'm a sophomore at the
               University of Tampa. I'm self-taught. Nobody told me I was allowed to start a
-              company, so I started one anyway.
+              company, so I started one anyway. Before any of the code, I co-founded the{" "}
+              <a href="https://kochharfoundation.com" target="_blank" rel="noreferrer" className="text-bone underline decoration-accent decoration-2 underline-offset-4 hover:text-accent">
+                Kochhar Foundation
+              </a>
+              , a charity that has raised over $22,000. The instinct to build something
+              real started long before I knew what a framework was.
             </p>
             <p>
               I got into this because I watched friends, smart, capable, hardworking friends,

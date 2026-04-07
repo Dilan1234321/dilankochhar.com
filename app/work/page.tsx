@@ -16,6 +16,17 @@ const projects = [
   },
   {
     n: "02",
+    title: "Kochhar Foundation",
+    role: "Co-founder",
+    year: "Ongoing",
+    url: "kochharfoundation.com",
+    href: "https://kochharfoundation.com",
+    tag: "Charity · $22K+ raised",
+    body: "A successful charity foundation I co-founded that has raised over $22,000 for the causes that matter to us. Proof that the building instinct started long before the code did.",
+    status: "live",
+  },
+  {
+    n: "03",
     title: "UTampa AKPSI",
     role: "Lead Developer",
     year: "2025",
@@ -26,7 +37,7 @@ const projects = [
     status: "live",
   },
   {
-    n: "03",
+    n: "04",
     title: "Erickson Flooring",
     role: "Full build · Design + Code",
     year: "2024",
@@ -37,7 +48,7 @@ const projects = [
     status: "live",
   },
   {
-    n: "04",
+    n: "05",
     title: "Puchalski Performance",
     role: "Full build",
     year: "2026",
@@ -48,7 +59,7 @@ const projects = [
     status: "wip",
   },
   {
-    n: "05",
+    n: "06",
     title: "Taken Time to Design",
     role: "Full build",
     year: "2026",
