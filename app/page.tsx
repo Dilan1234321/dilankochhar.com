@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 const stats = [
   { k: "5", v: "Sites shipped" },
@@ -26,35 +26,12 @@ export default function Home() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
-  const [time, setTime] = useState("");
-  useEffect(() => {
-    const update = () => {
-      const d = new Date();
-      const t = d.toLocaleTimeString("en-US", { hour12: false, timeZone: "America/New_York" });
-      setTime(t + " EST");
-    };
-    update();
-    const i = setInterval(update, 1000);
-    return () => clearInterval(i);
-  }, []);
-
   return (
     <>
       {/* HERO */}
       <section ref={ref} className="relative min-h-screen flex flex-col justify-center px-6 md:px-10 pt-32 pb-20 overflow-hidden">
         <div className="glow absolute inset-0 -z-10" />
         <motion.div style={{ y, opacity }} className="mx-auto max-w-7xl w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="flex items-center gap-3 text-[11px] uppercase tracking-[0.25em] text-bone/50 mb-8"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulseDot" />
-            <span className="font-mono">{time || "..."} · Tampa, FL</span>
-            <span className="hidden md:inline">· Currently building Dilly</span>
-          </motion.div>
-
           <h1 className="font-display text-[14vw] md:text-[9rem] leading-[0.85] tracking-tight text-balance">
             <motion.span
               initial={{ opacity: 0, y: 30 }}
@@ -112,7 +89,7 @@ export default function Home() {
           transition={{ duration: 1, delay: 1 }}
           className="absolute bottom-8 left-0 right-0 px-6 md:px-10"
         >
-          <div className="mx-auto max-w-7xl flex items-end justify-between text-[10px] uppercase tracking-[0.22em] text-bone/40 font-mono">
+          <div className="mx-auto max-w-7xl flex items-end justify-between text-[10px] uppercase tracking-[0.22em] text-bone/40">
             <span>↓ Scroll</span>
             <span className="hidden md:inline">N° 001 · Index</span>
           </div>
@@ -141,7 +118,7 @@ export default function Home() {
       <section className="relative px-6 md:px-10 py-32 md:py-48">
         <div className="mx-auto max-w-7xl grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
-            <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">N° 002 · The Company</p>
+            <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40">N° 002 · The Company</p>
             <Link
               href="/dilly"
               className="mt-6 inline-flex items-center gap-2 text-bone/70 hover:text-accent transition-colors text-sm"
@@ -157,7 +134,7 @@ export default function Home() {
               It turns every résumé, major, and skill into a real-time readiness score
               that tells students exactly what to do next to land the job they actually want.
             </p>
-            <p className="mt-6 text-bone/40 text-sm font-mono">
+            <p className="mt-6 text-bone/40 text-sm tracking-wider">
               Status: stealth · Solo founder · Pre-launch
             </p>
           </div>
@@ -167,14 +144,14 @@ export default function Home() {
       {/* MANIFESTO */}
       <section className="relative border-y border-bone/5 bg-ink overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-32 md:py-48">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono mb-10">N° 003 · Manifesto</p>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 mb-10">N° 003 · Manifesto</p>
           <p className="font-display text-4xl md:text-7xl leading-[1.02] text-balance">
             “LinkedIn does not help you get a job.
             <span className="text-accent"> No one does.</span>
             <br />
             So I'm building the thing that will.”
           </p>
-          <p className="mt-10 text-bone/40 text-sm font-mono">D.K., 2026</p>
+          <p className="mt-10 text-bone/40 text-sm tracking-wider">D.K., 2026</p>
         </div>
       </section>
 
@@ -183,7 +160,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between mb-14">
             <div>
-              <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">N° 004 · Selected Work</p>
+              <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40">N° 004 · Selected Work</p>
               <h2 className="mt-4 font-display text-5xl md:text-6xl">Things I've shipped.</h2>
             </div>
             <Link href="/work" className="hidden md:inline text-sm text-bone/60 hover:text-accent transition-colors">
@@ -202,12 +179,12 @@ export default function Home() {
                 className="group"
               >
                 <Link href="/work" className="grid grid-cols-12 gap-4 py-7 items-baseline hover:bg-bone/[0.02] transition-colors px-2 -mx-2 rounded">
-                  <span className="col-span-1 font-mono text-xs text-bone/40 pt-1">0{i + 1}</span>
+                  <span className="col-span-1 tracking-wider text-xs text-bone/40 pt-1">0{i + 1}</span>
                   <span className="col-span-5 md:col-span-4 font-display text-2xl md:text-3xl text-bone group-hover:text-accent transition-colors">
                     {w.title}
                   </span>
                   <span className="col-span-6 md:col-span-4 text-bone/55 text-sm">{w.role}</span>
-                  <span className="hidden md:block col-span-2 text-bone/40 text-xs font-mono uppercase tracking-wider">{w.tag}</span>
+                  <span className="hidden md:block col-span-2 text-bone/40 text-xs uppercase tracking-wider">{w.tag}</span>
                   <span className="hidden md:block col-span-1 text-right text-bone/40 group-hover:text-accent transition-colors">↗</span>
                 </Link>
               </motion.li>
@@ -219,7 +196,7 @@ export default function Home() {
       {/* CTA */}
       <section className="px-6 md:px-10 pb-32">
         <div className="mx-auto max-w-7xl rounded-3xl border border-bone/10 bg-gradient-to-br from-bone/[0.04] to-transparent p-10 md:p-20 text-center">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">N° 005 · The Ask</p>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40">N° 005 · The Ask</p>
           <h2 className="mt-6 font-display text-5xl md:text-7xl leading-[0.95] text-balance">
             If you're building something <span className="italic text-accent">hard</span>,
             <br className="hidden md:block" /> we should talk.

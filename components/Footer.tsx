@@ -49,7 +49,7 @@ export default function Footer() {
       <div className="border-t border-bone/5">
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-bone/40">
           <p>© {new Date().getFullYear()} Dilan Kochhar. Designed and coded in one sitting.</p>
-          <p className="font-mono">v1.0 · Tampa, FL</p>
+          <p className="tracking-wider">v1.0 · Tampa, FL</p>
         </div>
       </div>
     </footer>

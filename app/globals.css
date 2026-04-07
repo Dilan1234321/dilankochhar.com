@@ -5,7 +5,6 @@
 :root {
   --font-sans: "Inter", system-ui, sans-serif;
   --font-display: "Fraunces", "Times New Roman", serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 html,

@@ -32,7 +32,7 @@ export default function DillyPage() {
       <section className="relative px-6 md:px-10 pt-40 pb-24 overflow-hidden">
         <div className="glow absolute inset-0 -z-10" />
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40 font-mono">
+          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40">
             N° 002 · The Company
           </p>
           <h1 className="mt-8 font-display text-[12vw] md:text-[10rem] leading-[0.85] tracking-tight">
@@ -45,7 +45,7 @@ export default function DillyPage() {
             students exactly what to do next to land the job they want.
           </p>
 
-          <div className="mt-12 flex flex-wrap gap-3 text-xs font-mono uppercase tracking-wider">
+          <div className="mt-12 flex flex-wrap gap-3 text-xs uppercase tracking-wider">
             <span className="rounded-full border border-bone/15 px-3 py-1.5 text-bone/60">Stealth</span>
             <span className="rounded-full border border-bone/15 px-3 py-1.5 text-bone/60">Solo founder</span>
             <span className="rounded-full border border-bone/15 px-3 py-1.5 text-bone/60">Pre-launch</span>
@@ -58,7 +58,7 @@ export default function DillyPage() {
       <section className="border-t border-bone/5 px-6 md:px-10 py-32">
         <div className="mx-auto max-w-7xl grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
-            <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">The Problem</p>
+            <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40">The Problem</p>
           </div>
           <div className="md:col-span-8">
             <h2 className="font-display text-5xl md:text-7xl leading-[0.95] text-balance">
@@ -77,7 +77,7 @@ export default function DillyPage() {
       {/* INSIGHT */}
       <section className="border-y border-bone/5 bg-ink px-6 md:px-10 py-32">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono mb-10">The Insight</p>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 mb-10">The Insight</p>
           <p className="font-display text-4xl md:text-6xl leading-[1.05] text-balance max-w-5xl">
             “Career readiness” isn't a feeling. It's a function of inputs you can measure
             and a target you can name. <span className="text-accent">If you can measure it, you can move it.</span>
@@ -88,7 +88,7 @@ export default function DillyPage() {
       {/* HOW IT WORKS */}
       <section className="px-6 md:px-10 py-32">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono mb-12">How It Works</p>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 mb-12">How It Works</p>
           <ul className="grid md:grid-cols-2 gap-px bg-bone/5">
             {principles.map((p, i) => (
               <motion.li
@@ -99,7 +99,7 @@ export default function DillyPage() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="bg-ink p-10 md:p-14"
               >
-                <span className="font-mono text-xs text-bone/35">{p.n}</span>
+                <span className="tracking-wider text-xs text-bone/35">{p.n}</span>
                 <h3 className="mt-4 font-display text-3xl md:text-4xl text-balance">{p.t}</h3>
                 <p className="mt-5 text-bone/55 leading-relaxed">{p.d}</p>
               </motion.li>
@@ -112,7 +112,7 @@ export default function DillyPage() {
       <section className="border-t border-bone/5 px-6 md:px-10 py-32">
         <div className="mx-auto max-w-7xl grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
-            <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">Why Me</p>
+            <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40">Why Me</p>
           </div>
           <div className="md:col-span-8 space-y-6 text-lg text-bone/70 max-w-3xl leading-relaxed">
             <p>
@@ -136,7 +136,7 @@ export default function DillyPage() {
       <section className="px-6 md:px-10 py-24">
         <div className="mx-auto max-w-7xl rounded-3xl border border-bone/10 bg-gradient-to-br from-accent/[0.08] to-transparent p-10 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
-            <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono">Investors · Operators · Believers</p>
+            <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40">Investors · Operators · Believers</p>
             <h3 className="mt-4 font-display text-3xl md:text-5xl text-balance">
               I'm not raising. I am taking calls.
             </h3>

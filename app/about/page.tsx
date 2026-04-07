@@ -16,7 +16,7 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-10 pt-40 pb-20 overflow-hidden">
         <div className="glow absolute inset-0 -z-10" />
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40 font-mono">N° 003 · About</p>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40">N° 003 · About</p>
           <h1 className="mt-8 font-display text-[12vw] md:text-[10rem] leading-[0.85] tracking-tight">
             About.
           </h1>
@@ -34,7 +34,7 @@ export default function AboutPage() {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 flex justify-between text-[10px] uppercase tracking-[0.22em] text-bone/70 font-mono">
+              <div className="absolute bottom-4 left-4 right-4 flex justify-between text-[10px] uppercase tracking-[0.22em] text-bone/70">
                 <span>Tampa, FL</span>
                 <span>2026</span>
               </div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
       {/* TIMELINE */}
       <section className="border-t border-bone/5 px-6 md:px-10 py-32">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono mb-12">A Short History</p>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 mb-12">A Short History</p>
           <ul className="divide-y divide-bone/5 border-y border-bone/5">
             {timeline.map((row, i) => (
               <motion.li
@@ -84,7 +84,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 className="grid grid-cols-12 gap-6 py-7 items-baseline"
               >
-                <span className="col-span-3 md:col-span-2 font-mono text-bone/45">{row.y}</span>
+                <span className="col-span-3 md:col-span-2 tracking-wider text-bone/45">{row.y}</span>
                 <span className="col-span-9 md:col-span-10 font-display text-2xl md:text-3xl text-balance">
                   {row.t}
                 </span>
@@ -97,7 +97,7 @@ export default function AboutPage() {
       {/* BELIEFS */}
       <section className="border-t border-bone/5 bg-ink px-6 md:px-10 py-32">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 font-mono mb-12">What I Believe</p>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 mb-12">What I Believe</p>
           <div className="grid md:grid-cols-2 gap-x-16 gap-y-10 max-w-5xl">
             {[
               "LinkedIn does not help you get a job. No one does.",

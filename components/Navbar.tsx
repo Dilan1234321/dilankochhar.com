@@ -41,7 +41,7 @@ export default function Navbar() {
         <Link href="/" className="group flex items-center gap-3">
           <span className="font-display text-xl tracking-tight">Dilan Kochhar</span>
           <span className="hidden md:flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] text-bone/50">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulseDot" />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Available
           </span>
         </Link>

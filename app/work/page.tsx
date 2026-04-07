@@ -76,7 +76,7 @@ export default function WorkPage() {
     <>
       <section className="px-6 md:px-10 pt-40 pb-16">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40 font-mono">N° 004 · Selected Work</p>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40">N° 004 · Selected Work</p>
           <h1 className="mt-8 font-display text-[12vw] md:text-[10rem] leading-[0.85] tracking-tight">
             Work.
           </h1>
@@ -100,27 +100,27 @@ export default function WorkPage() {
               >
                 <div className="grid md:grid-cols-12 gap-6 md:gap-10 p-8 md:p-14 group hover:bg-bone/[0.02] transition-colors">
                   <div className="md:col-span-1">
-                    <span className="font-mono text-xs text-bone/35">{p.n}</span>
+                    <span className="tracking-wider text-xs text-bone/35">{p.n}</span>
                   </div>
                   <div className="md:col-span-5">
                     <h2 className="font-display text-4xl md:text-6xl leading-[0.95] text-balance group-hover:text-accent transition-colors">
                       {p.title}
                     </h2>
-                    <p className="mt-3 text-sm text-bone/45 font-mono uppercase tracking-wider">{p.tag}</p>
+                    <p className="mt-3 text-sm text-bone/45 uppercase tracking-wider">{p.tag}</p>
                   </div>
                   <div className="md:col-span-6 space-y-5">
                     <p className="text-bone/70 text-lg leading-relaxed text-balance">{p.body}</p>
                     <dl className="grid grid-cols-2 gap-4 pt-4 border-t border-bone/5 text-sm">
                       <div>
-                        <dt className="text-[10px] uppercase tracking-[0.2em] text-bone/35 font-mono">Role</dt>
+                        <dt className="text-[10px] uppercase tracking-[0.2em] text-bone/35">Role</dt>
                         <dd className="mt-1 text-bone/80">{p.role}</dd>
                       </div>
                       <div>
-                        <dt className="text-[10px] uppercase tracking-[0.2em] text-bone/35 font-mono">Year</dt>
+                        <dt className="text-[10px] uppercase tracking-[0.2em] text-bone/35">Year</dt>
                         <dd className="mt-1 text-bone/80">{p.year}</dd>
                       </div>
                       <div className="col-span-2">
-                        <dt className="text-[10px] uppercase tracking-[0.2em] text-bone/35 font-mono">URL</dt>
+                        <dt className="text-[10px] uppercase tracking-[0.2em] text-bone/35">URL</dt>
                         <dd className="mt-1">
                           {p.href ? (
                             <a
