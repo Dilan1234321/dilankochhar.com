@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 const timeline = [
   { y: "2005", t: "Born on Long Island, NY." },
-  { y: "2023", t: "Started teaching myself to code. No bootcamp, no CS degree, no permission." },
-  { y: "2024", t: "Enrolled at the University of Tampa. Shipped my first paid client site." },
-  { y: "2025", t: "Joined Alpha Kappa Psi. Built the chapter site. Started Dilly." },
-  { y: "2026", t: "5 sites shipped. Dilly in stealth. This page exists." },
+  { y: "School", t: "First learned how to code in a classroom. Didn't think much of it at the time." },
+  { y: "2022", t: "Started getting actually good at web development." },
+  { y: "2025", t: "Built the site for Alpha Kappa Psi at UTampa — my first real shipped project." },
+  { y: "2026", t: "First paid client site. Then Dilly. Then everything else. The last two months are the entire story." },
 ];
 
 export default function AboutPage() {
