@@ -13,7 +13,7 @@ const stats = [
 
 const work = [
   { title: "Dilly", role: "Founder · Engineer · Designer", url: "hellodilly.com", tag: "SaaS · Stealth" },
-  { title: "U Tampa AKPsi", role: "Lead Developer", url: "utampaakpsi.com", tag: "Org Site" },
+  { title: "UTampa AKPSI", role: "Lead Developer", url: "utampaakpsi.com", tag: "Org Site" },
   { title: "Erickson Flooring", role: "Full build", url: "erickson-flooring.com", tag: "Small Business" },
   { title: "Puchalski Performance", role: "In progress", url: "—", tag: "Coming soon" },
   { title: "Taken Time to Design", role: "In progress", url: "—", tag: "Coming soon" },

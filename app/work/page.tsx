@@ -16,7 +16,7 @@ const projects = [
   },
   {
     n: "02",
-    title: "U Tampa AKPsi",
+    title: "UTampa AKPSI",
     role: "Lead Developer",
     year: "2025",
     url: "utampaakpsi.com",
