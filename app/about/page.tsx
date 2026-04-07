@@ -27,16 +27,14 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             {/* PHOTO SLOT */}
-            <div className="relative aspect-[4/5] rounded-2xl border border-bone/10 bg-gradient-to-br from-bone/[0.05] to-transparent overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center px-6">
-                  <p className="font-display text-7xl text-bone/15">DK</p>
-                  <p className="mt-3 text-[10px] uppercase tracking-[0.25em] text-bone/30 font-mono">
-                    Photo · drop a JPG at /public/dilan.jpg
-                  </p>
-                </div>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 flex justify-between text-[10px] uppercase tracking-[0.22em] text-bone/40 font-mono">
+            <div className="relative aspect-[4/5] rounded-2xl border border-bone/10 overflow-hidden group">
+              <img
+                src="/dilan.jpg"
+                alt="Dilan Kochhar"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 flex justify-between text-[10px] uppercase tracking-[0.22em] text-bone/70 font-mono">
                 <span>Tampa, FL</span>
                 <span>2026</span>
               </div>
