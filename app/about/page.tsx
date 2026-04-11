@@ -7,7 +7,8 @@ const timeline = [
   { y: "School", t: "First learned how to code in a classroom. Didn't think much of it at the time." },
   { y: "2022", t: "Started getting actually good at web development." },
   { y: "2025", t: "Built the site for Alpha Kappa Psi at UTampa. My first real shipped project." },
-  { y: "2026", t: "First paid client site. Then Dilly. Then everything else. The last two months are the entire story." },
+  { y: "2026", t: "Launched an informal web development agency. Outsourcing my talent to creating the digital presence startups in the Tampa Bay Area." },
+  { y: "2026", t: "Built Dilly." },
 ];
 
 export default function AboutPage() {
@@ -63,7 +64,7 @@ export default function AboutPage() {
             </p>
             <p>
               I design and code everything I ship. I don't outsource the parts I'm bad at. I
-              get less bad at them. The way to be the smartest person in the room is to be the
+              just get less bad at them. The way to be the smartest person in the room is to be the
               one who actually built the thing.
             </p>
           </div>
