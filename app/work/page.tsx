@@ -74,11 +74,11 @@ const projects = [
     title: "Taken Time to Design",
     role: "Full build",
     year: "2026",
-    url: "tba",
-    href: null,
-    tag: "Coming soon",
-    body: "Studio site. In progress.",
-    status: "wip",
+    url: "takentimetodesign.com",
+    href: "https://takentimetodesign.com",
+    tag: "Design Studio",
+    body: "Studio site. Designed, built, and shipped.",
+    status: "live",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function WorkPage() {
             Work.
           </h1>
           <p className="mt-10 max-w-3xl text-xl md:text-2xl text-bone/65 text-balance leading-snug">
-            Five sites. Three live, two on the way. Every one designed, coded, and shipped solo.
+            Six sites. Five live, one on the way. Every one designed, coded, and shipped solo.
           </p>
         </div>
       </section>
