@@ -76,8 +76,8 @@ const projects = [
     year: "2026",
     url: "takentimetodesign.com",
     href: "https://takentimetodesign.com",
-    tag: "Design Studio",
-    body: "Studio site. Designed, built, and shipped.",
+    tag: "Design Studio · Art Commissions",
+    body: "A bespoke portraiture and illustration studio for artist Brooke Taken. The whole site is built around slowness — hand-drawn commissions, poetic copy, an unhurried brand. Designed and shipped to match the work it represents.",
     status: "live",
   },
 ];
