@@ -17,8 +17,8 @@ const work = [
   { title: "UTampa AKPSI", role: "Lead Developer", url: "utampaakpsi.com", tag: "Org Site" },
   { title: "Erickson Flooring", role: "Full build", url: "erickson-flooring.com", tag: "Small Business" },
   { title: "Thinkteks", role: "Architect · AI Outbound", url: "thinkteks.vercel.app", tag: "Recruiting · AI" },
+  { title: "Taken Time to Design", role: "Full build", url: "takentimetodesign.com", tag: "Art Commissions" },
   { title: "Puchalski Performance", role: "In progress", url: "tba", tag: "Coming soon" },
-  { title: "Taken Time to Design", role: "In progress", url: "tba", tag: "Coming soon" },
 ];
 
 export default function Home() {
@@ -147,10 +147,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-32 md:py-48">
           <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 mb-10">N° 003 · Manifesto</p>
           <p className="font-display text-4xl md:text-7xl leading-[1.02] text-balance">
-            “LinkedIn does not help you get a job.
+            "LinkedIn does not help you get a job.
             <span className="text-accent"> No one does.</span>
             <br />
-            So I'm building the thing that will.”
+            So I'm building the thing that will."
           </p>
           <p className="mt-10 text-bone/40 text-sm tracking-wider">D.K., 2026</p>
         </div>
