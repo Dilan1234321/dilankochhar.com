@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const stats = [
-  { k: "5", v: "Sites shipped" },
+  { k: "6", v: "Sites shipped" },
   { k: "20", v: "Years old" },
   { k: "0", v: "Funding raised" },
   { k: "1", v: "Person team" },
@@ -16,6 +16,7 @@ const work = [
   { title: "Kochhar Foundation", role: "Co-founder", url: "kochharfoundation.com", tag: "Charity · $22K+" },
   { title: "UTampa AKPSI", role: "Lead Developer", url: "utampaakpsi.com", tag: "Org Site" },
   { title: "Erickson Flooring", role: "Full build", url: "erickson-flooring.com", tag: "Small Business" },
+  { title: "Thinkteks", role: "Architect · AI Outbound", url: "thinkteks.vercel.app", tag: "Recruiting · AI" },
   { title: "Puchalski Performance", role: "In progress", url: "tba", tag: "Coming soon" },
   { title: "Taken Time to Design", role: "In progress", url: "tba", tag: "Coming soon" },
 ];

@@ -49,6 +49,17 @@ const projects = [
   },
   {
     n: "05",
+    title: "Thinkteks",
+    role: "Architect · Engineer",
+    year: "2026",
+    url: "thinkteks.vercel.app",
+    href: "https://thinkteks.vercel.app",
+    tag: "Recruiting · AI Outbound",
+    body: "Full brand and site rebuild for a boutique AI recruiting firm. Repositioned from generic staffing to premium technical recruiting. Built an autonomous outbound agent that finds companies hiring AI engineers, generates personalized 3-touch email sequences, and routes replies — all without human input.",
+    status: "live",
+  },
+  {
+    n: "06",
     title: "Puchalski Performance",
     role: "Full build",
     year: "2026",
@@ -59,7 +70,7 @@ const projects = [
     status: "wip",
   },
   {
-    n: "06",
+    n: "07",
     title: "Taken Time to Design",
     role: "Full build",
     year: "2026",
