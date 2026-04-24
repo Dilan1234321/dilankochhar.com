@@ -84,6 +84,17 @@ const projects: Project[] = [
     aspect: "aspect-[4/3]",
   },
   {
+    slug: "scoops",
+    title: "Scoops",
+    role: "In progress",
+    year: "2026",
+    url: "Coming soon",
+    href: null,
+    tag: "Consumer app · On-demand delivery",
+    bg: "#B85A6E",
+    aspect: "aspect-[4/5]",
+  },
+  {
     slug: "puchalski-performance",
     title: "Puchalski Performance",
     role: "In progress",
