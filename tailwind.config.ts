@@ -5,22 +5,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#07070A",
+        paper: "#EFE6D5",
+        paperHi: "#F5EEDF",
+        paperLo: "#E4D9C2",
+        ink: "#1C1F2B",
+        inkSoft: "#3C4258",
+        inkMuted: "#6F6A5F",
+        ochre: "#B86A2E",
+        navy: "#252B46",
         bone: "#F5F1EA",
-        accent: "#FF5B1F",
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       keyframes: {
-        pulseDot: {
-          "0%, 100%": { opacity: "1", transform: "scale(1)" },
-          "50%": { opacity: "0.4", transform: "scale(0.85)" },
-        },
-        marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
+        driftIn: {
+          "0%": { opacity: "0", transform: "translateY(12px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
         shimmer: {
           "0%": { backgroundPosition: "-200% 0" },
@@ -28,8 +31,7 @@ const config: Config = {
         },
       },
       animation: {
-        pulseDot: "pulseDot 1.6s ease-in-out infinite",
-        marquee: "marquee 40s linear infinite",
+        driftIn: "driftIn 0.8s ease-out forwards",
         shimmer: "shimmer 6s linear infinite",
       },
     },

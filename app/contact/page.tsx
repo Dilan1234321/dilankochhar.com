@@ -26,44 +26,58 @@ const channels = [
 export default function ContactPage() {
   return (
     <>
+      {/* Cover */}
       <section className="relative px-6 md:px-10 pt-40 pb-24 overflow-hidden">
-        <div className="glow absolute inset-0 -z-10" />
-        <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.25em] text-bone/40">N° 005 · Contact</p>
-          <h1 className="mt-8 font-display text-[12vw] md:text-[10rem] leading-[0.85] tracking-tight">
-            Let's talk.
+        <div className="mx-auto max-w-[92rem]">
+          <div className="flex items-baseline justify-between border-b hairline pb-5">
+            <p className="text-[10px] font-mono uppercase tracking-[0.32em] text-inkMuted">
+              N° 04 · Correspondence
+            </p>
+            <p className="hidden md:block text-[10px] font-mono uppercase tracking-[0.32em] text-inkMuted">
+              Open line. No form. No autoresponder.
+            </p>
+          </div>
+
+          <h1 className="mt-14 font-display text-[22vw] md:text-[14rem] leading-[0.82] tracking-tight">
+            <span className="block">Let&rsquo;s</span>
+            <span className="block italic font-light text-ochre -mt-2 md:-mt-6">talk.</span>
           </h1>
-          <p className="mt-10 max-w-3xl text-xl md:text-2xl text-bone/65 text-balance leading-snug">
-            No form. No autoresponder. If you write me, I read it. If it's good, I write back fast.
+
+          <p className="mt-12 max-w-3xl text-xl md:text-2xl text-inkSoft text-balance leading-relaxed">
+            No form. No autoresponder. If you write me, I read it. If it&rsquo;s good, I write
+            back fast.
           </p>
         </div>
       </section>
 
+      {/* Channels */}
       <section className="px-6 md:px-10 pb-24">
-        <div className="mx-auto max-w-7xl">
-          <ul className="divide-y divide-bone/5 border-y border-bone/5">
+        <div className="mx-auto max-w-[92rem]">
+          <ul className="border-y hairline divide-y divide-ink/10">
             {channels.map((c, i) => (
               <motion.li
                 key={c.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: i * 0.08 }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
               >
                 <a
                   href={c.href}
                   target={c.href.startsWith("http") ? "_blank" : undefined}
                   rel="noreferrer"
-                  className="group grid grid-cols-12 gap-4 md:gap-10 py-10 items-baseline hover:bg-bone/[0.02] transition-colors px-2 -mx-2 rounded"
+                  className="group grid grid-cols-12 gap-4 md:gap-10 py-10 items-baseline hover:bg-paperHi/60 transition-colors px-3 -mx-3"
                 >
-                  <span className="col-span-12 md:col-span-2 text-[11px] uppercase tracking-[0.22em] text-bone/40">
+                  <span className="col-span-12 md:col-span-2 text-[10px] font-mono uppercase tracking-[0.32em] text-inkMuted">
                     {c.label}
                   </span>
-                  <span className="col-span-12 md:col-span-6 font-display text-3xl md:text-5xl text-bone group-hover:text-accent transition-colors break-words">
+                  <span className="col-span-12 md:col-span-6 font-display text-3xl md:text-5xl text-ink group-hover:text-ochre transition-colors break-words">
                     {c.value}
                   </span>
-                  <span className="col-span-11 md:col-span-3 text-bone/55 text-sm">{c.note}</span>
-                  <span className="col-span-1 text-right text-bone/40 group-hover:text-accent transition-colors text-2xl">↗</span>
+                  <span className="col-span-11 md:col-span-3 text-inkSoft text-sm">{c.note}</span>
+                  <span className="col-span-1 text-right text-inkMuted group-hover:text-ochre transition-colors text-2xl">
+                    ↗
+                  </span>
                 </a>
               </motion.li>
             ))}
@@ -71,14 +85,19 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="border-t border-bone/5 px-6 md:px-10 py-32">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-bone/40 mb-8">A small dare</p>
+      {/* Small dare */}
+      <section className="border-t hairline px-6 md:px-10 py-32">
+        <div className="mx-auto max-w-[92rem]">
+          <p className="text-[10px] font-mono uppercase tracking-[0.32em] text-inkMuted mb-8">
+            A small dare
+          </p>
           <p className="font-display text-4xl md:text-7xl leading-[1.02] text-balance max-w-5xl">
-            If you're building something <span className="italic text-accent">hard</span>.
+            If you&rsquo;re building something <span className="italic text-ochre">hard</span>.
             Something nobody else thinks will work. Write me first.
           </p>
-          <p className="mt-10 text-bone/40 text-sm tracking-wider">D.K.</p>
+          <p className="mt-12 text-[10px] font-mono uppercase tracking-[0.32em] text-inkMuted">
+            D.K.
+          </p>
         </div>
       </section>
     </>
