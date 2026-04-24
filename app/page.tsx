@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const peek = [
   { title: "Dilly",             tag: "SaaS · AI",      year: "2026", href: "/work", bg: "#252B46" },
-  { title: "Thinkteks",         tag: "Agent · Brand",  year: "2026", href: "/work", bg: "#1C1F2B" },
+  { title: "Engineers in AI",   tag: "Agent · Brand",  year: "2026", href: "/work", bg: "#1C1F2B" },
   { title: "Taken Time",        tag: "Studio",         year: "2026", href: "/work", bg: "#B86A2E" },
   { title: "Erickson Flooring", tag: "Marketing",      year: "2026", href: "/work", bg: "#4F533A" },
 ];
