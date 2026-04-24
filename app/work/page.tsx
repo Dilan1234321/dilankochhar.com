@@ -29,17 +29,6 @@ const projects: Project[] = [
     aspect: "aspect-[4/5]",
   },
   {
-    slug: "kochhar-foundation",
-    title: "Kochhar Foundation",
-    role: "Co-founder",
-    year: "2023",
-    url: "kochharfoundation.com",
-    href: "https://kochharfoundation.com",
-    tag: "Charity · $22K raised",
-    bg: "#B86A2E",
-    aspect: "aspect-[4/3]",
-  },
-  {
     slug: "engineers-in-ai",
     title: "Engineers in AI",
     role: "Website + autonomous outbound agent",
@@ -71,6 +60,17 @@ const projects: Project[] = [
     tag: "Studio · Art commissions",
     bg: "#E4D9C2",
     aspect: "aspect-[3/4]",
+  },
+  {
+    slug: "kochhar-foundation",
+    title: "Kochhar Foundation",
+    role: "Co-founder",
+    year: "2023",
+    url: "kochharfoundation.com",
+    href: "https://kochharfoundation.com",
+    tag: "Charity · $22K raised",
+    bg: "#B86A2E",
+    aspect: "aspect-[4/3]",
   },
   {
     slug: "erickson-flooring",
@@ -110,11 +110,13 @@ const projects: Project[] = [
 function Tile({ p }: { p: Project }) {
   const isLight = p.bg === "#E4D9C2";
   const titleColor = isLight ? "text-ink" : "text-white";
-  const captionColor = isLight ? "text-ink/60" : "text-white/70";
 
   const inner = (
     <>
-      <div className={`tile ${p.aspect} mb-3`} style={p.image ? {} : { background: p.bg }}>
+      <div
+        className={`tile ${p.aspect} mb-3 transition-all duration-500 ease-out group-hover:shadow-[0_30px_60px_-20px_rgba(28,31,43,0.35)]`}
+        style={p.image ? {} : { background: p.bg }}
+      >
         {p.image ? (
           <Image
             src={p.image}
@@ -124,43 +126,49 @@ function Tile({ p }: { p: Project }) {
             className="tile-img"
           />
         ) : (
-          <div className="absolute inset-0 flex items-end p-6 md:p-8">
+          <div className="absolute inset-0 flex items-end p-6 md:p-8 transition-transform duration-700 ease-out group-hover:-translate-y-2">
             <span
-              className={`font-display leading-[0.9] tracking-tight ${titleColor}`}
+              className={`font-display leading-[0.9] tracking-tight transition-opacity duration-500 ${titleColor} group-hover:opacity-95`}
               style={{ fontSize: "clamp(2rem, 4.5vw, 4.5rem)" }}
             >
               {p.title}
             </span>
           </div>
         )}
+        {/* Ochre wash on hover — subtle warmth */}
+        <div className="pointer-events-none absolute inset-0 bg-ochre opacity-0 transition-opacity duration-500 group-hover:opacity-[0.08] mix-blend-overlay" />
+        {/* Thin bottom bar that grows in on hover */}
+        <div className="pointer-events-none absolute bottom-0 left-0 h-[3px] w-0 bg-ochre transition-[width] duration-700 ease-out group-hover:w-full" />
       </div>
       <div className="flex items-baseline justify-between gap-4">
         <div>
-          <p className="font-display text-lg md:text-xl text-ink">{p.title}</p>
-          <p className="text-xs uppercase tracking-widest text-ink/50 mt-1">
+          <p className="font-display text-lg md:text-xl text-ink transition-colors duration-300 group-hover:text-ochre">
+            {p.title}
+          </p>
+          <p className="text-xs uppercase tracking-widest text-ink/50 mt-1 transition-colors duration-300 group-hover:text-ink/70">
             {p.tag} · {p.year}
           </p>
         </div>
         {p.href && (
-          <span className="text-ink/40 group-hover:text-ochre transition-colors text-xl">↗</span>
+          <span className="text-ink/40 text-xl transition-all duration-300 group-hover:text-ochre group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+            ↗
+          </span>
         )}
       </div>
     </>
   );
 
+  const wrapperBase =
+    "group block break-inside-avoid mb-8 md:mb-12 transition-transform duration-500 ease-out will-change-transform hover:-translate-y-1.5";
+
   if (p.href) {
     return (
-      <a
-        href={p.href}
-        target="_blank"
-        rel="noreferrer"
-        className="group block break-inside-avoid mb-8 md:mb-12"
-      >
+      <a href={p.href} target="_blank" rel="noreferrer" className={wrapperBase}>
         {inner}
       </a>
     );
   }
-  return <div className="group block break-inside-avoid mb-8 md:mb-12 opacity-80">{inner}</div>;
+  return <div className={`${wrapperBase} opacity-80`}>{inner}</div>;
 }
 
 export default function WorkPage() {
