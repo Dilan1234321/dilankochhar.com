@@ -21,7 +21,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-top"
         />
         {/* Legibility gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/70" />
