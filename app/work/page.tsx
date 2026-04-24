@@ -42,11 +42,11 @@ const projects: Project[] = [
   {
     slug: "engineers-in-ai",
     title: "Engineers in AI",
-    role: "Architect · Engineer",
+    role: "Website + autonomous outbound agent",
     year: "2026",
     url: "engineersinai.com",
     href: "https://engineersinai.com",
-    tag: "AI Outbound · Brand",
+    tag: "Website · AI Agent",
     bg: "#1C1F2B",
     aspect: "aspect-[3/4]",
   },
