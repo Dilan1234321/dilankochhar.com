@@ -7,7 +7,7 @@ const peek = [
   { title: "Dilly",             tag: "SaaS · AI",      year: "2026", href: "/work", bg: "#252B46" },
   { title: "Engineers in AI",   tag: "Website · AI Agent",  year: "2026", href: "/work", bg: "#1C1F2B" },
   { title: "Taken Time",        tag: "Studio",         year: "2026", href: "/work", bg: "#B86A2E" },
-  { title: "Erickson Flooring", tag: "Marketing",      year: "2026", href: "/work", bg: "#4F533A" },
+  { title: "N+1 Talent",        tag: "Recruiting",     year: "2026", href: "/work", bg: "#1F3D2B" },
 ];
 
 export default function Home() {
@@ -67,7 +67,7 @@ export default function Home() {
             <p className="mt-8 text-lg text-ink/65 max-w-2xl leading-relaxed">
               Right now I'm building <Link href="/dilly" className="underline decoration-ochre underline-offset-4 hover:text-ochre">Dilly</Link>,
               a career platform for college students. Before that, a charity that raised $22K.
-              In between: six client sites.
+              In between: a growing roster of client sites.
             </p>
           </div>
         </div>

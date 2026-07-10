@@ -40,6 +40,17 @@ const projects: Project[] = [
     aspect: "aspect-[3/4]",
   },
   {
+    slug: "n-plus-one",
+    title: "N+1 Talent",
+    role: "Full build + inbound engine",
+    year: "2026",
+    url: "nplus1talent.com",
+    href: "https://nplus1talent.com",
+    tag: "Recruiting",
+    bg: "#1F3D2B",
+    aspect: "aspect-[4/3]",
+  },
+  {
     slug: "utampa-akpsi",
     title: "UTampa AKPSI",
     role: "Lead Developer",
@@ -84,6 +95,17 @@ const projects: Project[] = [
     aspect: "aspect-[4/3]",
   },
   {
+    slug: "sigma-marble",
+    title: "Sigma Marble Studio",
+    role: "In progress",
+    year: "2026",
+    url: "Coming soon",
+    href: null,
+    tag: "Stone & tile · Marketing",
+    bg: "#3E4147",
+    aspect: "aspect-[4/3]",
+  },
+  {
     slug: "scoops",
     title: "Scoops",
     role: "In progress",
@@ -106,6 +128,12 @@ const projects: Project[] = [
     aspect: "aspect-[4/5]",
   },
 ];
+
+// Counts derive from the list above so this copy can never go stale.
+const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
+const asWord = (n: number) => WORDS[n] ?? String(n);
+const liveCount = projects.filter((p) => p.href).length;
+const wipCount = projects.length - liveCount;
 
 function Tile({ p }: { p: Project }) {
   const isLight = p.bg === "#E4D9C2";
@@ -181,8 +209,9 @@ export default function WorkPage() {
             Work.
           </h1>
           <p className="md:col-span-4 text-lg md:text-xl text-ink/65 leading-relaxed md:text-right">
-            Seven projects, six live, one in progress. Every one designed, coded, and
-            shipped by me.
+            {asWord(projects.length).charAt(0).toUpperCase() + asWord(projects.length).slice(1)}{" "}
+            projects, {asWord(liveCount)} live, {asWord(wipCount)} in progress. Every one
+            designed, coded, and shipped by me.
           </p>
         </div>
       </section>
