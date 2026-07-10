@@ -97,10 +97,10 @@ const projects: Project[] = [
   {
     slug: "sigma-marble",
     title: "Sigma Marble Studio",
-    role: "In progress",
+    role: "Full build",
     year: "2026",
-    url: "Coming soon",
-    href: null,
+    url: "sigmamarble.vercel.app",
+    href: "https://sigmamarble.vercel.app",
     tag: "Stone & tile · Marketing",
     bg: "#3E4147",
     aspect: "aspect-[4/3]",
