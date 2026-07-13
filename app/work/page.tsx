@@ -2,138 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-
-type Project = {
-  slug: string;
-  title: string;
-  role: string;
-  year: string;
-  url: string;
-  href: string | null;
-  tag: string;
-  bg: string;
-  image?: string;
-  aspect: string; // varied ratios create the gallery rhythm
-};
-
-const projects: Project[] = [
-  {
-    slug: "dilly",
-    title: "Dilly",
-    role: "Founder · Engineer · Designer",
-    year: "2026",
-    url: "hellodilly.com",
-    href: "https://hellodilly.com",
-    tag: "SaaS · AI",
-    bg: "#252B46",
-    aspect: "aspect-[4/5]",
-  },
-  {
-    slug: "engineers-in-ai",
-    title: "Engineers in AI",
-    role: "Website + autonomous outbound agent",
-    year: "2026",
-    url: "engineersinai.com",
-    href: "https://engineersinai.com",
-    tag: "Website · AI Agent",
-    bg: "#1C1F2B",
-    aspect: "aspect-[3/4]",
-  },
-  {
-    slug: "n-plus-one",
-    title: "N+1 Talent",
-    role: "Full build + inbound engine",
-    year: "2026",
-    url: "nplus1talent.com",
-    href: "https://nplus1talent.com",
-    tag: "Recruiting",
-    bg: "#1F3D2B",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    slug: "utampa-akpsi",
-    title: "UTampa AKPSI",
-    role: "Lead Developer",
-    year: "2025",
-    url: "utampaakpsi.com",
-    href: "https://utampaakpsi.com",
-    tag: "Organization site",
-    bg: "#002868",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    slug: "taken-time-to-design",
-    title: "Taken Time to Design",
-    role: "Full build",
-    year: "2026",
-    url: "takentimetodesign.com",
-    href: "https://takentimetodesign.com",
-    tag: "Studio · Art commissions",
-    bg: "#E4D9C2",
-    aspect: "aspect-[3/4]",
-  },
-  {
-    slug: "kochhar-foundation",
-    title: "Kochhar Foundation",
-    role: "Co-founder",
-    year: "2023",
-    url: "kochharfoundation.com",
-    href: "https://kochharfoundation.com",
-    tag: "Charity · $22K raised",
-    bg: "#B86A2E",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    slug: "erickson-flooring",
-    title: "Erickson Flooring",
-    role: "Full build",
-    year: "2026",
-    url: "erickson-flooring.com",
-    href: "https://erickson-flooring.com",
-    tag: "Small business",
-    bg: "#4F533A",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    slug: "sigma-marble",
-    title: "Sigma Marble Studio",
-    role: "Full build",
-    year: "2026",
-    url: "sigmamarble.vercel.app",
-    href: "https://sigmamarble.vercel.app",
-    tag: "Stone & tile · Marketing",
-    bg: "#3E4147",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    slug: "scoops",
-    title: "Scoops",
-    role: "In progress",
-    year: "2026",
-    url: "Coming soon",
-    href: null,
-    tag: "Consumer app · On-demand delivery",
-    bg: "#B85A6E",
-    aspect: "aspect-[4/5]",
-  },
-  {
-    slug: "puchalski-performance",
-    title: "Puchalski Performance",
-    role: "In progress",
-    year: "2026",
-    url: "Coming soon",
-    href: null,
-    tag: "Athletic brand",
-    bg: "#2B2F1E",
-    aspect: "aspect-[4/5]",
-  },
-];
-
-// Counts derive from the list above so this copy can never go stale.
-const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
-const asWord = (n: number) => WORDS[n] ?? String(n);
-const liveCount = projects.filter((p) => p.href).length;
-const wipCount = projects.length - liveCount;
+import { projects, liveCount, wipCount, asWord, type Project } from "@/lib/projects";
+import { craftIntro, craftPillars, howIWork } from "@/lib/craft";
 
 function Tile({ p }: { p: Project }) {
   const isLight = p.bg === "#E4D9C2";
@@ -163,9 +33,7 @@ function Tile({ p }: { p: Project }) {
             </span>
           </div>
         )}
-        {/* Ochre wash on hover — subtle warmth */}
         <div className="pointer-events-none absolute inset-0 bg-ochre opacity-0 transition-opacity duration-500 group-hover:opacity-[0.08] mix-blend-overlay" />
-        {/* Thin bottom bar that grows in on hover */}
         <div className="pointer-events-none absolute bottom-0 left-0 h-[3px] w-0 bg-ochre transition-[width] duration-700 ease-out group-hover:w-full" />
       </div>
       <div className="flex items-baseline justify-between gap-4">
@@ -191,7 +59,7 @@ function Tile({ p }: { p: Project }) {
 
   if (p.href) {
     return (
-      <a href={p.href} target="_blank" rel="noreferrer" className={wrapperBase}>
+      <a href={`#${p.slug}`} className={wrapperBase}>
         {inner}
       </a>
     );
@@ -210,13 +78,24 @@ export default function WorkPage() {
           </h1>
           <p className="md:col-span-4 text-lg md:text-xl text-ink/65 leading-relaxed md:text-right">
             {asWord(projects.length).charAt(0).toUpperCase() + asWord(projects.length).slice(1)}{" "}
-            projects, {asWord(liveCount)} live, {asWord(wipCount)} in progress. Every one
-            designed, coded, and shipped by me.
+            projects, {asWord(liveCount)} live, {asWord(wipCount)} in progress. The gallery
+            is the proof. The writing below is how the skills actually got used.
           </p>
+        </div>
+        <div className="mx-auto max-w-[92rem] mt-10 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+          <a href="#craft" className="text-ink/60 hover:text-ochre transition-colors">
+            How I work →
+          </a>
+          <a href="#by-project" className="text-ink/60 hover:text-ochre transition-colors">
+            Skills by project →
+          </a>
+          <a href="#index" className="text-ink/60 hover:text-ochre transition-colors">
+            Index →
+          </a>
         </div>
       </section>
 
-      {/* Gallery (masonry columns) */}
+      {/* Gallery */}
       <section className="px-6 md:px-10 pb-24">
         <div className="mx-auto max-w-[92rem]">
           <div className="columns-1 md:columns-2 xl:columns-3 gap-6 md:gap-10">
@@ -227,37 +106,172 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* Index table — quick reference */}
-      <section className="px-6 md:px-10 pb-24">
+      {/* Craft thesis — talk about skills first */}
+      <section id="craft" className="scroll-mt-28 bg-ink text-paper px-6 md:px-10 py-24 md:py-32">
+        <div className="mx-auto max-w-[92rem]">
+          <p className="text-xs uppercase tracking-widest text-paper/50 mb-4">
+            {craftIntro.eyebrow}
+          </p>
+          <h2 className="font-display text-4xl md:text-6xl leading-[1.05] max-w-4xl text-balance">
+            {craftIntro.headline}
+          </h2>
+          <p className="mt-8 max-w-2xl text-lg md:text-xl text-paper/70 leading-relaxed">
+            {craftIntro.body}
+          </p>
+
+          <div className="mt-20 grid md:grid-cols-3 gap-10 md:gap-12 border-t border-paper/15 pt-16">
+            {howIWork.map((h) => (
+              <div key={h.title}>
+                <h3 className="font-display text-2xl md:text-3xl text-paper">{h.title}</h3>
+                <p className="mt-4 text-paper/65 leading-relaxed">{h.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-24 space-y-0 divide-y divide-paper/15 border-y border-paper/15">
+            {craftPillars.map((pillar, i) => (
+              <article key={pillar.slug} className="py-12 md:py-16 grid md:grid-cols-12 gap-8">
+                <div className="md:col-span-4">
+                  <p className="text-xs tabular-nums text-paper/40 mb-3">
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="font-display text-3xl md:text-4xl leading-none">
+                    {pillar.title}
+                  </h3>
+                  <p className="mt-6 text-sm text-paper/45 leading-relaxed">
+                    Seen in{" "}
+                    {pillar.where.map((name, idx) => (
+                      <span key={name}>
+                        {idx > 0 && (idx === pillar.where.length - 1 ? ", and " : ", ")}
+                        <span className="text-paper/70">{name}</span>
+                      </span>
+                    ))}
+                    .
+                  </p>
+                </div>
+                <div className="md:col-span-8">
+                  <p className="font-display text-2xl md:text-3xl leading-snug text-balance text-paper">
+                    {pillar.lead}
+                  </p>
+                  <p className="mt-6 text-base md:text-lg text-paper/65 leading-relaxed max-w-3xl">
+                    {pillar.body}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Skills by project — long form */}
+      <section id="by-project" className="scroll-mt-28 px-6 md:px-10 py-24 md:py-32">
+        <div className="mx-auto max-w-[92rem]">
+          <div className="grid md:grid-cols-12 gap-8 mb-16 items-end">
+            <div className="md:col-span-7">
+              <p className="text-xs uppercase tracking-widest text-ink/50 mb-4">By project</p>
+              <h2 className="font-display text-4xl md:text-6xl leading-[1.05]">
+                Where each skill showed up.
+              </h2>
+            </div>
+            <p className="md:col-span-5 text-ink/60 leading-relaxed md:text-right text-lg">
+              First person on purpose. If I can&apos;t explain how a skill was used on a
+              real project, it doesn&apos;t belong on this page.
+            </p>
+          </div>
+
+          <div className="space-y-0 divide-y divide-ink/10 border-y hairline">
+            {projects.map((p, i) => (
+              <article
+                key={p.slug}
+                id={p.slug}
+                className="scroll-mt-28 py-14 md:py-20 grid md:grid-cols-12 gap-8 md:gap-12"
+              >
+                <div className="md:col-span-4">
+                  <p className="text-xs tabular-nums text-ink/40 mb-3">
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="font-display text-3xl md:text-5xl leading-none text-ink">
+                    {p.title}
+                  </h3>
+                  <p className="mt-4 text-xs uppercase tracking-widest text-ink/50">
+                    {p.tag} · {p.year}
+                  </p>
+                  <p className="mt-2 text-sm text-ink/55">{p.role}</p>
+                  <p className="mt-6 font-mono text-[11px] leading-relaxed text-ink/45">
+                    {p.stack}
+                  </p>
+                  {p.href ? (
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 mt-6 text-sm text-ink/70 hover:text-ochre transition-colors"
+                    >
+                      {p.url} <span aria-hidden>↗</span>
+                    </a>
+                  ) : (
+                    <p className="mt-6 text-sm italic text-ink/40">{p.url}</p>
+                  )}
+                </div>
+
+                <div className="md:col-span-8">
+                  <p className="text-xl md:text-2xl text-ink/80 leading-relaxed text-pretty max-w-3xl font-display">
+                    {p.summary}
+                  </p>
+                  <p className="mt-12 text-xs uppercase tracking-widest text-ink/40">
+                    Skills on this project
+                  </p>
+                  <ul className="mt-4 divide-y divide-ink/10 border-t hairline">
+                    {p.skills.map((s) => (
+                      <li key={s.name} className="py-8">
+                        <h4 className="font-display text-2xl md:text-3xl text-ink">{s.name}</h4>
+                        <p className="mt-3 text-base md:text-lg text-ink/60 leading-relaxed max-w-2xl">
+                          {s.used}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Index */}
+      <section id="index" className="scroll-mt-28 px-6 md:px-10 pb-24">
         <div className="mx-auto max-w-[92rem]">
           <p className="text-xs uppercase tracking-widest text-ink/50 mb-6">Index</p>
           <ul className="divide-y divide-ink/10 border-y hairline">
             {projects.map((p, i) => (
               <li key={p.slug}>
-                {p.href ? (
-                  <a
-                    href={p.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group grid grid-cols-12 gap-4 py-5 items-baseline hover:text-ochre transition-colors"
+                <div className="grid grid-cols-12 gap-4 py-5 items-baseline">
+                  <span className="col-span-1 text-sm text-ink/40 tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <Link
+                    href={`#${p.slug}`}
+                    className="col-span-7 md:col-span-4 font-display text-xl md:text-2xl hover:text-ochre transition-colors"
                   >
-                    <span className="col-span-1 text-sm text-ink/40 tabular-nums">{String(i + 1).padStart(2, "0")}</span>
-                    <span className="col-span-11 md:col-span-4 font-display text-xl md:text-2xl">{p.title}</span>
-                    <span className="hidden md:block col-span-3 text-sm text-ink/60">{p.role}</span>
-                    <span className="hidden md:block col-span-2 text-sm text-ink/60">{p.year}</span>
-                    <span className="hidden md:block col-span-2 text-sm text-right text-ink/60 group-hover:text-ochre">
-                      {p.url} ↗
-                    </span>
-                  </a>
-                ) : (
-                  <div className="grid grid-cols-12 gap-4 py-5 items-baseline text-ink/50">
-                    <span className="col-span-1 text-sm tabular-nums">{String(i + 1).padStart(2, "0")}</span>
-                    <span className="col-span-11 md:col-span-4 font-display text-xl md:text-2xl">{p.title}</span>
-                    <span className="hidden md:block col-span-3 text-sm">{p.role}</span>
-                    <span className="hidden md:block col-span-2 text-sm">{p.year}</span>
-                    <span className="hidden md:block col-span-2 text-sm text-right italic">{p.url}</span>
-                  </div>
-                )}
+                    {p.title}
+                  </Link>
+                  <span className="hidden md:block col-span-3 text-sm text-ink/60">{p.role}</span>
+                  <span className="hidden md:block col-span-2 text-sm text-ink/60">{p.year}</span>
+                  <span className="col-span-4 md:col-span-2 text-sm text-right">
+                    {p.href ? (
+                      <a
+                        href={p.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-ink/60 hover:text-ochre transition-colors"
+                      >
+                        {p.url} ↗
+                      </a>
+                    ) : (
+                      <span className="text-ink/40 italic">{p.url}</span>
+                    )}
+                  </span>
+                </div>
               </li>
             ))}
           </ul>

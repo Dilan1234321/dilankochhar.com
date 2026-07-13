@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { craftPillars } from "@/lib/craft";
 
 const peek = [
-  { title: "Dilly",             tag: "SaaS · AI",      year: "2026", href: "/work", bg: "#252B46" },
-  { title: "Engineers in AI",   tag: "Website · AI Agent",  year: "2026", href: "/work", bg: "#1C1F2B" },
-  { title: "Taken Time",        tag: "Studio",         year: "2026", href: "/work", bg: "#B86A2E" },
-  { title: "N+1 Talent",        tag: "Recruiting",     year: "2026", href: "/work", bg: "#1F3D2B" },
+  { title: "Dilly",             tag: "SaaS · AI",      year: "2026", href: "/work#dilly", bg: "#252B46" },
+  { title: "Engineers in AI",   tag: "Website · AI Agent",  year: "2026", href: "/work#engineers-in-ai", bg: "#1C1F2B" },
+  { title: "Taken Time",        tag: "Studio",         year: "2026", href: "/work#taken-time-to-design", bg: "#B86A2E" },
+  { title: "N+1 Talent",        tag: "Recruiting",     year: "2026", href: "/work#n-plus-one", bg: "#1F3D2B" },
 ];
 
 export default function Home() {
@@ -43,10 +44,10 @@ export default function Home() {
                 <span aria-hidden>→</span>
               </Link>
               <Link
-                href="/dilly"
+                href="/work#craft"
                 className="inline-flex items-center gap-3 rounded-full border border-white/40 text-white px-6 py-3 text-sm hover:border-white hover:bg-white/10 transition"
               >
-                About Dilly
+                How I work
               </Link>
             </div>
           </div>
@@ -67,9 +68,48 @@ export default function Home() {
             <p className="mt-8 text-lg text-ink/65 max-w-2xl leading-relaxed">
               Right now I'm building <Link href="/dilly" className="underline decoration-ochre underline-offset-4 hover:text-ochre">Dilly</Link>,
               a career platform for college students. Before that, a charity that raised $22K.
-              In between: a growing roster of client sites.
+              In between: client sites, recruiting engines, and agents that do real outbound.
+              The skills aren&apos;t a sidebar — they&apos;re the story.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* CRAFT PREVIEW — talk about skills on the homepage */}
+      <section className="px-6 md:px-10 pb-24 md:pb-36">
+        <div className="mx-auto max-w-[92rem]">
+          <div className="grid md:grid-cols-12 gap-8 mb-14 items-end">
+            <div className="md:col-span-7">
+              <p className="text-xs uppercase tracking-widest text-ink/50 mb-4">Craft</p>
+              <h2 className="font-display text-4xl md:text-6xl leading-[1.05] text-balance">
+                I don&apos;t collect skills. I use them.
+              </h2>
+            </div>
+            <p className="md:col-span-5 text-ink/60 leading-relaxed md:text-right">
+              Product sense. Agents with receipts. Full-stack ownership. Growth engineering.
+              Design as code.{" "}
+              <Link href="/work#craft" className="underline decoration-ochre underline-offset-4 hover:text-ochre">
+                Read how each one shows up in the work →
+              </Link>
+            </p>
+          </div>
+          <ul className="divide-y divide-ink/10 border-y hairline">
+            {craftPillars.map((pillar) => (
+              <li key={pillar.slug}>
+                <Link
+                  href="/work#craft"
+                  className="group grid md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-10 items-baseline"
+                >
+                  <span className="md:col-span-3 font-display text-2xl md:text-3xl text-ink group-hover:text-ochre transition-colors">
+                    {pillar.title}
+                  </span>
+                  <span className="md:col-span-9 text-base md:text-lg text-ink/60 leading-relaxed">
+                    {pillar.lead}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

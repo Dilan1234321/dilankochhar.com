@@ -76,6 +76,61 @@ export default function AboutPage() {
               I design and code everything I ship. I don't outsource the parts I'm bad at. I
               just get less bad at them.
             </p>
+            <p>
+              Ask me what I&apos;m good at and I won&apos;t hand you a tech list. I&apos;ll
+              talk about product sense, agents that do real work, full-stack ownership,
+              growth engineering, and design as code — then point at the project where each
+              one had to prove itself.{" "}
+              <a
+                href="/work#craft"
+                className="underline decoration-ochre decoration-2 underline-offset-4 hover:text-ochre"
+              >
+                That writing lives on the work page
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How I work — skills in first person */}
+      <section className="px-6 md:px-10 pb-24">
+        <div className="mx-auto max-w-[92rem]">
+          <p className="text-xs uppercase tracking-widest text-ink/50 mb-10">How I work</p>
+          <div className="grid md:grid-cols-12 gap-10">
+            <h2 className="md:col-span-4 font-display text-3xl md:text-4xl leading-snug text-balance">
+              Skills are verbs. They only count when something ships.
+            </h2>
+            <div className="md:col-span-7 md:col-start-6 space-y-8 text-lg text-ink/70 leading-relaxed">
+              <p>
+                On <span className="text-ink">Dilly</span>, that means Expo, FastAPI,
+                Postgres, Claude and GPT in a dual-route system, Stripe, and a voice coach
+                that has to be safe enough for a student&apos;s real resume. On{" "}
+                <span className="text-ink">Engineers in AI</span> and{" "}
+                <span className="text-ink">N+1</span>, it means cron agents, programmatic
+                SEO, and outbound that starts from live ATS boards — not a prompt playground.
+              </p>
+              <p>
+                Client work is the same standard with a different surface:{" "}
+                <span className="text-ink">Erickson</span> and{" "}
+                <span className="text-ink">Sigma</span> are lead machines dressed as brand.
+                <span className="text-ink"> Taken Time</span> is taste under constraint.
+                <span className="text-ink"> AKPsi</span> was org product — directories,
+                donations, hire-our-members — before I had a SaaS to point at.
+              </p>
+              <p>
+                I&apos;m not interested in looking technical. I&apos;m interested in being
+                useful. The long version of every skill — what I did with it, on which
+                project, and why it mattered — is written out on{" "}
+                <a
+                  href="/work#by-project"
+                  className="underline decoration-ochre decoration-2 underline-offset-4 hover:text-ochre"
+                >
+                  Work → Skills by project
+                </a>
+                .
+              </p>
+            </div>
           </div>
         </div>
       </section>
