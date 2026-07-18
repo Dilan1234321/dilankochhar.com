@@ -106,9 +106,9 @@ export default function AboutPage() {
                 On <span className="text-ink">Dilly</span>, that means Expo, FastAPI,
                 Postgres, Claude and GPT in a dual-route system, Stripe, and a voice coach
                 that has to be safe enough for a student&apos;s real resume. On{" "}
-                <span className="text-ink">Engineers in AI</span> and{" "}
-                <span className="text-ink">N+1</span>, it means cron agents, programmatic
-                SEO, and outbound that starts from live ATS boards — not a prompt playground.
+                <span className="text-ink">N+1</span>, it means programmatic SEO, a
+                prospector that starts from live ATS boards, and outbound drafts that
+                aren&apos;t a prompt playground.
               </p>
               <p>
                 Client work is the same standard with a different surface:{" "}

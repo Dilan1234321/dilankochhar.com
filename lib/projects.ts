@@ -62,42 +62,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "engineers-in-ai",
-    title: "Engineers in AI",
-    role: "Website + autonomous outbound agent",
-    year: "2026",
-    url: "engineersinai.com",
-    href: "https://engineersinai.com",
-    tag: "Website · AI Agent",
-    bg: "#1C1F2B",
-    aspect: "aspect-[3/4]",
-    stack: "Static HTML · Vercel Functions · Groq · GitHub Issues CRM · Cron",
-    summary:
-      "I wanted to prove an AI agent could do recruiting work without a database budget. The site sells the firm; a weekday Vercel cron reads Greenhouse, Lever, and Ashby, scores urgency, and drafts outbound with Groq. Leads land in GitHub Issues. The whole product runs on Hobby-tier infra. Skills here are about leverage — how much real work you can automate when you refuse to overbuild.",
-    skills: [
-      {
-        name: "Serverless agents",
-        used: "I wrote an outbound agent that wakes on a schedule, scrapes public ATS JSON, ranks who might be hiring, and drafts cold email with Llama via Groq. Not a demo chat — a loop that shows up for work on weekdays.",
-      },
-      {
-        name: "Lead capture without a DB",
-        used: "Forms post into GitHub Issues as a free CRM, with an optional Discord ping and Cloudflare Turnstile so bots don't drown the pipeline. Constraint forced cleaner architecture.",
-      },
-      {
-        name: "Programmatic SEO",
-        used: "I built dedicated /seo landings, sitemap, robots, canonicals, and JSON-LD so hiring managers searching for AI recruiting actually find the firm — not just friends of the founder.",
-      },
-      {
-        name: "Conversion UX",
-        used: "An interactive ROI calculator on /hire, separate candidate and employer paths, and a password-gated admin. The site argues for the sale while the agent works the outbound.",
-      },
-      {
-        name: "Vercel Hobby ops",
-        used: "Static HTML plus serverless functions plus cron plus analytics — proof that a real product can live on free-tier infrastructure if you're ruthless about scope.",
-      },
-    ],
-  },
-  {
     slug: "n-plus-one",
     title: "N+1 Talent",
     role: "Full build + inbound engine",

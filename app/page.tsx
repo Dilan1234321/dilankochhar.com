@@ -6,9 +6,9 @@ import { craftPillars } from "@/lib/craft";
 
 const peek = [
   { title: "Dilly",             tag: "SaaS · AI",      year: "2026", href: "/work#dilly", bg: "#252B46" },
-  { title: "Engineers in AI",   tag: "Website · AI Agent",  year: "2026", href: "/work#engineers-in-ai", bg: "#1C1F2B" },
-  { title: "Taken Time",        tag: "Studio",         year: "2026", href: "/work#taken-time-to-design", bg: "#B86A2E" },
   { title: "N+1 Talent",        tag: "Recruiting",     year: "2026", href: "/work#n-plus-one", bg: "#1F3D2B" },
+  { title: "Taken Time",        tag: "Studio",         year: "2026", href: "/work#taken-time-to-design", bg: "#B86A2E" },
+  { title: "Sigma Marble",      tag: "Stone & tile",   year: "2026", href: "/work#sigma-marble", bg: "#3E4147" },
 ];
 
 export default function Home() {
