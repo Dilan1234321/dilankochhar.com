@@ -1,6 +1,12 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Dilly — the company",
+  description:
+    "Dilly turns every résumé, major, and skill into a real-time readiness score that tells college students exactly what to do next. Founded, designed, and built by Dilan Kochhar.",
+  alternates: { canonical: "/dilly" },
+};
 
 const principles = [
   {

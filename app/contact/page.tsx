@@ -1,4 +1,11 @@
-"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Email Dilan Kochhar about builds, SEO & AEO retainers, or Dilly. No form, no autoresponder — every message gets read.",
+  alternates: { canonical: "/contact" },
+};
 
 const channels = [
   {

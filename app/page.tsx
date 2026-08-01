@@ -1,8 +1,14 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { craftPillars } from "@/lib/craft";
+import { retainer, builds } from "@/lib/services";
+
+export const metadata: Metadata = {
+  description:
+    "Dilan Kochhar designs and builds websites, apps, and AI agents — and runs a $500/month SEO & AEO retainer that gets businesses found on Google and cited by AI assistants.",
+  alternates: { canonical: "/" },
+};
 
 const peek = [
   { title: "Dilly",             tag: "SaaS · AI",      year: "2026", href: "/work#dilly", bg: "#252B46" },
@@ -29,25 +35,29 @@ export default function Home() {
 
         <div className="relative z-10 h-full flex flex-col justify-end px-6 md:px-10 pb-20 md:pb-24">
           <div className="mx-auto max-w-[92rem] w-full">
+            <p className="font-mono text-[11px] md:text-xs uppercase tracking-[0.25em] text-white/70 mb-5">
+              Web · AI · Search — Tampa, FL
+            </p>
             <h1 className="font-display text-white text-[14vw] md:text-[9rem] leading-[0.88] tracking-tight">
               Dilan Kochhar
             </h1>
             <p className="mt-6 max-w-2xl text-lg md:text-2xl text-white/85 leading-snug">
-              I build websites, apps, and AI agents. Solo. Out of a dorm room in Tampa.
+              I design and build websites, apps, and AI agents — then make sure
+              Google and AI assistants can find them.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
-                href="/work"
+                href="/services"
                 className="inline-flex items-center gap-3 rounded-full bg-white text-ink px-6 py-3 text-sm font-medium hover:bg-paperHi transition-colors"
               >
-                See the work
+                Services &amp; pricing
                 <span aria-hidden>→</span>
               </Link>
               <Link
-                href="/work#craft"
+                href="/work"
                 className="inline-flex items-center gap-3 rounded-full border border-white/40 text-white px-6 py-3 text-sm hover:border-white hover:bg-white/10 transition"
               >
-                How I work
+                See the work
               </Link>
             </div>
           </div>
@@ -62,20 +72,64 @@ export default function Home() {
           </div>
           <div className="md:col-span-8">
             <p className="font-display text-3xl md:text-5xl leading-[1.1] text-balance max-w-3xl">
-              I'm twenty. I taught myself to code. I design and ship everything with my name
-              on it — from a single landing page to a full SaaS platform.
+              I taught myself to code, and I ship everything with my name on it —
+              from a single landing page to a full SaaS platform.
             </p>
             <p className="mt-8 text-lg text-ink/65 max-w-2xl leading-relaxed">
-              Right now I'm building <Link href="/dilly" className="underline decoration-ochre underline-offset-4 hover:text-ochre">Dilly</Link>,
-              a career platform for college students. Before that, a charity that raised $22K.
-              In between: client sites, recruiting engines, and agents that do real outbound.
-              The skills aren&apos;t a sidebar — they&apos;re the story.
+              I&apos;m the founder of <Link href="/dilly" className="underline decoration-ochre underline-offset-4 hover:text-ochre">Dilly</Link>,
+              a career platform for college students, and I take on a small roster of client
+              work: full builds, and a monthly retainer that keeps businesses visible in
+              search — the classic kind and the AI kind.
             </p>
           </div>
         </div>
       </section>
 
-      {/* CRAFT PREVIEW — talk about skills on the homepage */}
+      {/* SERVICES STRIP */}
+      <section className="px-6 md:px-10 pb-24 md:pb-36">
+        <div className="mx-auto max-w-[92rem]">
+          <div className="flex items-end justify-between mb-10">
+            <h2 className="font-display text-4xl md:text-6xl">Hire me</h2>
+            <Link href="/services" className="text-sm text-ink/60 hover:text-ochre transition-colors">
+              Full details →
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
+            <Link
+              href="/services#retainer"
+              className="group block bg-ink text-paper p-8 md:p-12 transition-transform duration-500 ease-out hover:-translate-y-1.5"
+            >
+              <p className="text-xs uppercase tracking-widest text-paper/50">{retainer.eyebrow}</p>
+              <h3 className="mt-5 font-display text-3xl md:text-5xl leading-[0.95] text-balance">
+                {retainer.name}
+              </h3>
+              <p className="mt-6 font-display text-4xl md:text-5xl text-ochre tabular-nums">
+                {retainer.price}
+              </p>
+              <p className="mt-6 text-paper/65 leading-relaxed max-w-md">{retainer.lead}</p>
+              <span className="inline-flex items-center gap-2 mt-8 text-sm text-paper/70 group-hover:text-ochre transition-colors">
+                What the month buys <span aria-hidden>→</span>
+              </span>
+            </Link>
+            <Link
+              href="/services#builds"
+              className="group block border hairline p-8 md:p-12 transition-transform duration-500 ease-out hover:-translate-y-1.5"
+            >
+              <p className="text-xs uppercase tracking-widest text-ink/50">{builds.eyebrow}</p>
+              <h3 className="mt-5 font-display text-3xl md:text-5xl leading-[0.95] text-balance text-ink">
+                {builds.name}
+              </h3>
+              <p className="mt-6 font-display text-2xl md:text-3xl text-ochre">{builds.price}</p>
+              <p className="mt-6 text-ink/65 leading-relaxed max-w-md">{builds.lead}</p>
+              <span className="inline-flex items-center gap-2 mt-8 text-sm text-ink/70 group-hover:text-ochre transition-colors">
+                How a project runs <span aria-hidden>→</span>
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CRAFT PREVIEW */}
       <section className="px-6 md:px-10 pb-24 md:pb-36">
         <div className="mx-auto max-w-[92rem]">
           <div className="grid md:grid-cols-12 gap-8 mb-14 items-end">
@@ -150,7 +204,7 @@ export default function Home() {
       <section className="px-6 md:px-10 pb-32">
         <div className="mx-auto max-w-[92rem] border-t hairline pt-20">
           <h2 className="font-display text-5xl md:text-7xl leading-[0.95] text-balance max-w-4xl">
-            Have something you'd want me to build?
+            Have something you&apos;d want me to build — or rank?
           </h2>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a

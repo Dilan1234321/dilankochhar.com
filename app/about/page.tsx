@@ -1,6 +1,12 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Self-taught developer and founder in Tampa. Co-founded a charity that raised $22K, founded Dilly, and builds every project solo — design through deploy.",
+  alternates: { canonical: "/about" },
+};
 
 const timeline = [
   { y: "2005", t: "Born on Long Island, NY." },
@@ -9,6 +15,7 @@ const timeline = [
   { y: "2025", t: "Shipped utampaakpsi.com. First real project with my name on it." },
   { y: "2026", t: "Launched an informal agency for Tampa Bay startups." },
   { y: "2026", t: "Built Dilly." },
+  { y: "2026", t: "Productized search: SEO & AEO retainers for businesses that want to be found — by Google and by AI." },
 ];
 
 const beliefs = [

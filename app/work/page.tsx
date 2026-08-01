@@ -1,9 +1,14 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { projects, liveCount, wipCount, asWord, type Project } from "@/lib/projects";
 import { craftIntro, craftPillars, howIWork } from "@/lib/craft";
+
+export const metadata: Metadata = {
+  title: "Work — projects, live and in build",
+  description: `${asWord(projects.length)} projects: SaaS, recruiting engines, client sites, and AI agents — with a first-person breakdown of how each skill was actually used.`,
+  alternates: { canonical: "/work" },
+};
 
 function Tile({ p }: { p: Project }) {
   const isLight = p.bg === "#E4D9C2";
