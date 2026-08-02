@@ -33,9 +33,9 @@ export default function ContactPage() {
     <>
       {/* Header */}
       <section className="px-6 md:px-10 pt-36 md:pt-44 pb-12">
-        <div className="mx-auto max-w-[92rem]">
-          <p className="text-xs uppercase tracking-widest text-ink/50">Contact</p>
-          <h1 className="mt-6 font-display text-[14vw] md:text-[11rem] leading-[0.88] tracking-tight">
+        <div className="mx-auto max-w-[88rem]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50">Contact</p>
+          <h1 className="mt-4 font-display text-4xl md:text-6xl tracking-tight">
             Say hi.
           </h1>
           <p className="mt-10 max-w-3xl text-xl md:text-2xl text-ink/70 leading-relaxed">
@@ -47,7 +47,7 @@ export default function ContactPage() {
 
       {/* Channels */}
       <section className="px-6 md:px-10 pb-24">
-        <div className="mx-auto max-w-[92rem]">
+        <div className="mx-auto max-w-[88rem]">
           <ul className="divide-y divide-ink/10 border-y hairline">
             {channels.map((c) => (
               <li key={c.label}>
@@ -60,11 +60,11 @@ export default function ContactPage() {
                   <span className="col-span-12 md:col-span-2 text-xs uppercase tracking-widest text-ink/50">
                     {c.label}
                   </span>
-                  <span className="col-span-12 md:col-span-6 font-display text-3xl md:text-5xl text-ink group-hover:text-ochre transition-colors break-words">
+                  <span className="col-span-12 md:col-span-6 font-display text-3xl md:text-5xl text-ink group-hover:text-accent transition-colors break-words">
                     {c.value}
                   </span>
                   <span className="col-span-11 md:col-span-3 text-ink/60 text-sm">{c.note}</span>
-                  <span className="col-span-1 text-right text-ink/40 group-hover:text-ochre transition-colors text-2xl">
+                  <span className="col-span-1 text-right text-ink/40 group-hover:text-accent transition-colors text-2xl">
                     ↗
                   </span>
                 </a>
@@ -76,7 +76,7 @@ export default function ContactPage() {
 
       {/* Closing */}
       <section className="border-t hairline px-6 md:px-10 py-24">
-        <div className="mx-auto max-w-[92rem]">
+        <div className="mx-auto max-w-[88rem]">
           <p className="font-display text-3xl md:text-6xl leading-[1.1] text-balance max-w-5xl">
             If you're building something hard, something nobody else thinks will work —
             write me first.

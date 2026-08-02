@@ -32,17 +32,17 @@ export default function AboutPage() {
     <>
       {/* Header */}
       <section className="px-6 md:px-10 pt-36 md:pt-44 pb-12">
-        <div className="mx-auto max-w-[92rem]">
-          <p className="text-xs uppercase tracking-widest text-ink/50">About</p>
-          <h1 className="mt-6 font-display text-[14vw] md:text-[11rem] leading-[0.88] tracking-tight">
-            About.
+        <div className="mx-auto max-w-[88rem]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50">About</p>
+          <h1 className="mt-4 font-display text-4xl md:text-6xl tracking-tight">
+            The person you&apos;d be hiring.
           </h1>
         </div>
       </section>
 
       {/* Portrait + copy */}
       <section className="px-6 md:px-10 pb-24">
-        <div className="mx-auto max-w-[92rem] grid md:grid-cols-12 gap-10">
+        <div className="mx-auto max-w-[88rem] grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden bg-ink/10">
               <Image
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 href="https://kochharfoundation.com"
                 target="_blank"
                 rel="noreferrer"
-                className="underline decoration-ochre decoration-2 underline-offset-4 hover:text-ochre"
+                className="underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
               >
                 Kochhar Foundation
               </a>
@@ -90,7 +90,7 @@ export default function AboutPage() {
               one had to prove itself.{" "}
               <a
                 href="/work#craft"
-                className="underline decoration-ochre decoration-2 underline-offset-4 hover:text-ochre"
+                className="underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
               >
                 That writing lives on the work page
               </a>
@@ -102,7 +102,7 @@ export default function AboutPage() {
 
       {/* How I work — skills in first person */}
       <section className="px-6 md:px-10 pb-24">
-        <div className="mx-auto max-w-[92rem]">
+        <div className="mx-auto max-w-[88rem]">
           <p className="text-xs uppercase tracking-widest text-ink/50 mb-10">How I work</p>
           <div className="grid md:grid-cols-12 gap-10">
             <h2 className="md:col-span-4 font-display text-3xl md:text-4xl leading-snug text-balance">
@@ -131,7 +131,7 @@ export default function AboutPage() {
                 project, and why it mattered — is written out on{" "}
                 <a
                   href="/work#by-project"
-                  className="underline decoration-ochre decoration-2 underline-offset-4 hover:text-ochre"
+                  className="underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
                 >
                   Work → Skills by project
                 </a>
@@ -144,7 +144,7 @@ export default function AboutPage() {
 
       {/* Timeline */}
       <section className="border-t hairline px-6 md:px-10 py-24">
-        <div className="mx-auto max-w-[92rem]">
+        <div className="mx-auto max-w-[88rem]">
           <p className="text-xs uppercase tracking-widest text-ink/50 mb-10">A short history</p>
           <ul className="divide-y divide-ink/10 border-y hairline">
             {timeline.map((row, i) => (
@@ -161,11 +161,11 @@ export default function AboutPage() {
 
       {/* Beliefs */}
       <section className="bg-ink text-paper px-6 md:px-10 py-24 md:py-32">
-        <div className="mx-auto max-w-[92rem]">
+        <div className="mx-auto max-w-[88rem]">
           <p className="text-xs uppercase tracking-widest text-paper/50 mb-10">What I believe</p>
           <div className="grid md:grid-cols-2 gap-x-16 gap-y-8 max-w-5xl">
             {beliefs.map((b, i) => (
-              <p key={i} className="font-display text-2xl md:text-3xl text-balance leading-snug border-l-2 border-ochre pl-5">
+              <p key={i} className="font-display text-2xl md:text-3xl text-balance leading-snug border-l-2 border-accent pl-5">
                 {b}
               </p>
             ))}

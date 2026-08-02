@@ -50,7 +50,7 @@ export const craftPillars: CraftPillar[] = [
     slug: "design",
     title: "Design as code",
     lead: "I don't hand off the hard visual decisions.",
-    body: `Typography, motion, photography direction, brand systems — I design them in the same pass as the markup. Taken Time is a quiet studio. Sigma is motion-forward commercial stone. This portfolio is editorial paper and ochre. If the first viewport could belong to someone else, the branding failed. I treat that as a bug.`,
+    body: `Typography, motion, photography direction, brand systems — I design them in the same pass as the markup. Taken Time is a quiet studio. Sigma is motion-forward commercial stone. This portfolio is engineered monochrome with one working blue. If the first viewport could belong to someone else, the branding failed. I treat that as a bug.`,
     where: ["Taken Time to Design", "Sigma Marble Studio", "Atlas Portfolio", "UTampa AKPSI"],
   },
 ];

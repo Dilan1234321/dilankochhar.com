@@ -4,21 +4,26 @@
 
 :root {
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-display: "Fraunces", "Times New Roman", serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 html,
 body {
-  background: #EFE6D5;
-  color: #1C1F2B;
+  background: #ffffff;
+  color: #0a0a0b;
   -webkit-font-smoothing: antialiased;
   font-family: var(--font-sans);
 }
 
 ::selection {
-  background: #1C1F2B;
-  color: #EFE6D5;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* Display headings — tight, engineered, no serif. */
+.font-display {
+  font-weight: 600;
+  letter-spacing: -0.03em;
 }
 
 .text-balance {
@@ -30,30 +35,32 @@ body {
 }
 
 .hairline {
-  border-color: rgba(28, 31, 43, 0.14);
+  border-color: rgba(10, 10, 11, 0.12);
 }
 
 .rule {
   height: 1px;
-  background: rgba(28, 31, 43, 0.14);
+  background: rgba(10, 10, 11, 0.12);
 }
 
-/* Gallery tiles — clean, minimal, gallery-wall feeling. */
-.tile {
+/* Case cards — bordered, quiet, professional. */
+.case-card {
   position: relative;
-  overflow: hidden;
-  background: #1C1F2B;
+  border: 1px solid rgba(10, 10, 11, 0.12);
+  background: #ffffff;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-.tile-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.9s cubic-bezier(.22,1,.36,1);
+.case-card:hover {
+  border-color: rgba(37, 99, 235, 0.55);
+  box-shadow: 0 12px 32px -18px rgba(10, 10, 11, 0.25);
+  transform: translateY(-2px);
 }
 
-.tile:hover .tile-img {
-  transform: scale(1.04);
+@media (prefers-reduced-motion: reduce) {
+  .case-card,
+  .case-card:hover {
+    transition: none;
+    transform: none;
+  }
 }

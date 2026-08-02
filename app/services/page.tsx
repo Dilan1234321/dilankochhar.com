@@ -62,12 +62,15 @@ export default function ServicesPage() {
       />
 
       {/* Header */}
-      <section className="px-6 md:px-10 pt-36 md:pt-44 pb-16">
-        <div className="mx-auto max-w-[92rem] grid md:grid-cols-12 gap-8 items-end">
-          <h1 className="md:col-span-8 font-display text-[14vw] md:text-[9rem] leading-[0.9] tracking-tight">
-            Services.
-          </h1>
-          <p className="md:col-span-4 text-lg md:text-xl text-ink/65 leading-relaxed md:text-right">
+      <section className="px-6 md:px-10 pt-32 md:pt-40 pb-16">
+        <div className="mx-auto max-w-[88rem] grid md:grid-cols-12 gap-8 items-end">
+          <div className="md:col-span-8">
+            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">Services</p>
+            <h1 className="font-display text-4xl md:text-6xl tracking-tight">
+              Hire me.
+            </h1>
+          </div>
+          <p className="md:col-span-4 text-lg text-ink/60 leading-relaxed md:text-right">
             Two ways to work with me. Both are done by one person — the one whose
             name is on this site.
           </p>
@@ -76,7 +79,7 @@ export default function ServicesPage() {
 
       {/* Retainer */}
       <section id="retainer" className="scroll-mt-28 px-6 md:px-10 pb-24">
-        <div className="mx-auto max-w-[92rem]">
+        <div className="mx-auto max-w-[88rem]">
           <div className="border hairline">
             <div className="grid md:grid-cols-12">
               {/* Offer panel */}
@@ -88,7 +91,7 @@ export default function ServicesPage() {
                   <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[0.95] text-balance">
                     {retainer.name}
                   </h2>
-                  <p className="mt-8 font-display text-5xl md:text-7xl text-ochre tabular-nums">
+                  <p className="mt-8 font-display text-5xl md:text-6xl text-accentBright tabular-nums">
                     {retainer.price}
                   </p>
                   <p className="mt-8 text-lg text-paper/70 leading-relaxed">{retainer.lead}</p>
@@ -96,7 +99,7 @@ export default function ServicesPage() {
                 <div>
                   <a
                     href={`mailto:ceo@hellodilly.com?subject=${encodeURIComponent("Search & AI Visibility retainer")}`}
-                    className="inline-flex items-center gap-3 rounded-full bg-paper text-ink px-6 py-3 text-sm font-medium hover:bg-ochre hover:text-paper transition-colors"
+                    className="inline-flex items-center gap-3 rounded-md bg-paper text-ink px-6 py-3 text-sm font-medium hover:bg-accent hover:text-paper transition-colors"
                   >
                     Start with an email <span aria-hidden>→</span>
                   </a>
@@ -127,7 +130,7 @@ export default function ServicesPage() {
                   {retainer.evidence}{" "}
                   <Link
                     href="/work#n-plus-one"
-                    className="underline decoration-ochre underline-offset-4 hover:text-ochre"
+                    className="underline decoration-accent underline-offset-4 hover:text-accent"
                   >
                     See the build →
                   </Link>
@@ -140,13 +143,13 @@ export default function ServicesPage() {
 
       {/* Project builds */}
       <section id="builds" className="scroll-mt-28 px-6 md:px-10 pb-24">
-        <div className="mx-auto max-w-[92rem] grid md:grid-cols-12 gap-10">
+        <div className="mx-auto max-w-[88rem] grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <p className="text-xs uppercase tracking-widest text-ink/50">{builds.eyebrow}</p>
             <h2 className="mt-6 font-display text-4xl md:text-5xl leading-[0.95] text-balance">
               {builds.name}
             </h2>
-            <p className="mt-6 font-display text-2xl text-ochre">{builds.price}</p>
+            <p className="mt-6 font-display text-2xl text-accent">{builds.price}</p>
           </div>
           <div className="md:col-span-8">
             <p className="text-lg md:text-xl text-ink/70 leading-relaxed max-w-2xl">
@@ -161,7 +164,7 @@ export default function ServicesPage() {
             </ul>
             <Link
               href="/work"
-              className="inline-flex items-center gap-2 mt-8 text-sm text-ink/70 hover:text-ochre transition-colors"
+              className="inline-flex items-center gap-2 mt-8 text-sm text-ink/70 hover:text-accent transition-colors"
             >
               Every claim above is on the work page <span aria-hidden>→</span>
             </Link>
@@ -171,7 +174,7 @@ export default function ServicesPage() {
 
       {/* How it works */}
       <section className="bg-ink text-paper px-6 md:px-10 py-24 md:py-32">
-        <div className="mx-auto max-w-[92rem]">
+        <div className="mx-auto max-w-[88rem]">
           <p className="text-xs uppercase tracking-widest text-paper/50 mb-14">How it works</p>
           <div className="grid md:grid-cols-3 gap-10 md:gap-14">
             {steps.map((s) => (
@@ -187,7 +190,7 @@ export default function ServicesPage() {
 
       {/* FAQ */}
       <section className="px-6 md:px-10 py-24">
-        <div className="mx-auto max-w-[92rem] grid md:grid-cols-12 gap-10">
+        <div className="mx-auto max-w-[88rem] grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <p className="text-xs uppercase tracking-widest text-ink/50">Straight answers</p>
             <h2 className="mt-6 font-display text-4xl md:text-5xl leading-[0.95]">Questions.</h2>
@@ -205,20 +208,20 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <section className="px-6 md:px-10 pb-32">
-        <div className="mx-auto max-w-[92rem] border-t hairline pt-20">
+        <div className="mx-auto max-w-[88rem] border-t hairline pt-20">
           <h2 className="font-display text-5xl md:text-7xl leading-[0.95] text-balance max-w-4xl">
             Ready when you are.
           </h2>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href={`mailto:ceo@hellodilly.com?subject=${encodeURIComponent("Working together")}`}
-              className="inline-flex items-center gap-3 rounded-full bg-ink text-paper px-6 py-3 text-sm hover:bg-ochre transition-colors"
+              className="inline-flex items-center gap-3 rounded-md bg-ink text-paper px-6 py-3 text-sm hover:bg-accent transition-colors"
             >
               ceo@hellodilly.com
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 rounded-full border border-ink/30 px-6 py-3 text-sm text-ink/80 hover:border-ink hover:text-ink transition"
+              className="inline-flex items-center gap-3 rounded-md border border-ink/30 px-6 py-3 text-sm text-ink/80 hover:border-ink hover:text-ink transition"
             >
               Other ways to reach me
             </Link>

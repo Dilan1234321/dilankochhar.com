@@ -36,9 +36,9 @@ export default function DillyPage() {
     <>
       {/* Header */}
       <section className="px-6 md:px-10 pt-36 md:pt-44 pb-12">
-        <div className="mx-auto max-w-[92rem]">
-          <p className="text-xs uppercase tracking-widest text-ink/50">The Company</p>
-          <h1 className="mt-6 font-display text-[14vw] md:text-[11rem] leading-[0.88] tracking-tight">
+        <div className="mx-auto max-w-[88rem]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50">The Company</p>
+          <h1 className="mt-4 font-display text-4xl md:text-6xl tracking-tight">
             Dilly.
           </h1>
           <p className="mt-10 max-w-4xl text-2xl md:text-3xl text-ink/80 leading-snug">
@@ -51,7 +51,7 @@ export default function DillyPage() {
 
       {/* Problem */}
       <section className="border-t hairline px-6 md:px-10 py-24 md:py-32">
-        <div className="mx-auto max-w-[92rem] grid md:grid-cols-12 gap-10">
+        <div className="mx-auto max-w-[88rem] grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <p className="text-xs uppercase tracking-widest text-ink/50">The problem</p>
           </div>
@@ -71,7 +71,7 @@ export default function DillyPage() {
 
       {/* Insight */}
       <section className="bg-ink text-paper px-6 md:px-10 py-24 md:py-32">
-        <div className="mx-auto max-w-[92rem]">
+        <div className="mx-auto max-w-[88rem]">
           <p className="text-xs uppercase tracking-widest text-paper/50 mb-10">The insight</p>
           <p className="font-display text-3xl md:text-6xl leading-[1.1] text-balance max-w-5xl">
             Career readiness isn't a feeling. It's a function of inputs you can measure and
@@ -82,7 +82,7 @@ export default function DillyPage() {
 
       {/* How it works */}
       <section className="px-6 md:px-10 py-24 md:py-32">
-        <div className="mx-auto max-w-[92rem]">
+        <div className="mx-auto max-w-[88rem]">
           <p className="text-xs uppercase tracking-widest text-ink/50 mb-10">How it works</p>
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {principles.map((p) => (
@@ -98,7 +98,7 @@ export default function DillyPage() {
 
       {/* Why me */}
       <section className="border-t hairline px-6 md:px-10 py-24 md:py-32">
-        <div className="mx-auto max-w-[92rem] grid md:grid-cols-12 gap-10">
+        <div className="mx-auto max-w-[88rem] grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <p className="text-xs uppercase tracking-widest text-ink/50">Why me</p>
           </div>
@@ -122,7 +122,7 @@ export default function DillyPage() {
 
       {/* CTA */}
       <section className="px-6 md:px-10 pb-24">
-        <div className="mx-auto max-w-[92rem] border-t hairline pt-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="mx-auto max-w-[88rem] border-t hairline pt-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="text-xs uppercase tracking-widest text-ink/50">Investors · Operators · Believers</p>
             <h3 className="mt-4 font-display text-3xl md:text-5xl text-balance max-w-2xl">
@@ -132,13 +132,13 @@ export default function DillyPage() {
           <div className="flex gap-3 flex-wrap">
             <a
               href="mailto:ceo@hellodilly.com"
-              className="inline-flex items-center gap-3 rounded-full bg-ink text-paper px-6 py-3 text-sm hover:bg-ochre transition-colors"
+              className="inline-flex items-center gap-3 rounded-md bg-ink text-paper px-6 py-3 text-sm hover:bg-accent transition-colors"
             >
               ceo@hellodilly.com
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 rounded-full border border-ink/30 px-6 py-3 text-sm text-ink/80 hover:border-ink hover:text-ink transition"
+              className="inline-flex items-center gap-3 rounded-md border border-ink/30 px-6 py-3 text-sm text-ink/80 hover:border-ink hover:text-ink transition"
             >
               Other channels
             </Link>

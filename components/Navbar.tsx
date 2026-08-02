@@ -16,10 +16,9 @@ export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const onHome = pathname === "/";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -29,22 +28,21 @@ export default function Navbar() {
     setOpen(false);
   }, [pathname]);
 
-  const overHero = onHome && !scrolled;
-  const textColor = overHero ? "text-white" : "text-ink";
-  const mutedColor = overHero ? "text-white/70" : "text-ink/60";
-
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${
-        scrolled ? "bg-paper/90 backdrop-blur-md border-b hairline" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 bg-paper/90 backdrop-blur-md transition-shadow ${
+        scrolled ? "border-b hairline" : ""
       }`}
     >
-      <nav className="mx-auto max-w-[92rem] px-6 md:px-10 h-20 flex items-center justify-between">
-        <Link href="/" className={`font-display text-2xl tracking-tight transition-colors ${textColor}`}>
-          Dilan Kochhar
+      <nav className="mx-auto max-w-[88rem] px-6 md:px-10 h-16 flex items-center justify-between">
+        <Link href="/" className="flex items-baseline gap-3">
+          <span className="font-display text-lg tracking-tight text-ink">Dilan Kochhar</span>
+          <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-[0.2em] text-ink/40">
+            Web · AI · Search
+          </span>
         </Link>
 
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-7">
           {links.map((l) => {
             const active = pathname === l.href;
             return (
@@ -52,8 +50,8 @@ export default function Navbar() {
                 <Link
                   href={l.href}
                   className={`text-sm transition-colors ${
-                    active ? textColor : mutedColor
-                  } hover:${textColor}`}
+                    active ? "text-ink font-medium" : "text-ink/60 hover:text-ink"
+                  }`}
                 >
                   {l.label}
                 </Link>
@@ -62,21 +60,17 @@ export default function Navbar() {
           })}
           <li>
             <Link
-              href="/contact"
-              className={`ml-2 inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm transition-colors ${
-                overHero
-                  ? "bg-white text-ink hover:bg-paperHi"
-                  : "bg-ink text-paper hover:bg-ochre"
-              }`}
+              href="/services"
+              className="ml-2 inline-flex items-center gap-2 rounded-md bg-ink text-paper px-4 py-2 text-sm font-medium hover:bg-accent transition-colors"
             >
-              Get in touch
+              Hire me
             </Link>
           </li>
         </ul>
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className={`md:hidden p-2 ${textColor}`}
+          className="md:hidden p-2 text-ink"
           aria-label="Toggle menu"
         >
           <div className="space-y-1.5">
@@ -94,8 +88,8 @@ export default function Navbar() {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className={`block font-display text-3xl ${
-                    pathname === l.href ? "text-ochre" : "text-ink"
+                  className={`block font-display text-2xl ${
+                    pathname === l.href ? "text-accent" : "text-ink"
                   }`}
                 >
                   {l.label}
@@ -104,10 +98,10 @@ export default function Navbar() {
             ))}
             <li className="pt-2">
               <Link
-                href="/contact"
-                className="inline-flex rounded-full bg-ink text-paper px-5 py-2.5 text-sm"
+                href="/services"
+                className="inline-flex rounded-md bg-ink text-paper px-5 py-2.5 text-sm font-medium"
               >
-                Get in touch
+                Hire me
               </Link>
             </li>
           </ul>
