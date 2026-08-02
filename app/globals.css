@@ -64,3 +64,45 @@ body {
     transform: none;
   }
 }
+
+/* Live-projects ticker. */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: marquee 36s linear infinite;
+}
+
+.marquee-row {
+  display: inline-flex;
+  align-items: center;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Arrow micro-interaction on links and buttons. */
+.arrow-shift {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+a:hover .arrow-shift,
+.group:hover .arrow-shift {
+  transform: translateX(3px);
+}

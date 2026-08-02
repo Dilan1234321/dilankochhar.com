@@ -28,16 +28,21 @@ export default function Navbar() {
     setOpen(false);
   }, [pathname]);
 
+  // Over the dark home hero the nav runs light; everywhere else it's solid paper.
+  const overDark = pathname === "/" && !scrolled && !open;
+  const text = overDark ? "text-paper" : "text-ink";
+  const muted = overDark ? "text-paper/60 hover:text-paper" : "text-ink/60 hover:text-ink";
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-paper/90 backdrop-blur-md transition-shadow ${
-        scrolled ? "border-b hairline" : ""
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        overDark ? "bg-transparent" : "bg-paper/90 backdrop-blur-md border-b hairline"
       }`}
     >
       <nav className="mx-auto max-w-[88rem] px-6 md:px-10 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-baseline gap-3">
-          <span className="font-display text-lg tracking-tight text-ink">Dilan Kochhar</span>
-          <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-[0.2em] text-ink/40">
+          <span className={`font-display text-lg tracking-tight transition-colors ${text}`}>Dilan Kochhar</span>
+          <span className={`hidden sm:inline font-mono text-[10px] uppercase tracking-[0.2em] transition-colors ${overDark ? "text-paper/40" : "text-ink/40"}`}>
             Web · AI · Search
           </span>
         </Link>
@@ -49,9 +54,7 @@ export default function Navbar() {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className={`text-sm transition-colors ${
-                    active ? "text-ink font-medium" : "text-ink/60 hover:text-ink"
-                  }`}
+                  className={`text-sm transition-colors ${active ? `${text} font-medium` : muted}`}
                 >
                   {l.label}
                 </Link>
@@ -61,7 +64,11 @@ export default function Navbar() {
           <li>
             <Link
               href="/services"
-              className="ml-2 inline-flex items-center gap-2 rounded-md bg-ink text-paper px-4 py-2 text-sm font-medium hover:bg-accent transition-colors"
+              className={`ml-2 inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors ${
+                overDark
+                  ? "bg-paper text-ink hover:bg-accentBright hover:text-paper"
+                  : "bg-ink text-paper hover:bg-accent"
+              }`}
             >
               Hire me
             </Link>
@@ -70,7 +77,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden p-2 text-ink"
+          className={`md:hidden p-2 transition-colors ${text}`}
           aria-label="Toggle menu"
         >
           <div className="space-y-1.5">
