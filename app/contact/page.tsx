@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Email Dilan Kochhar about builds, SEO & AEO retainers, or Dilly. No form, no autoresponder — every message gets read.",
+    "Email Dilan Kochhar about builds, SEO & AEO retainers, or Dilly. No form, no autoresponder. Every message gets read.",
   alternates: { canonical: "/contact" },
 };
 
@@ -34,7 +34,7 @@ export default function ContactPage() {
       {/* Header */}
       <section className="px-6 md:px-10 pt-36 md:pt-44 pb-12">
         <div className="mx-auto max-w-[88rem]">
-          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50">Contact</p>
+          <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50">Contact</p>
           <h1 className="mt-4 font-display text-4xl md:text-6xl tracking-tight">
             Say hi.
           </h1>
@@ -78,7 +78,7 @@ export default function ContactPage() {
       <section className="border-t hairline px-6 md:px-10 py-24">
         <div className="mx-auto max-w-[88rem]">
           <p className="font-display text-3xl md:text-6xl leading-[1.1] text-balance max-w-5xl">
-            If you're building something hard, something nobody else thinks will work —
+            If you're building something hard, something nobody else thinks will work,
             write me first.
           </p>
         </div>

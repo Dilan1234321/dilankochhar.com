@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dilly — the company",
+  title: "Dilly, the company",
   description:
     "Dilly turns every résumé, major, and skill into a real-time readiness score that tells college students exactly what to do next. Founded, designed, and built by Dilan Kochhar.",
   alternates: { canonical: "/dilly" },
@@ -17,7 +17,7 @@ const principles = [
   {
     n: "02",
     t: "The score updates in real time.",
-    d: "Add a project, take a course, change your goal — the readiness number moves. Career prep stops being a guessing game.",
+    d: "Add a project, take a course, change your goal, and the readiness number moves. Career prep stops being a guessing game.",
   },
   {
     n: "03",
@@ -37,7 +37,7 @@ export default function DillyPage() {
       {/* Header */}
       <section className="px-6 md:px-10 pt-36 md:pt-44 pb-12">
         <div className="mx-auto max-w-[88rem]">
-          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50">The Company</p>
+          <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50">The Company</p>
           <h1 className="mt-4 font-display text-4xl md:text-6xl tracking-tight">
             Dilly.
           </h1>

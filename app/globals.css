@@ -4,7 +4,6 @@
 
 :root {
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 html,
@@ -20,7 +19,7 @@ body {
   color: #ffffff;
 }
 
-/* Display headings — tight, engineered, no serif. */
+/* Display headings: tight, engineered, no serif. */
 .font-display {
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -43,7 +42,7 @@ body {
   background: rgba(10, 10, 11, 0.12);
 }
 
-/* Case cards — bordered, quiet, professional. */
+/* Case cards: bordered, quiet, professional. */
 .case-card {
   position: relative;
   border: 1px solid rgba(10, 10, 11, 0.12);

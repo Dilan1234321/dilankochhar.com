@@ -42,7 +42,7 @@ export default function Navbar() {
       <nav className="mx-auto max-w-[88rem] px-6 md:px-10 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-baseline gap-3">
           <span className={`font-display text-lg tracking-tight transition-colors ${text}`}>Dilan Kochhar</span>
-          <span className={`hidden sm:inline font-mono text-[10px] uppercase tracking-[0.2em] transition-colors ${overDark ? "text-paper/40" : "text-ink/40"}`}>
+          <span className={`hidden sm:inline font-medium text-[10px] uppercase tracking-[0.2em] transition-colors ${overDark ? "text-paper/40" : "text-ink/40"}`}>
             Web · AI · Search
           </span>
         </Link>

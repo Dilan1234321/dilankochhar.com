@@ -4,18 +4,18 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Self-taught developer and founder in Tampa. Co-founded a charity that raised $22K, founded Dilly, and builds every project solo — design through deploy.",
+    "Self-taught developer and founder in Tampa. Co-founded a charity that raised $22K, founded Dilly, and builds every project solo, design through deploy.",
   alternates: { canonical: "/about" },
 };
 
 const timeline = [
-  { y: "2005", t: "Born on Long Island, NY." },
+  { y: "2005", t: "Born in New York." },
   { y: "School", t: "First learned to code. Didn't think much of it at the time." },
   { y: "2022", t: "Started getting actually good at web development." },
   { y: "2025", t: "Shipped utampaakpsi.com. First real project with my name on it." },
   { y: "2026", t: "Launched an informal agency for Tampa Bay startups." },
   { y: "2026", t: "Built Dilly." },
-  { y: "2026", t: "Productized search: SEO & AEO retainers for businesses that want to be found — by Google and by AI." },
+  { y: "2026", t: "Productized search: SEO & AEO retainers for businesses that want to be found by Google and by AI." },
 ];
 
 const beliefs = [
@@ -33,7 +33,7 @@ export default function AboutPage() {
       {/* Header */}
       <section className="px-6 md:px-10 pt-36 md:pt-44 pb-12">
         <div className="mx-auto max-w-[88rem]">
-          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50">About</p>
+          <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50">About</p>
           <h1 className="mt-4 font-display text-4xl md:text-6xl tracking-tight">
             The person you&apos;d be hiring.
           </h1>
@@ -60,7 +60,7 @@ export default function AboutPage() {
               I'm Dilan. I'm 20. I build the things I wish existed.
             </p>
             <p>
-              I grew up on Long Island and live in Tampa, a sophomore at the University of
+              I grew up in New York and live in Tampa, a sophomore at the University of
               Tampa. Self-taught. Nobody told me I was allowed to start a company, so I
               started one anyway. Before the code, I co-founded the{" "}
               <a
@@ -74,8 +74,8 @@ export default function AboutPage() {
               , a charity that has raised over $22,000.
             </p>
             <p>
-              I got into this because I watched friends — smart, capable, hardworking friends
-              — flounder trying to find their first real job out of college. Career centers
+              I got into this because I watched smart, capable, hardworking
+              friends flounder trying to find their first real job out of college. Career centers
               were useless. LinkedIn was a popularity contest. I figured someone should fix
               it. Then I figured: why not me.
             </p>
@@ -86,8 +86,8 @@ export default function AboutPage() {
             <p>
               Ask me what I&apos;m good at and I won&apos;t hand you a tech list. I&apos;ll
               talk about product sense, agents that do real work, full-stack ownership,
-              growth engineering, and design as code — then point at the project where each
-              one had to prove itself.{" "}
+              growth engineering, and design as code. Then I point at the project where
+              each one had to prove itself.{" "}
               <a
                 href="/work#craft"
                 className="underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
@@ -100,7 +100,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* How I work — skills in first person */}
+      {/* How I work: skills in first person */}
       <section className="px-6 md:px-10 pb-24">
         <div className="mx-auto max-w-[88rem]">
           <p className="text-xs uppercase tracking-widest text-ink/50 mb-10">How I work</p>
@@ -122,13 +122,13 @@ export default function AboutPage() {
                 <span className="text-ink">Erickson</span> and{" "}
                 <span className="text-ink">Sigma</span> are lead machines dressed as brand.
                 <span className="text-ink"> Taken Time</span> is taste under constraint.
-                <span className="text-ink"> AKPsi</span> was org product — directories,
-                donations, hire-our-members — before I had a SaaS to point at.
+                <span className="text-ink"> AKPsi</span> was org product, directories,
+                donations, hire-our-members, before I had a SaaS to point at.
               </p>
               <p>
                 I&apos;m not interested in looking technical. I&apos;m interested in being
-                useful. The long version of every skill — what I did with it, on which
-                project, and why it mattered — is written out on{" "}
+                useful. The long version of every skill, what I did with it and why it
+                mattered, is written out on{" "}
                 <a
                   href="/work#by-project"
                   className="underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"

@@ -4,8 +4,8 @@ import { projects, liveCount, wipCount, asWord } from "@/lib/projects";
 import { craftIntro, craftPillars, howIWork } from "@/lib/craft";
 
 export const metadata: Metadata = {
-  title: "Work — projects, live and in build",
-  description: `${asWord(projects.length)} projects: SaaS, recruiting engines, client sites, and AI agents — with a first-person breakdown of how each skill was actually used.`,
+  title: "Work: projects, live and in build",
+  description: `${asWord(projects.length)} projects: SaaS, recruiting engines, client sites, and AI agents, with a first-person breakdown of how each skill was actually used.`,
   alternates: { canonical: "/work" },
 };
 
@@ -16,7 +16,7 @@ export default function WorkPage() {
       <section className="px-6 md:px-10 pt-32 md:pt-40 pb-12">
         <div className="mx-auto max-w-[88rem] grid md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">Work</p>
+            <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">Work</p>
             <h1 className="font-display text-4xl md:text-6xl tracking-tight">
               Proof, not promises.
             </h1>
@@ -50,10 +50,10 @@ export default function WorkPage() {
               className={`case-card group block p-7 md:p-8 ${p.href ? "" : "opacity-70"}`}
             >
               <div className="flex items-baseline justify-between gap-4">
-                <span className="font-mono text-xs text-ink/40 tabular-nums">
+                <span className="font-medium text-xs text-ink/40 tabular-nums">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/45 text-right">
+                <span className="font-medium text-[10px] uppercase tracking-[0.2em] text-ink/45 text-right">
                   {p.tag} · {p.year}
                 </span>
               </div>
@@ -62,7 +62,7 @@ export default function WorkPage() {
               </h2>
               <p className="mt-2 text-sm text-ink/55">{p.role}</p>
               <p className="mt-4 text-ink/60 leading-relaxed line-clamp-3">{p.summary}</p>
-              <p className="mt-6 font-mono text-[11px] text-ink/45 leading-relaxed">{p.stack}</p>
+              <p className="mt-6 font-medium text-[11px] text-ink/45 leading-relaxed">{p.stack}</p>
               <p className="mt-5 text-sm">
                 {p.href ? (
                   <span className="text-ink/70 group-hover:text-accent transition-colors">
@@ -80,7 +80,7 @@ export default function WorkPage() {
       {/* Craft thesis */}
       <section id="craft" className="scroll-mt-24 bg-ink text-paper px-6 md:px-10 py-20 md:py-28">
         <div className="mx-auto max-w-[88rem]">
-          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-paper/50 mb-4">
+          <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-paper/50 mb-4">
             {craftIntro.eyebrow}
           </p>
           <h2 className="font-display text-3xl md:text-5xl tracking-tight max-w-4xl text-balance">
@@ -103,7 +103,7 @@ export default function WorkPage() {
             {craftPillars.map((pillar, i) => (
               <article key={pillar.slug} className="py-10 md:py-14 grid md:grid-cols-12 gap-8">
                 <div className="md:col-span-4">
-                  <p className="font-mono text-xs tabular-nums text-paper/40 mb-3">
+                  <p className="font-medium text-xs tabular-nums text-paper/40 mb-3">
                     {String(i + 1).padStart(2, "0")}
                   </p>
                   <h3 className="font-display text-2xl md:text-3xl tracking-tight">
@@ -134,12 +134,12 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* Skills by project — long form */}
+      {/* Skills by project: long form */}
       <section id="by-project" className="scroll-mt-24 px-6 md:px-10 py-20 md:py-28">
         <div className="mx-auto max-w-[88rem]">
           <div className="grid md:grid-cols-12 gap-8 mb-14 items-end">
             <div className="md:col-span-7">
-              <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">By project</p>
+              <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">By project</p>
               <h2 className="font-display text-3xl md:text-5xl tracking-tight">
                 Where each skill showed up.
               </h2>
@@ -158,17 +158,17 @@ export default function WorkPage() {
                 className="scroll-mt-24 py-12 md:py-16 grid md:grid-cols-12 gap-8 md:gap-12"
               >
                 <div className="md:col-span-4">
-                  <p className="font-mono text-xs tabular-nums text-ink/40 mb-3">
+                  <p className="font-medium text-xs tabular-nums text-ink/40 mb-3">
                     {String(i + 1).padStart(2, "0")}
                   </p>
                   <h3 className="font-display text-2xl md:text-4xl tracking-tight text-ink">
                     {p.title}
                   </h3>
-                  <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50">
+                  <p className="mt-4 font-medium text-[10px] uppercase tracking-[0.2em] text-ink/50">
                     {p.tag} · {p.year}
                   </p>
                   <p className="mt-2 text-sm text-ink/55">{p.role}</p>
-                  <p className="mt-6 font-mono text-[11px] leading-relaxed text-ink/45">
+                  <p className="mt-6 font-medium text-[11px] leading-relaxed text-ink/45">
                     {p.stack}
                   </p>
                   {p.href ? (
@@ -189,7 +189,7 @@ export default function WorkPage() {
                   <p className="text-lg md:text-xl text-ink/75 leading-relaxed text-pretty max-w-3xl">
                     {p.summary}
                   </p>
-                  <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.2em] text-ink/40">
+                  <p className="mt-10 font-medium text-[10px] uppercase tracking-[0.2em] text-ink/40">
                     Skills on this project
                   </p>
                   <ul className="mt-4 divide-y divide-ink/10 border-t hairline">
@@ -212,12 +212,12 @@ export default function WorkPage() {
       {/* Index */}
       <section id="index" className="scroll-mt-24 px-6 md:px-10 pb-24">
         <div className="mx-auto max-w-[88rem]">
-          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-6">Index</p>
+          <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-6">Index</p>
           <ul className="divide-y divide-ink/10 border-y hairline">
             {projects.map((p, i) => (
               <li key={p.slug}>
                 <div className="grid grid-cols-12 gap-4 py-4 items-baseline">
-                  <span className="col-span-1 font-mono text-sm text-ink/40 tabular-nums">
+                  <span className="col-span-1 font-medium text-sm text-ink/40 tabular-nums">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <Link

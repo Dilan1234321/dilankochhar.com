@@ -15,7 +15,7 @@ export type Project = {
   image?: string;
   aspect: string;
   stack: string;
-  /** Longer narrative — how the craft came together on this project */
+  /** Longer narrative: how the craft came together on this project */
   summary: string;
   skills: Skill[];
 };
@@ -33,11 +33,11 @@ export const projects: Project[] = [
     aspect: "aspect-[4/5]",
     stack: "Expo · React Native · FastAPI · PostgreSQL · Claude / GPT · Stripe",
     summary:
-      "This is the hardest thing I've built. Dilly is a career OS for students — not a chatbot bolted onto a landing page. One mobile app holds three product skins (career, college admissions, pre-med), a voice coach, job matching, Stripe paywalls, and a FastAPI brain on Postgres. I founded it, designed it, and wrote the code end to end. Every skill below had to work at 2 a.m. when a sophomore actually opens the app.",
+      "This is the hardest thing I've built. Dilly is a career OS for students, not a chatbot bolted onto a landing page. One mobile app holds three product skins (career, college admissions, pre-med), a voice coach, job matching, Stripe paywalls, and a FastAPI brain on Postgres. I founded it, designed it, and wrote the code end to end. Every skill below had to work at 2 a.m. when a sophomore actually opens the app.",
     skills: [
       {
         name: "Product architecture",
-        used: "I designed three products that share one spine — auth, metering, AI, and profile facts — so career, admissions, and medical don't become three separate codebases. The skill was knowing what to share and what to isolate before the complexity ate me.",
+        used: "I designed three products that share one spine (auth, metering, AI, and profile facts) so career, admissions, and medical don't become three separate codebases. The skill was knowing what to share and what to isolate before the complexity ate me.",
       },
       {
         name: "Expo / React Native",
@@ -45,7 +45,7 @@ export const projects: Project[] = [
       },
       {
         name: "FastAPI + PostgreSQL",
-        used: "The backend is a large FastAPI surface on AWS RDS — resume parsing, ATS scoring, internship crawl ingest, cron jobs, SSE streaming. I treat the API as the product: if the route isn't trustworthy, the AI is just theater.",
+        used: "The backend is a large FastAPI surface on AWS RDS: resume parsing, ATS scoring, internship crawl ingest, cron jobs, SSE streaming. I treat the API as the product: if the route isn't trustworthy, the AI is just theater.",
       },
       {
         name: "LLM systems",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
       },
       {
         name: "Auth & payments",
-        used: "Email OTP, magic links, Sign in with Apple and Google, Stripe subscriptions with webhook idempotency, Moves-based metering, even Apple Wallet passes. Monetization and identity aren't afterthoughts — they're product features I own.",
+        used: "Email OTP, magic links, Sign in with Apple and Google, Stripe subscriptions with webhook idempotency, Moves-based metering, even Apple Wallet passes. Monetization and identity aren't afterthoughts. They're product features I own.",
       },
       {
         name: "Ops & infra",
@@ -77,11 +77,11 @@ export const projects: Project[] = [
     skills: [
       {
         name: "Programmatic SEO",
-        used: "I wrote Python generators that emit fifty-plus state pages, role pages, a salary guide, and an insights hub from templates. One codebase, a whole keyword map — so the firm shows up when someone searches how to hire AI talent in Texas, not just \"N+1.\"",
+        used: "I wrote Python generators that emit fifty-plus state pages, role pages, a salary guide, and an insights hub from templates. One codebase, a whole keyword map, so the firm shows up when someone searches how to hire AI talent in Texas, not just \"N+1.\"",
       },
       {
         name: "GEO / AI discoverability",
-        used: "llms.txt, Organization and FAQ JSON-LD, careful canonicals — I treat ChatGPT and AI Overviews as channels the same way I treat Google. If models cite you, you win deals you never bid on.",
+        used: "llms.txt, Organization and FAQ JSON-LD, careful canonicals. I treat ChatGPT and AI Overviews as channels the same way I treat Google. If models cite you, you win deals you never bid on.",
       },
       {
         name: "Three.js",
@@ -109,11 +109,11 @@ export const projects: Project[] = [
     aspect: "aspect-[4/3]",
     stack: "Static HTML · CSS · Vanilla JS · Formspree · BillHighway",
     summary:
-      "My first real project with my name on it. A full chapter site — brothers, officers, events, hire, sponsors, donate — designed and coded as lead developer. Skills here are org product thinking: directories, sponsorship tiers, donations, and a hire-our-members path that actually helps brothers get jobs.",
+      "My first real project with my name on it. A full chapter site: brothers, officers, events, hire, sponsors, donate. Designed and coded as lead developer. Skills here are org product thinking: directories, sponsorship tiers, donations, and a hire-our-members path that actually helps brothers get jobs.",
     skills: [
       {
         name: "Multi-page static architecture",
-        used: "Nine pages with shared behaviors, dark mode that sticks in localStorage, and a glass nav with a lamp-hover effect. No framework — just craft and consistency.",
+        used: "Nine pages with shared behaviors, dark mode that sticks in localStorage, and a glass nav with a lamp-hover effect. No framework, just craft and consistency.",
       },
       {
         name: "Org product patterns",
@@ -129,7 +129,7 @@ export const projects: Project[] = [
       },
       {
         name: "Motion & brand UI",
-        used: "Parallax hero, mobile nav, Cinzel and Montserrat locked to AKPsi identity. Brand fidelity is a skill — chapters notice when you get the navy wrong.",
+        used: "Parallax hero, mobile nav, Cinzel and Montserrat locked to AKPsi identity. Brand fidelity is a skill. Chapters notice when you get the navy wrong.",
       },
     ],
   },
@@ -145,15 +145,15 @@ export const projects: Project[] = [
     aspect: "aspect-[3/4]",
     stack: "Static HTML · CSS · Vanilla JS · Vercel",
     summary:
-      "An artist studio should feel like a studio — quiet, intentional, slow. I built Brooke Taken's commission site as brand first: gallery, tiers, FAQ, inquiry. The skills are taste under constraint — static HTML that still feels expensive, and a funnel that turns admiration into a commission brief.",
+      "An artist studio should feel like a studio: quiet, intentional, slow. I built Brooke Taken's commission site as brand first: gallery, tiers, FAQ, inquiry. The skills are taste under constraint: static HTML that still feels expensive, and a funnel that turns admiration into a commission brief.",
     skills: [
       {
         name: "Brand & art direction",
-        used: "Cormorant, Italiana, Cinzel; gold on ink; framed plaques under each piece. I designed the site so removing the logo would still feel like her work — not a generic template with her photos dropped in.",
+        used: "Cormorant, Italiana, Cinzel; gold on ink; framed plaques under each piece. I designed the site so removing the logo would still feel like her work, not a generic template with her photos dropped in.",
       },
       {
         name: "Commission funnel",
-        used: "Pricing tiers plus an inquiry form that composes a structured mailto brief. Collectors don't need a SaaS checkout on day one — they need a clear next step that respects the artist.",
+        used: "Pricing tiers plus an inquiry form that composes a structured mailto brief. Collectors don't need a SaaS checkout on day one. They need a clear next step that respects the artist.",
       },
       {
         name: "Gallery UX",
@@ -161,7 +161,7 @@ export const projects: Project[] = [
       },
       {
         name: "Static deploy",
-        used: "Vercel routes for home, gallery, commissions, about, contact with shared JS. Fast, cheap, no CMS tax for a portfolio that changes when she finishes a piece — not every hour.",
+        used: "Vercel routes for home, gallery, commissions, about, contact with shared JS. Fast, cheap, no CMS tax for a portfolio that changes when she finishes a piece, not every hour.",
       },
     ],
   },
@@ -177,11 +177,11 @@ export const projects: Project[] = [
     aspect: "aspect-[4/3]",
     stack: "WordPress · Nonprofit ops · Fundraising",
     summary:
-      "Before I was a founder of software, I co-founded a charity. Kochhar Foundation exists to put brighter minds through technology — and the public site plus the storytelling helped raise over $22K. Skills here are mission, narrative, and shipping something people trust with money.",
+      "Before I was a founder of software, I co-founded a charity. Kochhar Foundation exists to put brighter minds through technology, and the public site plus the storytelling helped raise over $22K. Skills here are mission, narrative, and shipping something people trust with money.",
     skills: [
       {
         name: "Nonprofit founding",
-        used: "I wasn't the freelance developer on this one — I was co-founder. Mission, story, and donation path had to be real enough that strangers would give.",
+        used: "I wasn't the freelance developer on this one. I was co-founder. Mission, story, and donation path had to be real enough that strangers would give.",
       },
       {
         name: "WordPress",
@@ -205,11 +205,11 @@ export const projects: Project[] = [
     aspect: "aspect-[4/3]",
     stack: "Static HTML · CSS · FormSubmit · Vercel",
     summary:
-      "A Tampa flooring company doesn't need a design award — they need quote requests. I built a luxury-feeling marketing site that behaves like a sales tool: portfolio, craftsmanship story, FAQ, and FormSubmit quote capture with spam protection. Skills: local lead gen, conversion design, photography-led layout.",
+      "A Tampa flooring company doesn't need a design award. They need quote requests. I built a luxury-feeling marketing site that behaves like a sales tool: portfolio, craftsmanship story, FAQ, and FormSubmit quote capture with spam protection. Skills: local lead gen, conversion design, photography-led layout.",
     skills: [
       {
         name: "Local lead gen",
-        used: "I structured the site as a funnel — home to portfolio to craftsmanship to FAQ to contact — so a homeowner who trusts the work has an obvious next step: request a quote.",
+        used: "I structured the site as a funnel, home to portfolio to craftsmanship to FAQ to contact, so a homeowner who trusts the work has an obvious next step: request a quote.",
       },
       {
         name: "Form capture",
@@ -245,7 +245,7 @@ export const projects: Project[] = [
       },
       {
         name: "Motion design",
-        used: "Framer Motion plus Lenis — hero, panorama, wave text, reveal imagery. Motion that sells materiality: stone should feel heavy and precise, not bouncy.",
+        used: "Framer Motion plus Lenis: hero, panorama, wave text, reveal imagery. Motion that sells materiality: stone should feel heavy and precise, not bouncy.",
       },
       {
         name: "Interactive maps",
@@ -257,7 +257,7 @@ export const projects: Project[] = [
       },
       {
         name: "File-based CMS",
-        used: "TypeScript modules for projects, services, categories, testimonials. No headless CMS overhead for a marketing site that updates when a job finishes — not when a blog posts.",
+        used: "TypeScript modules for projects, services, categories, testimonials. No headless CMS overhead for a marketing site that updates when a job finishes, not when a blog posts.",
       },
     ],
   },
@@ -273,7 +273,7 @@ export const projects: Project[] = [
     aspect: "aspect-[4/5]",
     stack: "In progress",
     summary:
-      "On-demand delivery is a full-stack stress test: orders, dispatch, live status, payments. Scoops is in build. When the first public cut ships, this section will name every skill that had to work under load — not just look good in a mock.",
+      "On-demand delivery is a full-stack stress test: orders, dispatch, live status, payments. Scoops is in build. When the first public cut ships, this section will name every skill that had to work under load, not just look good in a mock.",
     skills: [
       {
         name: "Product design",
@@ -293,7 +293,7 @@ export const projects: Project[] = [
     aspect: "aspect-[4/5]",
     stack: "In progress",
     summary:
-      "An athletic brand needs a visual system before it needs a shop. Puchalski is in progress — brand language and site architecture first. Skills breakdown lands with the public launch.",
+      "An athletic brand needs a visual system before it needs a shop. Puchalski is in progress: brand language and site architecture first. Skills breakdown lands with the public launch.",
     skills: [
       {
         name: "Brand systems",

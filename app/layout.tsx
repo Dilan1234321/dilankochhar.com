@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,21 +11,14 @@ const inter = Inter({
   display: "swap",
 });
 
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://dilankochhar.com"),
   title: {
-    default: "Dilan Kochhar — Web developer, AI engineer & SEO/AEO specialist",
-    template: "%s — Dilan Kochhar",
+    default: "Dilan Kochhar | Web developer, AI engineer & SEO/AEO specialist",
+    template: "%s | Dilan Kochhar",
   },
   description:
-    "Websites, apps, and AI agents designed and built by one person — plus a $500/month SEO & AEO retainer that gets businesses found on Google and cited by AI. Founder of Dilly. Tampa, FL.",
+    "Websites, apps, and AI agents designed and built by one person, plus a $500/month SEO & AEO retainer that gets businesses found on Google and cited by AI. Founder of Dilly. Tampa, FL.",
   keywords: [
     "web developer Tampa",
     "SEO services",
@@ -37,18 +30,18 @@ export const metadata: Metadata = {
     "Dilan Kochhar",
   ],
   openGraph: {
-    title: "Dilan Kochhar — Web, AI & Search",
+    title: "Dilan Kochhar | Web, AI & Search",
     description:
-      "Websites, apps, and AI agents built solo — and a monthly SEO + AEO retainer that makes sure they get found.",
+      "Websites, apps, and AI agents built solo, and a monthly SEO + AEO retainer that makes sure they get found.",
     url: "https://dilankochhar.com",
     siteName: "Dilan Kochhar",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dilan Kochhar — Web, AI & Search",
+    title: "Dilan Kochhar | Web, AI & Search",
     description:
-      "Websites, apps, and AI agents built solo — and a monthly SEO + AEO retainer that makes sure they get found.",
+      "Websites, apps, and AI agents built solo, and a monthly SEO + AEO retainer that makes sure they get found.",
   },
   robots: { index: true, follow: true },
 };
@@ -75,7 +68,7 @@ const personJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body className="min-h-screen bg-paper text-ink antialiased">
         <script
           type="application/ld+json"

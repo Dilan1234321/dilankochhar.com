@@ -10,7 +10,7 @@ export default function Footer() {
             Built to be found.
           </p>
           <p className="mt-5 text-ink/60 text-sm max-w-md leading-relaxed">
-            Websites, apps, and AI agents — designed and coded by one person in Tampa.
+            Websites, apps, and AI agents, designed and coded by one person in Tampa.
             SEO &amp; AEO retainers from $500/month.
           </p>
         </div>

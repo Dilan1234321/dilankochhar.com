@@ -9,7 +9,7 @@ import Marquee from "@/components/Marquee";
 
 export const metadata: Metadata = {
   description:
-    "Dilan Kochhar designs and builds websites, apps, and AI agents — and runs a $500/month SEO & AEO retainer that gets businesses found on Google and cited by AI assistants.",
+    "Dilan Kochhar designs and builds websites, apps, and AI agents, and runs a $500/month SEO & AEO retainer that gets businesses found on Google and cited by AI assistants.",
   alternates: { canonical: "/" },
 };
 
@@ -27,7 +27,7 @@ const chips = [
 export default function Home() {
   return (
     <>
-      {/* HERO — dark, cinematic, engineered */}
+      {/* HERO: dark, cinematic, engineered */}
       <section className="relative bg-ink text-paper overflow-hidden">
         {/* Fine blueprint grid */}
         <div
@@ -40,12 +40,12 @@ export default function Home() {
         />
         <div className="relative mx-auto max-w-[88rem] px-6 md:px-10 pt-36 md:pt-44 pb-16 md:pb-20 grid md:grid-cols-12 gap-12 md:gap-14 items-center min-h-[92svh]">
           <div className="md:col-span-7">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-paper/50">
-              Web engineer · AI · SEO &amp; AEO — Tampa, FL
+            <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-paper/50">
+              Web engineer · AI · SEO &amp; AEO · Tampa, FL
             </p>
             <h1 className="mt-7 font-display text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight text-balance">
-              I build websites, apps, and AI agents —{" "}
-              <span className="text-paper/55">then make sure they get</span>{" "}
+              I build websites, apps, and AI agents.{" "}
+              <span className="text-paper/55">Then I make sure they get</span>{" "}
               <span className="text-accentBright">found.</span>
             </h1>
             <p className="mt-7 max-w-xl text-lg md:text-xl text-paper/60 leading-relaxed">
@@ -73,7 +73,7 @@ export default function Home() {
             <div className="mt-12 flex flex-wrap gap-3">
               {chips.map((c) => (
                 <div key={c.k} className="flex items-baseline gap-3 border border-paper/15 px-4 py-3">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-paper/45">
+                  <span className="font-medium text-[10px] uppercase tracking-[0.2em] text-paper/45">
                     {c.k}
                   </span>
                   <span className="font-display text-lg text-paper tabular-nums">{c.v}</span>
@@ -92,15 +92,15 @@ export default function Home() {
                 className="object-cover object-[50%_35%]"
               />
             </div>
-            <p className="mt-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-paper/45">
+            <p className="mt-3 flex items-center justify-between font-medium text-[10px] uppercase tracking-[0.2em] text-paper/45">
               <span>Dilan Kochhar</span>
               <span>Founder · Engineer</span>
             </p>
           </div>
         </div>
         <div className="relative mx-auto max-w-[88rem] px-6 md:px-10 pb-8">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-paper/35">
-            — Scroll
+          <p className="font-medium text-[10px] uppercase tracking-[0.3em] text-paper/35">
+            Scroll
           </p>
         </div>
         <Marquee />
@@ -110,17 +110,17 @@ export default function Home() {
       <section className="px-6 md:px-10 py-20 md:py-28">
         <div className="mx-auto max-w-[88rem] grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50">About</p>
+            <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50">About</p>
           </div>
           <Reveal className="md:col-span-8">
             <p className="font-display text-3xl md:text-5xl leading-[1.1] tracking-tight text-balance max-w-3xl">
-              I taught myself to code, and I ship everything with my name on it —
+              I taught myself to code, and I ship everything with my name on it,
               from a single landing page to a full SaaS platform.
             </p>
             <p className="mt-8 text-lg text-ink/60 max-w-2xl leading-relaxed">
               Every site in the ticker above is live, designed and coded by one person.
-              That standard — brand, build, and discoverability handled together — is
-              what clients hire me for.
+              Clients hire me for that standard: brand, build, and
+              discoverability handled together.
             </p>
           </Reveal>
         </div>
@@ -132,7 +132,7 @@ export default function Home() {
           <Reveal>
             <div className="flex items-end justify-between mb-10">
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">Services</p>
+                <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">Services</p>
                 <h2 className="font-display text-3xl md:text-5xl tracking-tight">Two ways to hire me</h2>
               </div>
               <Link href="/services" className="text-sm text-ink/60 hover:text-accent transition-colors whitespace-nowrap">
@@ -146,7 +146,7 @@ export default function Home() {
                 href="/services#retainer"
                 className="group block h-full bg-ink text-paper p-8 md:p-12"
               >
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-paper/50">{retainer.eyebrow}</p>
+                <p className="font-medium text-[10px] uppercase tracking-[0.2em] text-paper/50">{retainer.eyebrow}</p>
                 <h3 className="mt-5 font-display text-3xl md:text-4xl tracking-tight text-balance">
                   {retainer.name}
                 </h3>
@@ -161,7 +161,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.1}>
               <Link href="/services#builds" className="case-card group block h-full p-8 md:p-12">
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50">{builds.eyebrow}</p>
+                <p className="font-medium text-[10px] uppercase tracking-[0.2em] text-ink/50">{builds.eyebrow}</p>
                 <h3 className="mt-5 font-display text-3xl md:text-4xl tracking-tight text-balance text-ink">
                   {builds.name}
                 </h3>
@@ -182,7 +182,7 @@ export default function Home() {
           <Reveal>
             <div className="grid md:grid-cols-12 gap-8 mb-12 items-end">
               <div className="md:col-span-7">
-                <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">Craft</p>
+                <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">Craft</p>
                 <h2 className="font-display text-3xl md:text-5xl tracking-tight text-balance">
                   I don&apos;t collect skills. I use them.
                 </h2>
@@ -201,7 +201,7 @@ export default function Home() {
                   href="/work#craft"
                   className="group grid md:grid-cols-12 gap-3 md:gap-8 py-7 md:py-8 items-baseline"
                 >
-                  <span className="md:col-span-1 font-mono text-xs text-ink/40 tabular-nums">
+                  <span className="md:col-span-1 font-medium text-xs text-ink/40 tabular-nums">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="md:col-span-3 font-display text-xl md:text-2xl text-ink group-hover:text-accent transition-colors">
@@ -223,7 +223,7 @@ export default function Home() {
           <Reveal>
             <div className="flex items-end justify-between mb-10">
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">Selected work</p>
+                <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">Selected work</p>
                 <h2 className="font-display text-3xl md:text-5xl tracking-tight">Proof, not promises</h2>
               </div>
               <Link href="/work" className="text-sm text-ink/60 hover:text-accent transition-colors whitespace-nowrap">
@@ -239,12 +239,12 @@ export default function Home() {
                     <h3 className="font-display text-2xl md:text-3xl tracking-tight text-ink group-hover:text-accent transition-colors">
                       {p.title}
                     </h3>
-                    <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/45 whitespace-nowrap">
+                    <span className="font-medium text-[10px] uppercase tracking-[0.2em] text-ink/45 whitespace-nowrap">
                       {p.tag}
                     </span>
                   </div>
                   <p className="mt-4 text-ink/60 leading-relaxed line-clamp-3">{p.summary}</p>
-                  <p className="mt-6 font-mono text-[11px] text-ink/45 leading-relaxed">{p.stack}</p>
+                  <p className="mt-6 font-medium text-[11px] text-ink/45 leading-relaxed">{p.stack}</p>
                 </Link>
               </Reveal>
             ))}
@@ -257,7 +257,7 @@ export default function Home() {
         <div className="mx-auto max-w-[88rem]">
           <Reveal>
             <h2 className="font-display text-4xl md:text-6xl tracking-tight text-balance max-w-4xl">
-              Have something you&apos;d want me to build — or rank?
+              Have something you&apos;d want me to build, or rank?
             </h2>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <a

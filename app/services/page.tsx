@@ -1,15 +1,45 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { retainer, builds, steps, faq, RETAINER_PRICE } from "@/lib/services";
+import { retainer, builds, care, steps, faq, RETAINER_PRICE, CARE_BUNDLE_PRICE } from "@/lib/services";
 
 export const metadata: Metadata = {
-  title: "Services — SEO & AEO retainer, web & AI builds",
-  description: `Professional SEO and AEO (AI search optimization) retainer for $${RETAINER_PRICE}/month, plus full website, app, and AI agent builds. One person, no agency overhead.`,
+  title: "Services: SEO & AEO, care plans, and full builds",
+  description: `SEO and AEO retainer for $${RETAINER_PRICE}/month, website security and maintenance care plans from $${CARE_BUNDLE_PRICE}/month, and full websites from $1,000. One person, no agency overhead.`,
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Services — Dilan Kochhar",
-    description: `Search & AI Visibility retainer, $${RETAINER_PRICE}/month. Websites, apps, and AI agents scoped per project.`,
+    title: "Services | Dilan Kochhar",
+    description: `Search & AI Visibility retainer $${RETAINER_PRICE}/month. Site care from $${CARE_BUNDLE_PRICE}/month. Websites from $1,000.`,
     url: "/services",
+  },
+};
+
+const careJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Website Care Plans (Security & Maintenance)",
+  serviceType: "Website security, maintenance, and support",
+  description:
+    "Monthly website care: security updates, backups, uptime monitoring, bug fixes, and content changes. Security $45/month, maintenance $80/month, or both as Full Care for $100/month.",
+  provider: { "@type": "Person", name: "Dilan Kochhar", url: "https://dilankochhar.com" },
+  areaServed: "United States",
+  offers: [
+    { "@type": "Offer", name: "Security", priceCurrency: "USD", price: "45" },
+    { "@type": "Offer", name: "Maintenance", priceCurrency: "USD", price: "80" },
+    { "@type": "Offer", name: "Full Care", priceCurrency: "USD", price: CARE_BUNDLE_PRICE.toString() },
+  ],
+};
+
+const buildsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Website, App & AI Agent Builds",
+  serviceType: "Web development",
+  description: "Full website builds from $1,000; apps and AI agents scoped per project.",
+  provider: { "@type": "Person", name: "Dilan Kochhar", url: "https://dilankochhar.com" },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "USD",
+    priceSpecification: { "@type": "PriceSpecification", minPrice: 1000, priceCurrency: "USD" },
   },
 };
 
@@ -60,19 +90,27 @@ export default function ServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(careJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildsJsonLd) }}
+      />
 
       {/* Header */}
       <section className="px-6 md:px-10 pt-32 md:pt-40 pb-16">
         <div className="mx-auto max-w-[88rem] grid md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">Services</p>
+            <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">Services</p>
             <h1 className="font-display text-4xl md:text-6xl tracking-tight">
               Hire me.
             </h1>
           </div>
           <p className="md:col-span-4 text-lg text-ink/60 leading-relaxed md:text-right">
-            Two ways to work with me. Both are done by one person — the one whose
-            name is on this site.
+            Growth, care, and full builds. All of it done by one person, the one
+            whose name is on this site.
           </p>
         </div>
       </section>
@@ -138,6 +176,49 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Care plans */}
+      <section id="care" className="scroll-mt-28 px-6 md:px-10 pb-24">
+        <div className="mx-auto max-w-[88rem]">
+          <div className="grid md:grid-cols-12 gap-8 mb-10 items-end">
+            <div className="md:col-span-7">
+              <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50 mb-3">
+                {care.eyebrow}
+              </p>
+              <h2 className="font-display text-3xl md:text-5xl tracking-tight">{care.name}</h2>
+            </div>
+            <p className="md:col-span-5 text-ink/60 leading-relaxed md:text-right">{care.lead}</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-5">
+            {care.items.map((item) => (
+              <div key={item.name} className="case-card p-7 md:p-9">
+                <h3 className="font-display text-2xl tracking-tight text-ink">{item.name}</h3>
+                <p className="mt-4 font-display text-3xl md:text-4xl text-ink tabular-nums">
+                  {item.price}
+                </p>
+                <p className="mt-5 text-ink/60 leading-relaxed">{item.detail}</p>
+              </div>
+            ))}
+            <div className="relative border border-accent bg-ink text-paper p-7 md:p-9">
+              <p className="absolute top-0 right-0 bg-accent text-paper px-3 py-1 font-medium text-[10px] uppercase tracking-[0.2em]">
+                Best value
+              </p>
+              <h3 className="font-display text-2xl tracking-tight">{care.bundle.name}</h3>
+              <p className="mt-4 font-display text-3xl md:text-4xl text-accentBright tabular-nums">
+                {care.bundle.price}
+              </p>
+              <p className="mt-5 text-paper/65 leading-relaxed">{care.bundle.detail}</p>
+              <a
+                href={`mailto:ceo@hellodilly.com?subject=${encodeURIComponent("Full Care plan")}`}
+                className="inline-flex items-center gap-2 mt-6 text-sm text-paper/80 hover:text-accentBright transition-colors"
+              >
+                Start Full Care <span aria-hidden className="arrow-shift">→</span>
+              </a>
+            </div>
+          </div>
+          <p className="mt-8 text-ink/60 leading-relaxed max-w-3xl">{care.note}</p>
         </div>
       </section>
 
