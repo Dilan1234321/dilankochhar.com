@@ -4,11 +4,11 @@ import { retainer, builds, care, steps, faq, RETAINER_PRICE, CARE_BUNDLE_PRICE }
 
 export const metadata: Metadata = {
   title: "Services: SEO & AEO, care plans, and full builds",
-  description: `SEO and AEO retainer for $${RETAINER_PRICE}/month, website security and maintenance care plans from $${CARE_BUNDLE_PRICE}/month, and full websites from $1,000. One person, no agency overhead.`,
+  description: `SEO and AEO retainer for $${RETAINER_PRICE}/month, website security and maintenance care plans from $${CARE_BUNDLE_PRICE}/month, and full websites from $100/month. One person, no agency overhead.`,
   alternates: { canonical: "/services" },
   openGraph: {
     title: "Services | Dilan Kochhar",
-    description: `Search & AI Visibility retainer $${RETAINER_PRICE}/month. Site care from $${CARE_BUNDLE_PRICE}/month. Websites from $1,000.`,
+    description: `Search & AI Visibility retainer $${RETAINER_PRICE}/month. Site care from $${CARE_BUNDLE_PRICE}/month. Websites from $100/month.`,
     url: "/services",
   },
 };
@@ -34,12 +34,17 @@ const buildsJsonLd = {
   "@type": "Service",
   name: "Website, App & AI Agent Builds",
   serviceType: "Web development",
-  description: "Full website builds from $1,000; apps and AI agents scoped per project.",
+  description: "Full website builds from $100/month; apps and AI agents scoped per project.",
   provider: { "@type": "Person", name: "Dilan Kochhar", url: "https://dilankochhar.com" },
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
-    priceSpecification: { "@type": "PriceSpecification", minPrice: 1000, priceCurrency: "USD" },
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      minPrice: 100,
+      priceCurrency: "USD",
+      referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
+    },
   },
 };
 

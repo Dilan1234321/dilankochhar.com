@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Dilly, the company",
   description:
-    "Dilly turns every résumé, major, and skill into a real-time readiness score that tells college students exactly what to do next. Founded, designed, and built by Dilan Kochhar.",
+    "Dilly is an AI career platform for college students. It learns each student's real profile, their major, skills, and projects, and tells them exactly what to do next. Founded, designed, and built by Dilan Kochhar.",
   alternates: { canonical: "/dilly" },
 };
 
@@ -16,8 +16,8 @@ const principles = [
   },
   {
     n: "02",
-    t: "The score updates in real time.",
-    d: "Add a project, take a course, change your goal, and the readiness number moves. Career prep stops being a guessing game.",
+    t: "It keeps up in real time.",
+    d: "Add a project, take a course, change your goal, and Dilly's read on you changes with it. Career prep stops being a guessing game.",
   },
   {
     n: "03",
@@ -42,9 +42,9 @@ export default function DillyPage() {
             Dilly.
           </h1>
           <p className="mt-10 max-w-4xl text-2xl md:text-3xl text-ink/80 leading-snug">
-            Dilly replaces the broken way colleges prepare students for careers. It turns
-            every résumé, major, and skill into a real-time readiness score that tells
-            students exactly what to do next.
+            Dilly replaces the broken way colleges prepare students for careers. It learns
+            every résumé, major, and skill a student actually has, then tells them exactly
+            what to do next.
           </p>
         </div>
       </section>
@@ -62,7 +62,7 @@ export default function DillyPage() {
             <div className="mt-10 grid md:grid-cols-2 gap-x-10 gap-y-6 text-ink/70 text-lg leading-relaxed max-w-3xl">
               <p>$200K of tuition. A 30-minute résumé review with someone who hasn't job-hunted in 20 years.</p>
               <p>LinkedIn was supposed to fix this. It made it worse. Everyone has the same template and no one gets seen.</p>
-              <p>Students don't need motivation. They need a number that tells them, today, whether they're going to make it.</p>
+              <p>Students don't need motivation. They need a straight answer, today, about where they stand.</p>
               <p>Then they need the next move. Not a list of 40 things. The one move that matters this week.</p>
             </div>
           </div>
@@ -74,8 +74,8 @@ export default function DillyPage() {
         <div className="mx-auto max-w-[88rem]">
           <p className="text-xs uppercase tracking-widest text-paper/50 mb-10">The insight</p>
           <p className="font-display text-3xl md:text-6xl leading-[1.1] text-balance max-w-5xl">
-            Career readiness isn't a feeling. It's a function of inputs you can measure and
-            a target you can name. If you can measure it, you can move it.
+            Career prep isn't a feeling. It's a real profile, a target you can name,
+            and the next move that closes the gap between them.
           </p>
         </div>
       </section>

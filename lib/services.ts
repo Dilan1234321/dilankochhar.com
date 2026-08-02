@@ -46,8 +46,8 @@ export const retainer = {
 export const builds = {
   eyebrow: "Project work",
   name: "Websites, apps & AI agents",
-  price: "From $1,000",
-  lead: "Full builds, designed and coded by one person, to the same standard as everything on the work page. Websites start at $1,000; apps and AI agents are quoted per project. After launch, care plans keep it healthy from $100 a month.",
+  price: "From $100/month",
+  lead: "Full builds, designed and coded by one person, to the same standard as everything on the work page. Websites start at $100 a month; apps and AI agents are quoted per project.",
   items: [
     "Marketing sites that behave like sales tools (Erickson Flooring, Sigma Marble Studio)",
     "Brand-first studio sites (Taken Time to Design)",
@@ -122,7 +122,7 @@ export const faq = [
   },
   {
     q: "How much does a website cost?",
-    a: "Websites start at $1,000 and are scoped per project based on pages, features, and content. Apps and AI agents are quoted individually. You get a fixed price before any work starts.",
+    a: "Websites start at $100 a month, scoped to your pages, features, and content. Apps and AI agents are quoted individually. You get a fixed monthly price before any work starts.",
   },
   {
     q: "When do results show up?",
