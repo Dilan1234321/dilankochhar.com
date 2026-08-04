@@ -33,7 +33,7 @@ export const projects: Project[] = [
     aspect: "aspect-[4/5]",
     stack: "Expo · React Native · FastAPI · PostgreSQL · Claude / GPT · Stripe",
     summary:
-      "This is the hardest thing I've built. Dilly is a career OS for students, not a chatbot bolted onto a landing page. One mobile app holds three product skins (career, college admissions, pre-med), a voice coach, job matching, Stripe paywalls, and a FastAPI brain on Postgres. I founded it, designed it, and wrote the code end to end. Every skill below had to work at 2 a.m. when a sophomore actually opens the app.",
+      "This is the hardest thing I've built. Dilly is the daily workbench that keeps college students ahead of AI, not a chatbot bolted onto a landing page. It's live on the App Store: a living profile, one clear move a day, a resume ledger that only uses real facts, a 50K-job feed refreshed nightly, and Stripe billing. I founded it, designed it, and wrote the code end to end, over 1,100 production builds and counting. Every skill below had to work at 2 a.m. when a sophomore actually opens the app.",
     skills: [
       {
         name: "Product architecture",

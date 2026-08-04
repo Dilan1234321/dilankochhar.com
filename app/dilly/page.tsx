@@ -5,25 +5,32 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Dilly, the company",
   description:
-    "Dilly is an AI career platform for college students. It learns each student's real profile, their major, skills, and projects, and tells them exactly what to do next. Founded, designed, and built by Dilan Kochhar.",
+    "Dilly is the daily workbench that keeps college students ahead of AI: a living profile, one clear move a day, and proof they can export. Live on the App Store. Founded, designed, and built by Dilan Kochhar.",
   alternates: { canonical: "/dilly" },
 };
+
+const facts = [
+  { k: "App Store", v: "Live" },
+  { k: "Jobs in feed", v: "50K+" },
+  { k: "Price", v: "$8.99/mo" },
+  { k: "Builds shipped", v: "1,100+" },
+];
 
 const principles = [
   {
     n: "01",
-    t: "Every student is data.",
-    d: "Major, GPA, courses, projects, internships, skills, résumé, LinkedIn, GitHub. Dilly ingests all of it.",
+    t: "A living profile.",
+    d: "Coursework, projects, tools, goals. Every feature reads the same record, so the advice cites what a student actually built instead of guessing.",
   },
   {
     n: "02",
-    t: "It keeps up in real time.",
-    d: "Add a project, take a course, change your goal, and Dilly's read on you changes with it. Career prep stops being a guessing game.",
+    t: "One clear move a day.",
+    d: "Not a list of 40 things. Dilly surfaces the one three-minute move that matters today, tuned to the student's field and to where AI is catching up.",
   },
   {
     n: "03",
-    t: "Tell them what to do next.",
-    d: "Not generic advice. The single highest-leverage action this week to land the job they actually want.",
+    t: "Proof they can export.",
+    d: "The Truth Ledger grounds every resume bullet in a real profile fact. No invented bullets, ever. The profile compounds into something worth showing.",
   },
   {
     n: "04",
@@ -50,10 +57,20 @@ export default function DillyPage() {
             />
           </h1>
           <p className="mt-10 max-w-4xl text-2xl md:text-3xl text-ink/80 leading-snug">
-            Dilly replaces the broken way colleges prepare students for careers. It learns
-            every résumé, major, and skill a student actually has, then tells them exactly
-            what to do next.
+            Dilly is the daily workbench that keeps college students ahead of AI: a
+            living profile, one clear move a day, and proof they can export. Live on
+            the App Store for verified students.
           </p>
+          <div className="mt-10 flex flex-wrap gap-3">
+            {facts.map((f) => (
+              <div key={f.k} className="flex items-baseline gap-3 border hairline px-4 py-3">
+                <span className="font-medium text-[10px] uppercase tracking-[0.2em] text-ink/45">
+                  {f.k}
+                </span>
+                <span className="font-display text-lg text-ink tabular-nums">{f.v}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -69,9 +86,9 @@ export default function DillyPage() {
             </h2>
             <div className="mt-10 grid md:grid-cols-2 gap-x-10 gap-y-6 text-ink/70 text-lg leading-relaxed max-w-3xl">
               <p>$200K of tuition. A 30-minute résumé review with someone who hasn't job-hunted in 20 years.</p>
-              <p>LinkedIn was supposed to fix this. It made it worse. Everyone has the same template and no one gets seen.</p>
-              <p>Students don't need motivation. They need a straight answer, today, about where they stand.</p>
-              <p>Then they need the next move. Not a list of 40 things. The one move that matters this week.</p>
+              <p>AI is eating the first rungs of the ladder, and the market answers with doom reports and advice that never looks at what a student actually built.</p>
+              <p>Career tools feel useful once, then go quiet. Read the report, feel behind, close the app. The churn is baked into the format.</p>
+              <p>Students need the next move. Not a list of 40 things. The one move that matters this week.</p>
             </div>
           </div>
         </div>
@@ -82,8 +99,8 @@ export default function DillyPage() {
         <div className="mx-auto max-w-[88rem]">
           <p className="text-xs uppercase tracking-widest text-paper/50 mb-10">The insight</p>
           <p className="font-display text-3xl md:text-6xl leading-[1.1] text-balance max-w-5xl">
-            Career prep isn't a feeling. It's a real profile, a target you can name,
-            and the next move that closes the gap between them.
+            The next career OS is a habit product, not a document tool. Whoever owns
+            the daily habit owns the profile.
           </p>
         </div>
       </section>
@@ -113,16 +130,17 @@ export default function DillyPage() {
           <div className="md:col-span-8 space-y-6 text-lg text-ink/70 max-w-3xl leading-relaxed">
             <p>
               I'm 20. A sophomore at the University of Tampa. Self-taught. I went looking for
-              the tool I needed and it didn't exist. So I'm building it.
+              the tool I needed and it didn't exist. So I built it.
             </p>
             <p>
               I'm not the right founder for this in the way investors usually mean. I'm the
               right founder because <span className="text-ink font-medium">I'm the customer</span>,
-              and I've already shipped real products people pay for.
+              and the product is live: on the App Store since May, over 1,100 production
+              builds shipped, Stripe billing running, a 50K-job feed refreshed nightly.
             </p>
             <p>
-              No team. No funding. No advisors. Just me, a laptop, and the conviction that
-              this is the thing I'm supposed to build.
+              Solo and bootstrapped to this point. A laptop, a daily shipping cadence, and
+              the conviction that this is the thing I'm supposed to build.
             </p>
           </div>
         </div>
@@ -134,22 +152,24 @@ export default function DillyPage() {
           <div>
             <p className="text-xs uppercase tracking-widest text-ink/50">Investors · Operators · Believers</p>
             <h3 className="mt-4 font-display text-3xl md:text-5xl text-balance max-w-2xl">
-              I'm not raising. I am taking calls.
+              Raising a $250K seed. The product is already live.
             </h3>
           </div>
           <div className="flex gap-3 flex-wrap">
             <a
-              href="mailto:ceo@hellodilly.com"
+              href="https://investors.hellodilly.com"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-3 rounded-md bg-ink text-paper px-6 py-3 text-sm hover:bg-accent transition-colors"
+            >
+              Investor overview <span aria-hidden>↗</span>
+            </a>
+            <a
+              href="mailto:ceo@hellodilly.com"
+              className="inline-flex items-center gap-3 rounded-md border border-ink/30 px-6 py-3 text-sm text-ink/80 hover:border-ink hover:text-ink transition"
             >
               ceo@hellodilly.com
             </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-3 rounded-md border border-ink/30 px-6 py-3 text-sm text-ink/80 hover:border-ink hover:text-ink transition"
-            >
-              Other channels
-            </Link>
           </div>
         </div>
       </section>
