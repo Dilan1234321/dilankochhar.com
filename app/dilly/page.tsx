@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Dilly, the company",
@@ -38,8 +39,15 @@ export default function DillyPage() {
       <section className="px-6 md:px-10 pt-36 md:pt-44 pb-12">
         <div className="mx-auto max-w-[88rem]">
           <p className="font-medium text-[11px] uppercase tracking-[0.25em] text-ink/50">The Company</p>
-          <h1 className="mt-4 font-display text-4xl md:text-6xl tracking-tight">
-            Dilly.
+          <h1 className="mt-6">
+            <Image
+              src="/dilly-wordmark.png"
+              alt="Dilly"
+              width={258}
+              height={140}
+              priority
+              className="h-14 md:h-20 w-auto"
+            />
           </h1>
           <p className="mt-10 max-w-4xl text-2xl md:text-3xl text-ink/80 leading-snug">
             Dilly replaces the broken way colleges prepare students for careers. It learns
