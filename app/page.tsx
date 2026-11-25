@@ -9,6 +9,19 @@ function Arrow() {
   );
 }
 
+/** The Dilly logo, sized to sit inline with surrounding text. */
+function DillyLogo({ className = "" }: { className?: string }) {
+  return (
+    <Image
+      src="/dilly-logo.png"
+      alt="Dilly"
+      width={360}
+      height={180}
+      className={`inline-block h-[1.15em] w-auto align-[-0.3em] ${className}`}
+    />
+  );
+}
+
 function SectionHead({ id, title, note }: { id: string; title: string; note?: string }) {
   return (
     <div id={id} className="scroll-mt-24 flex items-baseline justify-between gap-6 border-b border-line pb-4 mb-2">
@@ -75,15 +88,19 @@ export default function Home() {
         </div>
         <h1 className="mt-8 text-4xl sm:text-5xl font-semibold tracking-tight text-balance">Dilan Kochhar</h1>
         <p className="mt-4 text-lg text-soft max-w-xl text-balance leading-relaxed">
-          Founder of <a href={dilly.url} className="text-ink underline decoration-line underline-offset-4 hover:decoration-accent">Dilly</a>.
+          Founder of{" "}
+          <a href={dilly.url} target="_blank" rel="noreferrer" className="inline-block transition-opacity hover:opacity-80">
+            <DillyLogo />
+          </a>
+          .
           I design and build websites, software, and AI systems, start to finish.
         </p>
         <p className="mt-2 text-sm text-muted">Tampa, FL · University of Tampa</p>
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href={`mailto:${EMAIL}`} className="rounded-full bg-ink text-white px-5 py-2.5 text-sm font-medium hover:bg-accent transition-colors">
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <a href={`mailto:${EMAIL}`} className="btn-3d btn-green">
             Get in touch
           </a>
-          <a href="#work" className="rounded-full border border-line px-5 py-2.5 text-sm font-medium text-ink hover:border-ink transition-colors">
+          <a href="#work" className="btn-3d btn-blue">
             See my work
           </a>
         </div>
@@ -92,13 +109,44 @@ export default function Home() {
       {/* Dilly */}
       <section className="pb-20">
         <SectionHead id="work" title="Building now" />
-        <a href={dilly.url} target="_blank" rel="noreferrer" className="group mt-6 block rounded-2xl border border-line p-6 sm:p-8 hover:border-ink/30 transition-colors">
+        <div className="mt-6 rounded-3xl border border-line p-6 sm:p-10">
           <div className="flex items-center justify-between gap-4">
-            <Image src="/dilly-wordmark.png" alt="Dilly" width={258} height={140} className="h-8 w-auto" />
-            <span className="text-sm text-ink group-hover:text-accent transition-colors">hellodilly.com <Arrow /></span>
+            <a href={dilly.url} target="_blank" rel="noreferrer" className="transition-opacity hover:opacity-80">
+              <Image src="/dilly-logo.png" alt="Dilly" width={360} height={180} className="h-10 w-auto" />
+            </a>
+            <a href={dilly.url} target="_blank" rel="noreferrer" className="group text-sm text-ink hover:text-accent transition-colors">
+              trydilly.com <Arrow />
+            </a>
           </div>
-          <p className="mt-5 text-[17px] leading-relaxed text-soft">{dilly.lead}</p>
-          <dl className="mt-6 grid grid-cols-3 gap-4 border-t border-line pt-5">
+
+          <h3 className="mt-8 text-3xl sm:text-4xl font-semibold tracking-tight text-balance">{dilly.headline}</h3>
+          <p className="mt-4 text-[17px] leading-relaxed text-soft max-w-2xl">
+            <DillyLogo /> {dilly.lead}
+          </p>
+
+          {/* Companions */}
+          <ul className="mt-8 grid grid-cols-6 gap-2 sm:gap-4">
+            {dilly.companions.map((c) => (
+              <li key={c.name} className="flex flex-col items-center text-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={c.src} alt={c.name} width={96} height={96} loading="lazy" className="h-12 w-12 sm:h-20 sm:w-20 object-contain transition-transform hover:-translate-y-1" />
+                <span className="mt-1.5 text-[11px] sm:text-xs text-muted">{c.name}</span>
+              </li>
+            ))}
+          </ul>
+
+          {/* How it works */}
+          <ol className="mt-8 grid sm:grid-cols-3 gap-3">
+            {dilly.steps.map((step, i) => (
+              <li key={step.title} className="rounded-2xl bg-[#F4F8FF] p-5">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1C6EF2] text-xs font-bold text-white">{i + 1}</span>
+                <h4 className="mt-3 font-semibold text-ink">{step.title}</h4>
+                <p className="mt-1.5 text-sm leading-relaxed text-soft">{step.text}</p>
+              </li>
+            ))}
+          </ol>
+
+          <dl className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-line pt-6">
             {dilly.facts.map((f) => (
               <div key={f.k}>
                 <dt className="text-[13px] text-muted">{f.k}</dt>
@@ -106,8 +154,12 @@ export default function Home() {
               </div>
             ))}
           </dl>
-          <p className="mt-5 text-[13px] text-muted">{dilly.stack}</p>
-        </a>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a href={dilly.appStore} target="_blank" rel="noreferrer" className="btn-3d btn-blue">Get the app</a>
+            <a href={dilly.url} target="_blank" rel="noreferrer" className="btn-3d btn-green">Visit trydilly.com</a>
+          </div>
+        </div>
       </section>
 
       {/* Software */}
@@ -149,8 +201,8 @@ export default function Home() {
             <a href="https://kochharfoundation.com" target="_blank" rel="noreferrer" className="text-ink underline decoration-line underline-offset-4 hover:decoration-accent">
               Kochhar Foundation
             </a>
-            , a charity that has raised over $22,000 to bring technology education to students. I started Dilly
-            after watching capable friends struggle to land their first job out of college.
+            , a charity that has raised over $22,000 to bring technology education to students. Today I&apos;m
+            building <DillyLogo />, which teaches kids how AI works instead of just chatting with it.
           </p>
         </div>
       </section>
@@ -164,7 +216,7 @@ export default function Home() {
         </a>
         <div className="mt-6 flex justify-center gap-6 text-sm text-muted">
           <a href={GITHUB} target="_blank" rel="noreferrer" className="hover:text-ink">GitHub</a>
-          <a href={dilly.url} target="_blank" rel="noreferrer" className="hover:text-ink">Dilly</a>
+          <a href={dilly.url} target="_blank" rel="noreferrer" className="transition-opacity hover:opacity-80"><DillyLogo /></a>
         </div>
         <p className="mt-12 text-xs text-muted">© {new Date().getFullYear()} Dilan Kochhar</p>
       </footer>

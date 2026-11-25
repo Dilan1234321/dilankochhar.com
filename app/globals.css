@@ -21,3 +21,34 @@ body {
 .text-balance {
   text-wrap: balance;
 }
+
+/* Chunky 3D buttons: solid fill, darker bottom edge that presses down on click. */
+.btn-3d {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 13px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  box-shadow: 0 4px 0 var(--edge);
+  transition: transform 80ms ease, box-shadow 80ms ease, filter 120ms ease;
+}
+.btn-3d:hover {
+  filter: brightness(1.06);
+}
+.btn-3d:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 var(--edge);
+}
+.btn-green {
+  background: #58cc02;
+  --edge: #46a302;
+}
+.btn-blue {
+  background: #1cb0f6;
+  --edge: #1899d6;
+}
