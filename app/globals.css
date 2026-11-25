@@ -2,106 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-sans: "Inter", system-ui, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
-html,
 body {
   background: #ffffff;
   color: #0a0a0b;
+  font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-family: var(--font-sans);
 }
 
 ::selection {
-  background: #2563eb;
+  background: #1d4ed8;
   color: #ffffff;
-}
-
-/* Display headings: tight, engineered, no serif. */
-.font-display {
-  font-weight: 600;
-  letter-spacing: -0.03em;
 }
 
 .text-balance {
   text-wrap: balance;
-}
-
-.text-pretty {
-  text-wrap: pretty;
-}
-
-.hairline {
-  border-color: rgba(10, 10, 11, 0.12);
-}
-
-.rule {
-  height: 1px;
-  background: rgba(10, 10, 11, 0.12);
-}
-
-/* Case cards: bordered, quiet, professional. */
-.case-card {
-  position: relative;
-  border: 1px solid rgba(10, 10, 11, 0.12);
-  background: #ffffff;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-}
-
-.case-card:hover {
-  border-color: rgba(37, 99, 235, 0.55);
-  box-shadow: 0 12px 32px -18px rgba(10, 10, 11, 0.25);
-  transform: translateY(-2px);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .case-card,
-  .case-card:hover {
-    transition: none;
-    transform: none;
-  }
-}
-
-/* Live-projects ticker. */
-.marquee {
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.marquee-track {
-  display: inline-flex;
-  animation: marquee 36s linear infinite;
-}
-
-.marquee-row {
-  display: inline-flex;
-  align-items: center;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation: none;
-  }
-}
-
-/* Arrow micro-interaction on links and buttons. */
-.arrow-shift {
-  display: inline-block;
-  transition: transform 0.25s ease;
-}
-
-a:hover .arrow-shift,
-.group:hover .arrow-shift {
-  transform: translateX(3px);
 }
