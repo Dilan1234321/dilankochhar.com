@@ -213,7 +213,6 @@ export default function Home() {
       {/* Contact */}
       <footer id="contact" className="scroll-mt-24 border-t border-line py-16 text-center">
         <h2 className="text-2xl font-semibold tracking-tight">Let&apos;s build something.</h2>
-        <p className="mt-3 text-soft">I read every email myself and reply fast.</p>
         <div className="mt-6">
           <EmailLink email={EMAIL} className="text-lg font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-accent">
             {EMAIL}
