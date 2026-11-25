@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   variable: "--font-sans",
   display: "swap",
 });
@@ -14,11 +12,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://dilankochhar.com"),
   title: {
-    default: "Dilan Kochhar | Web developer, AI engineer & SEO/AEO specialist",
+    default: "Dilan Kochhar | Founder of Dilly, software & web developer",
     template: "%s | Dilan Kochhar",
   },
   description:
-    "Websites, apps, and AI agents designed and built by one person, plus a $500/month SEO & AEO retainer that gets businesses found on Google and cited by AI. Founder of Dilly. Tampa, FL.",
+    "Dilan Kochhar is the founder of Dilly and a software and web developer in Tampa, FL. Websites, apps, and AI systems, designed and built start to finish.",
   keywords: [
     "web developer Tampa",
     "SEO services",
@@ -51,9 +49,9 @@ const personJsonLd = {
   "@type": "Person",
   name: "Dilan Kochhar",
   url: "https://dilankochhar.com",
-  image: "https://dilankochhar.com/dilan.jpg",
+  image: "https://dilankochhar.com/headshot.jpg",
   email: "mailto:ceo@hellodilly.com",
-  jobTitle: "Web developer, AI engineer & SEO/AEO specialist",
+  jobTitle: "Founder of Dilly",
   address: { "@type": "PostalAddress", addressLocality: "Tampa", addressRegion: "FL" },
   sameAs: ["https://github.com/dilan1234321", "https://hellodilly.com"],
   knowsAbout: [
@@ -69,14 +67,12 @@ const personJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen bg-paper text-ink antialiased">
+      <body className="min-h-screen bg-white text-ink antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
-        <Navbar />
-        <main className="relative z-10">{children}</main>
-        <Footer />
+        <main>{children}</main>
       </body>
     </html>
   );

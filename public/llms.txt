@@ -4,14 +4,14 @@
 
 ## Services
 
-- [Services & pricing](https://dilankochhar.com/services): Search & AI Visibility retainer, $500/month. Website care plans from $100/month (security, maintenance, or both). Websites from $100/month; apps and AI agents scoped per project.
+- [Services & pricing](https://dilankochhar.com/#services): Search & AI Visibility retainer, $500/month. Website care plans from $100/month (security, maintenance, or both). Websites from $100/month; apps and AI agents scoped per project.
 
 ## Work
 
-- [Work](https://dilankochhar.com/work): Projects with first-person breakdowns of how each skill was used, including Dilly (SaaS/AI), N+1 Talent (recruiting site, programmatic SEO, outbound agent), UTampa AKPSI, Taken Time to Design, Kochhar Foundation, Erickson Flooring, and Sigma Marble Studio.
-- [Dilly](https://dilankochhar.com/dilly): The company. An AI career platform for college students.
+- [Work](https://dilankochhar.com/#work): Projects with first-person breakdowns of how each skill was used, including Dilly (SaaS/AI), N+1 Talent (recruiting site, programmatic SEO, outbound agent), Sage (agency operating system), LeaseLogic AI, UTampa AKPSI, Taken Time to Design, Kochhar Foundation, Erickson Flooring, Sigma Marble Studio, Nomi Bar, and Mu Epsilon Delta.
+- [Dilly](https://dilankochhar.com/#work): The company. An AI career platform for college students.
 
 ## About
 
-- [About](https://dilankochhar.com/about): Self-taught, born in New York, based in Tampa. Co-founded the Kochhar Foundation (raised $22K+).
-- [Contact](https://dilankochhar.com/contact): ceo@hellodilly.com. Read personally, answered fast.
+- [About](https://dilankochhar.com/#about): Self-taught, born in New York, based in Tampa. Co-founded the Kochhar Foundation (raised $22K+).
+- [Contact](https://dilankochhar.com/#contact): ceo@hellodilly.com. Read personally, answered fast.
