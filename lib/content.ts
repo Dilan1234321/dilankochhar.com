@@ -16,7 +16,7 @@ export const dilly = {
   appStore: "https://apps.apple.com/us/app/id6817830445",
   headline: "AI-smart, not AI-dependent.",
   lead:
-    "is a learning app for kids ages 3 to 8. Each child trains their own companion, then builds things with what it learned, and finds out how AI works by making it. I founded it, designed it, and built it end to end.",
+    "is a learning app for kids ages 7 to 11. Each child trains their own companion, then builds things with what it learned, and finds out how AI works by making it. I founded it, designed it, and built it end to end.",
   // Companion art is served from trydilly.com so it stays in sync with the app's site.
   companions: [
     { name: "Pip", src: "https://trydilly.com/assets/companions/pip-happy.webp" },
@@ -41,7 +41,7 @@ export const dilly = {
     },
   ],
   facts: [
-    { k: "Ages", v: "3 to 8" },
+    { k: "Ages", v: "7 to 11" },
     { k: "Platform", v: "iPhone & iPad" },
     { k: "Price", v: "Free · Core $9.99/mo" },
     { k: "Safety", v: "No chatbot, no AI service" },
