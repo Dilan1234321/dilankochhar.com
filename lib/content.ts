@@ -43,8 +43,6 @@ export const dilly = {
   facts: [
     { k: "Ages", v: "7 to 11" },
     { k: "Platform", v: "iPhone & iPad" },
-    { k: "Price", v: "Free · Core $9.99/mo" },
-    { k: "Safety", v: "No chatbot, no AI service" },
   ],
 };
 

@@ -146,7 +146,7 @@ export default function Home() {
             ))}
           </ol>
 
-          <dl className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-line pt-6">
+          <dl className="mt-8 grid grid-cols-2 gap-4 border-t border-line pt-6">
             {dilly.facts.map((f) => (
               <div key={f.k}>
                 <dt className="text-[13px] text-muted">{f.k}</dt>
