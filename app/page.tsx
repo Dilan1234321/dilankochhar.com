@@ -97,10 +97,10 @@ export default function Home() {
         </p>
         <p className="mt-2 text-sm text-muted">Tampa, FL · University of Tampa</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <a href={`mailto:${EMAIL}`} className="btn-3d btn-green">
+          <a href={`mailto:${EMAIL}`} className="btn-3d btn-navy">
             Get in touch
           </a>
-          <a href="#work" className="btn-3d btn-blue">
+          <a href="#work" className="btn-3d btn-white">
             See my work
           </a>
         </div>
@@ -156,8 +156,11 @@ export default function Home() {
           </dl>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href={dilly.appStore} target="_blank" rel="noreferrer" className="btn-3d btn-blue">Get the app</a>
-            <a href={dilly.url} target="_blank" rel="noreferrer" className="btn-3d btn-green">Visit trydilly.com</a>
+            <a href={dilly.appStore} target="_blank" rel="noreferrer" className="btn-3d btn-dilly">
+              <Image src="/dilly-app-icon.webp" alt="" width={96} height={96} className="h-7 w-7 rounded-lg ring-2 ring-white/70" />
+              Get the app
+            </a>
+            <a href={dilly.url} target="_blank" rel="noreferrer" className="btn-3d btn-sky">Visit trydilly.com</a>
           </div>
         </div>
       </section>

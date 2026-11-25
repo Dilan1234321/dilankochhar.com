@@ -44,11 +44,32 @@ body {
   transform: translateY(4px);
   box-shadow: 0 0 0 var(--edge);
 }
-.btn-green {
-  background: #58cc02;
-  --edge: #46a302;
+/* Dark blue: primary call to action. */
+.btn-navy {
+  background: #1e3a8a;
+  --edge: #172554;
 }
-.btn-blue {
+/* White with a grey border and edge, so it still reads as a button. */
+.btn-white {
+  background: #ffffff;
+  color: #1e3a8a;
+  border: 2px solid #e5e5e5;
+  padding: 11px 22px;
+  --edge: #e5e5e5;
+}
+.btn-white:hover {
+  filter: none;
+  background: #f7f7f7;
+}
+/* Dilly logo blue. */
+.btn-dilly {
+  background: #0370f5;
+  --edge: #0256c4;
+  gap: 10px;
+  padding-left: 14px;
+}
+/* Light sky blue. */
+.btn-sky {
   background: #1cb0f6;
   --edge: #1899d6;
 }
