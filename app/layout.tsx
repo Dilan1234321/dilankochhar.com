@@ -50,10 +50,10 @@ const personJsonLd = {
   name: "Dilan Kochhar",
   url: "https://dilankochhar.com",
   image: "https://dilankochhar.com/headshot.jpg",
-  email: "mailto:ceo@hellodilly.com",
+  email: "mailto:dilan@hellodilly.com",
   jobTitle: "Founder of Dilly",
   address: { "@type": "PostalAddress", addressLocality: "Tampa", addressRegion: "FL" },
-  sameAs: ["https://github.com/dilan1234321", "https://hellodilly.com"],
+  sameAs: ["https://github.com/dilan1234321", "https://trydilly.com"],
   knowsAbout: [
     "Web development",
     "SEO",

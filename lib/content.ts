@@ -1,4 +1,4 @@
-export const EMAIL = "ceo@hellodilly.com";
+export const EMAIL = "dilan@hellodilly.com";
 export const GITHUB = "https://github.com/dilan1234321";
 
 export type Item = {
@@ -12,15 +12,40 @@ export type Item = {
 };
 
 export const dilly = {
-  url: "https://hellodilly.com",
+  url: "https://trydilly.com",
+  appStore: "https://apps.apple.com/us/app/id6817830445",
+  headline: "AI-smart, not AI-dependent.",
   lead:
-    "Dilly is the daily workbench that keeps college students ahead of AI: a living profile, one clear move a day, and a resume built only from real facts. I founded it, designed it, and wrote it end to end.",
-  facts: [
-    { k: "Status", v: "Live on the App Store" },
-    { k: "Jobs in feed", v: "50K+" },
-    { k: "Builds shipped", v: "1,100+" },
+    "is a learning app for kids ages 3 to 8. Each child trains their own companion, then builds things with what it learned, and finds out how AI works by making it. I founded it, designed it, and built it end to end.",
+  // Companion art is served from trydilly.com so it stays in sync with the app's site.
+  companions: [
+    { name: "Pip", src: "https://trydilly.com/assets/companions/pip-happy.webp" },
+    { name: "Mochi", src: "https://trydilly.com/assets/companions/mochi-happy.webp" },
+    { name: "Fern", src: "https://trydilly.com/assets/companions/fern-happy.webp" },
+    { name: "Nova", src: "https://trydilly.com/assets/companions/nova-happy.webp" },
+    { name: "Pebble", src: "https://trydilly.com/assets/companions/pebble-happy.webp" },
+    { name: "Wisp", src: "https://trydilly.com/assets/companions/wisp-happy.webp" },
   ],
-  stack: "Expo · React Native · FastAPI · PostgreSQL · Claude & GPT · Stripe",
+  steps: [
+    {
+      title: "Pick a companion",
+      text: "Six friends to choose from. Each one starts out able to do nothing. It's a learner, not a know-it-all.",
+    },
+    {
+      title: "Teach it",
+      text: "Kids spot what went wrong, pick the rule that fixes it, and test again. No typing, just prepared choices.",
+    },
+    {
+      title: "Build with it",
+      text: "Every skill becomes a puzzle piece. In the Workshop, pieces snap together into games, codes, and robot repairs.",
+    },
+  ],
+  facts: [
+    { k: "Ages", v: "3 to 8" },
+    { k: "Platform", v: "iPhone & iPad" },
+    { k: "Price", v: "Free · Core $9.99/mo" },
+    { k: "Safety", v: "No chatbot, no AI service" },
+  ],
 };
 
 export const software: Item[] = [
