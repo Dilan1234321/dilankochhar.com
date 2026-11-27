@@ -92,7 +92,7 @@ export default function Home() {
             <DillyLogo />
           </a>
           .
-          I design and build websites, software, and AI systems, start to finish.
+          I build websites, software, and AI systems, and manage CRMs that turn leads into customers.
         </p>
         <p className="mt-2 text-sm text-muted">Tampa, FL · New York, NY</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -205,7 +205,7 @@ export default function Home() {
         </div>
         {BOOKING_URL && (
           <div className="mt-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
-            <p className="text-[15px] text-soft">Not sure what you need? Book a free 15-minute call.</p>
+            <p className="text-[15px] text-soft">Not sure what you need? Book a free intro call.</p>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-3d btn-navy shrink-0">
               Book a call
             </a>
@@ -223,10 +223,7 @@ export default function Home() {
           </p>
           <p>
             Before software, I co-founded the{" "}
-            <a href="https://kochharfoundation.com" target="_blank" rel="noreferrer" className="text-ink underline decoration-line underline-offset-4 hover:decoration-accent">
-              Kochhar Foundation
-            </a>
-            , a charity that has raised over $22,000 to bring technology education to students. Today I&apos;m
+            <span className="text-ink">Kochhar Foundation</span>, a charity that has raised over $22,000 to bring technology education to students. Today I&apos;m
             building <DillyLogo />, which teaches kids how AI works instead of just chatting with it.
           </p>
         </div>
