@@ -94,7 +94,7 @@ export default function Home() {
           .
           I build websites, software, and AI systems, and manage CRMs that turn leads into customers.
         </p>
-        <p className="mt-2 text-sm text-muted">Tampa, FL · New York, NY</p>
+        <p className="mt-2 text-sm text-muted">Tampa Bay, FL · Miami, FL · New York, NY</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           {BOOKING_URL ? (
             <>
