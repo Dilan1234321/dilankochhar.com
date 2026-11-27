@@ -23,6 +23,7 @@ import {
   siRailway,
   siReact,
   siScikitlearn,
+  siShopify,
   siSentry,
   siStripe,
   siSwift,
@@ -47,6 +48,7 @@ export const glyphs = {
   heart: "M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z",
   book: "M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5M8 7h7",
   bot: "M6 9h12v10H6zM12 5v4M9 13h.01M15 13h.01M9 16h6",
+  lock: "M6 11h12v9H6zM9 11V8a3 3 0 0 1 6 0v3",
   braces: "M8 4H7a2 2 0 0 0-2 2v4l-2 2 2 2v4a2 2 0 0 0 2 2h1M16 4h1a2 2 0 0 1 2 2v4l2 2-2 2v4a2 2 0 0 1-2 2h-1",
 } as const;
 
@@ -75,6 +77,8 @@ export const SKILLS = {
   three: b("Three.js", siThreedotjs),
   maplibre: b("MapLibre", siMaplibre),
   wordpress: b("WordPress", siWordpress),
+  shopify: b("Shopify", siShopify),
+  liquid: g("Liquid themes", "braces"),
   // Backend, data & AI
   fastapi: b("FastAPI", siFastapi),
   postgres: b("PostgreSQL", siPostgresql),
@@ -96,6 +100,7 @@ export const SKILLS = {
   formspree: b("Formspree", siFormspree),
   web3forms: g("Web3Forms", "mail"),
   formsubmit: g("FormSubmit", "mail"),
+  klaviyo: g("Klaviyo email flows", "mail"),
   greenhouse: b("Greenhouse API", siGreenhouse),
   appStore: b("App Store", siAppstore),
   // Craft
@@ -108,6 +113,8 @@ export const SKILLS = {
   aeo: g("AEO / AI search", "sparkles"),
   structuredData: g("Structured data", "braces"),
   leadGen: g("Lead generation", "target"),
+  wholesale: g("B2B wholesale portal", "lock"),
+  ecommerce: g("E-commerce", "target"),
   automation: g("Outbound automation", "bot"),
   machineLearning: g("Machine learning", "brain"),
   fundraising: g("Fundraising", "heart"),

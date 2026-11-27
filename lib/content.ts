@@ -91,6 +91,15 @@ export const software: Item[] = [
 
 export const websites: Item[] = [
   {
+    name: "Wine & Shine Co",
+    skills: ["shopify", "liquid", "wholesale", "klaviyo", "ecommerce"],
+    kind: "Shopify store",
+    year: "2026",
+    blurb:
+      "Shopify store with a wholesale portal: retailers apply, get approved, sign in with a one-time code, and order by the case at partner pricing.",
+    url: "https://wineandshineco.com",
+  },
+  {
     name: "N+1 Talent",
     skills: ["html", "css", "js", "three", "programmaticSeo", "aeo", "structuredData", "web3forms", "vercel"],
     kind: "Recruiting firm",
