@@ -1,5 +1,6 @@
 import Image from "next/image";
 import EmailLink from "@/components/EmailLink";
+import Skills from "@/components/Skills";
 import { EMAIL, GITHUB, dilly, software, websites, services, type Item } from "@/lib/content";
 
 function Arrow() {
@@ -32,38 +33,35 @@ function SectionHead({ id, title, note }: { id: string; title: string; note?: st
   );
 }
 
-function Row({ item, showStack }: { item: Item; showStack?: boolean }) {
+function Row({ item }: { item: Item }) {
   const host = item.url?.replace(/^https?:\/\//, "");
-  const inner = (
-    <div className="grid sm:grid-cols-[1fr_auto] gap-x-8 gap-y-1 py-5">
-      <div>
-        <h3 className="font-medium text-ink">
-          {item.name}
-          <span className="ml-2 text-muted font-normal">{item.kind}</span>
-        </h3>
-        <p className="mt-1.5 text-[15px] leading-relaxed text-soft max-w-2xl">{item.blurb}</p>
-        {showStack && item.stack && <p className="mt-2 text-[13px] text-muted">{item.stack}</p>}
-      </div>
-      <div className="text-sm text-muted sm:text-right whitespace-nowrap">
-        {item.url ? (
-          <span className="text-ink group-hover:text-accent transition-colors">
-            {host} <Arrow />
-          </span>
-        ) : (
-          <span>{item.label ?? item.year}</span>
-        )}
-      </div>
-    </div>
-  );
   return (
-    <li className="border-b border-line last:border-0">
-      {item.url ? (
-        <a href={item.url} target="_blank" rel="noreferrer" className="group block">
-          {inner}
-        </a>
-      ) : (
-        inner
-      )}
+    <li className="border-b border-line last:border-0 py-5">
+      <div className="grid sm:grid-cols-[1fr_auto] gap-x-8 gap-y-1">
+        <div>
+          <h3 className="font-medium text-ink">
+            {item.url ? (
+              <a href={item.url} target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
+                {item.name}
+              </a>
+            ) : (
+              item.name
+            )}
+            <span className="ml-2 text-muted font-normal">{item.kind}</span>
+          </h3>
+          <p className="mt-1.5 text-[15px] leading-relaxed text-soft max-w-2xl">{item.blurb}</p>
+        </div>
+        <div className="text-sm text-muted sm:text-right whitespace-nowrap">
+          {item.url ? (
+            <a href={item.url} target="_blank" rel="noreferrer" className="group text-ink hover:text-accent transition-colors">
+              {host} <Arrow />
+            </a>
+          ) : (
+            <span>{item.label ?? item.year}</span>
+          )}
+        </div>
+      </div>
+      <Skills skills={item.skills} className="mt-3" />
     </li>
   );
 }
@@ -155,6 +153,8 @@ export default function Home() {
             ))}
           </dl>
 
+          <Skills skills={dilly.skills} className="mt-6" />
+
           <div className="mt-8 flex flex-wrap gap-4">
             <a href={dilly.appStore} target="_blank" rel="noreferrer" className="btn-3d btn-dilly">
               <Image src="/dilly-app-icon.webp" alt="" width={96} height={96} className="h-7 w-7 rounded-lg ring-2 ring-white/70" />
@@ -168,7 +168,7 @@ export default function Home() {
       {/* Software */}
       <section className="pb-20">
         <SectionHead id="software" title="Software" note="Products, tools & agents" />
-        <ul>{software.map((s) => <Row key={s.name} item={s} showStack />)}</ul>
+        <ul>{software.map((s) => <Row key={s.name} item={s} />)}</ul>
       </section>
 
       {/* Websites */}
