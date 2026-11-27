@@ -1,6 +1,6 @@
 # Dilan Kochhar
 
-> Web developer and AI engineer in Tampa, FL. Designs and builds websites, apps, and AI agents solo, and offers CRM management from $1,500/month (pipeline setup, automations, follow-ups, and reporting). Also offers website care plans: security $45/month, maintenance $80/month, or both as Full Care for $100/month. Websites are one-time builds starting at $1,000. Founder of Dilly (trydilly.com), an iPhone and iPad app where kids learn how AI works by teaching their own companion.
+> Web developer and AI engineer serving Tampa Bay, Miami, and New York. Designs and builds websites, apps, and AI agents solo, and offers CRM management from $1,500/month (pipeline setup, automations, follow-ups, and reporting). Also offers website care plans: security $45/month, maintenance $80/month, or both as Full Care for $100/month. Websites are one-time builds starting at $1,000. Founder of Dilly (trydilly.com), an iPhone and iPad app where kids learn how AI works by teaching their own companion.
 
 ## Services
 
@@ -13,5 +13,5 @@
 
 ## About
 
-- [About](https://dilankochhar.com/#about): Self-taught, born in New York, based in Tampa. Co-founded the Kochhar Foundation (raised $22K+).
+- [About](https://dilankochhar.com/#about): Self-taught, born in New York, based in Tampa Bay. Co-founded the Kochhar Foundation (raised $22K+).
 - [Contact](https://dilankochhar.com/#contact): dilan@hellodilly.com. Read personally, answered fast.
