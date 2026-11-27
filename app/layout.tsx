@@ -11,7 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dilankochhar.com"),
+  metadataBase: new URL("https://www.dilankochhar.com"),
+  alternates: { canonical: "/" },
   title: {
     default: "Dilan Kochhar | Founder of Dilly, software & web developer",
     template: "%s | Dilan Kochhar",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     title: "Dilan Kochhar | Web, AI & CRM",
     description:
       "Websites, apps, and AI agents built solo, plus hands-on CRM management that turns leads into customers.",
-    url: "https://dilankochhar.com",
+    url: "https://www.dilankochhar.com",
     siteName: "Dilan Kochhar",
     type: "website",
   },
@@ -49,8 +50,8 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Dilan Kochhar",
-  url: "https://dilankochhar.com",
-  image: "https://dilankochhar.com/headshot.jpg",
+  url: "https://www.dilankochhar.com",
+  image: "https://www.dilankochhar.com/headshot.jpg",
   email: "mailto:dilan@hellodilly.com",
   jobTitle: "Founder of Dilly",
   address: { "@type": "PostalAddress", addressLocality: "Tampa", addressRegion: "FL" },

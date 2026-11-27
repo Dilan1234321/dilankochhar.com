@@ -70,6 +70,7 @@ body {
 }
 /* Light sky blue. */
 .btn-sky {
-  background: #1cb0f6;
-  --edge: #1899d6;
+  /* Darkened from #1cb0f6 so white text passes WCAG AA (4.65:1). */
+  background: #0a7abb;
+  --edge: #08639a;
 }
