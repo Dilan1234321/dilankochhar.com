@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Dilan Kochhar",
   },
   description:
-    "Dilan Kochhar is the founder of Dilly and a software and web developer in Tampa, FL. Websites, apps, and AI systems, designed and built start to finish.",
+    "Dilan Kochhar is the founder of Dilly and a software and web developer in Tampa, FL. Websites, apps, AI systems, and CRM management, designed and built start to finish.",
   keywords: [
     "web developer Tampa",
     "CRM management",
