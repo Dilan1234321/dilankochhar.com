@@ -19,14 +19,14 @@ export const dilly = {
   headline: "AI-smart, not AI-dependent.",
   lead:
     "is a learning app for kids ages 7 to 11. Each child trains their own companion, then builds things with what it learned, and finds out how AI works by making it. I founded it, designed it, and built it end to end.",
-  // Companion art is served from trydilly.com so it stays in sync with the app's site.
+  // Companion art is self-hosted so it never depends on another site being up.
   companions: [
-    { name: "Pip", src: "https://trydilly.com/assets/companions/pip-happy.webp" },
-    { name: "Mochi", src: "https://trydilly.com/assets/companions/mochi-happy.webp" },
-    { name: "Fern", src: "https://trydilly.com/assets/companions/fern-happy.webp" },
-    { name: "Nova", src: "https://trydilly.com/assets/companions/nova-happy.webp" },
-    { name: "Pebble", src: "https://trydilly.com/assets/companions/pebble-happy.webp" },
-    { name: "Wisp", src: "https://trydilly.com/assets/companions/wisp-happy.webp" },
+    { name: "Pip", src: "/companions/pip-happy.webp" },
+    { name: "Mochi", src: "/companions/mochi-happy.webp" },
+    { name: "Fern", src: "/companions/fern-happy.webp" },
+    { name: "Nova", src: "/companions/nova-happy.webp" },
+    { name: "Pebble", src: "/companions/pebble-happy.webp" },
+    { name: "Wisp", src: "/companions/wisp-happy.webp" },
   ],
   steps: [
     {
@@ -168,13 +168,14 @@ export const websites: Item[] = [
 export const services = [
   {
     name: "Websites",
-    price: "From $100/mo",
-    detail: "Designed and built by me, start to finish. Apps and AI agents are quoted per project.",
+    price: "One-time build from $1,000",
+    detail: "Designed and coded by me, start to finish, and yours to keep. Apps and AI agents are quoted per project.",
   },
   {
-    name: "Search & AI Visibility",
-    price: "$500/mo",
-    detail: "Technical SEO, structured data, and AEO so you show up on Google and in ChatGPT answers.",
+    name: "CRM Management",
+    price: "From $1,500/mo",
+    detail:
+      "I build and run your CRM: pipelines, automations, follow-ups, and reporting, so every lead gets worked and nothing slips through the cracks.",
   },
   {
     name: "Website care",

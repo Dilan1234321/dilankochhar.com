@@ -19,27 +19,26 @@ export const metadata: Metadata = {
     "Dilan Kochhar is the founder of Dilly and a software and web developer in Tampa, FL. Websites, apps, and AI systems, designed and built start to finish.",
   keywords: [
     "web developer Tampa",
-    "SEO services",
-    "AEO",
-    "AI search optimization",
-    "answer engine optimization",
+    "CRM management",
+    "CRM automation",
+    "website design",
     "AI agents",
     "Next.js developer",
     "Dilan Kochhar",
   ],
   openGraph: {
-    title: "Dilan Kochhar | Web, AI & Search",
+    title: "Dilan Kochhar | Web, AI & CRM",
     description:
-      "Websites, apps, and AI agents built solo, and a monthly SEO + AEO retainer that makes sure they get found.",
+      "Websites, apps, and AI agents built solo, plus hands-on CRM management that turns leads into customers.",
     url: "https://dilankochhar.com",
     siteName: "Dilan Kochhar",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dilan Kochhar | Web, AI & Search",
+    title: "Dilan Kochhar | Web, AI & CRM",
     description:
-      "Websites, apps, and AI agents built solo, and a monthly SEO + AEO retainer that makes sure they get found.",
+      "Websites, apps, and AI agents built solo, plus hands-on CRM management that turns leads into customers.",
   },
   robots: { index: true, follow: true },
 };
@@ -56,8 +55,8 @@ const personJsonLd = {
   sameAs: ["https://github.com/dilan1234321", "https://trydilly.com"],
   knowsAbout: [
     "Web development",
+    "CRM management",
     "SEO",
-    "Answer engine optimization (AEO)",
     "AI agents",
     "Next.js",
     "React Native",
