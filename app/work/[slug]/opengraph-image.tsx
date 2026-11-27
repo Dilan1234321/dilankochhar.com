@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getCaseStudy } from "@/lib/caseStudies";
 
-export const alt = "Case study by Dilan Kochhar";
+export const alt = "Project by Dilan Kochhar";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -12,7 +12,7 @@ const ACCENT = "#1D4ED8";
 
 export default function Image({ params }: { params: { slug: string } }) {
   const c = getCaseStudy(params.slug);
-  const name = c?.name ?? "Case study";
+  const name = c?.name ?? "Project";
   const meta = c ? `${c.kind} · ${c.year}` : "";
 
   return new ImageResponse(
@@ -30,7 +30,7 @@ export default function Image({ params }: { params: { slug: string } }) {
           position: "relative",
         }}
       >
-        <div style={{ fontSize: 28, color: ACCENT, letterSpacing: "0.04em" }}>CASE STUDY</div>
+        <div style={{ fontSize: 28, color: ACCENT, letterSpacing: "0.04em" }}>HOW I BUILT IT</div>
         <div
           style={{
             marginTop: 24,

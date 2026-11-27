@@ -18,15 +18,15 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Props): Metadata {
   const c = getCaseStudy(params.slug);
   if (!c) return {};
-  const title = `${c.name} case study`;
+  const title = `How I built ${c.name}`;
   const path = `/work/${c.slug}`;
   return {
     title,
-    description: c.summary,
+    description: plain(c.summary),
     alternates: { canonical: path },
     openGraph: {
       title: `${title} | Dilan Kochhar`,
-      description: c.summary,
+      description: plain(c.summary),
       url: `${SITE}${path}`,
       siteName: "Dilan Kochhar",
       type: "article",
@@ -34,9 +34,40 @@ export function generateMetadata({ params }: Props): Metadata {
     twitter: {
       card: "summary_large_image",
       title: `${title} | Dilan Kochhar`,
-      description: c.summary,
+      description: plain(c.summary),
     },
   };
+}
+
+/** Removes the **bold** and ==highlight== markers, for meta tags and JSON-LD. */
+function plain(text: string) {
+  return text.replace(/\*\*(.+?)\*\*/g, "$1").replace(/==(.+?)==/g, "$1");
+}
+
+/** Renders **bold** as dark ink and ==highlight== in the accent color with a soft wash. */
+function Rich({ text }: { text: string }) {
+  const parts = text.split(/(\*\*.+?\*\*|==.+?==)/g);
+  return (
+    <>
+      {parts.map((p, i) => {
+        if (p.startsWith("**") && p.endsWith("**")) {
+          return (
+            <strong key={i} className="font-semibold text-ink">
+              {p.slice(2, -2)}
+            </strong>
+          );
+        }
+        if (p.startsWith("==") && p.endsWith("==")) {
+          return (
+            <mark key={i} className="rounded-md bg-accent/10 px-1 py-0.5 font-medium text-accent">
+              {p.slice(2, -2)}
+            </mark>
+          );
+        }
+        return p;
+      })}
+    </>
+  );
 }
 
 /** Brand colors that are too light to read on a pale chip fall back to ink. Mirrors components/Skills. */
@@ -110,8 +141,8 @@ export default function CaseStudyPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: c.name,
-    headline: `${c.name} case study`,
-    description: c.summary,
+    headline: `How I built ${c.name}`,
+    description: plain(c.summary),
     url: pageUrl,
     mainEntityOfPage: pageUrl,
     genre: c.kind,
@@ -155,12 +186,12 @@ export default function CaseStudyPage({ params }: Props) {
             </span>
           </a>
         )}
-        <p className="mt-6 text-lg leading-relaxed text-soft text-balance">{c.summary}</p>
+        <p className="mt-6 text-lg leading-relaxed text-soft text-balance"><Rich text={c.summary} /></p>
 
         <Section title="The challenge">
           <div className="space-y-4 text-[15px] leading-relaxed text-soft">
             {c.challenge.map((p) => (
-              <p key={p}>{p}</p>
+              <p key={p}><Rich text={p} /></p>
             ))}
           </div>
         </Section>
@@ -170,7 +201,7 @@ export default function CaseStudyPage({ params }: Props) {
             {c.built.map((b) => (
               <li key={b} className="relative pl-5">
                 <span aria-hidden className="absolute left-0 top-[0.6em] h-1.5 w-1.5 rounded-full bg-accent" />
-                {b}
+                <Rich text={b} />
               </li>
             ))}
           </ul>
@@ -184,7 +215,7 @@ export default function CaseStudyPage({ params }: Props) {
           <Section title="Outcome">
             <div className="space-y-4 text-[15px] leading-relaxed text-soft">
               {c.outcome.map((p) => (
-                <p key={p}>{p}</p>
+                <p key={p}><Rich text={p} /></p>
               ))}
             </div>
           </Section>
