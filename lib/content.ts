@@ -3,6 +3,10 @@ import type { SkillKey } from "./skills";
 export const EMAIL = "dilan@hellodilly.com";
 export const GITHUB = "https://github.com/dilan1234321";
 
+// Public link for a free 15-minute intro call (e.g. a Calendly or Cal.com event page).
+// Leave as null to hide every "Book a call" button; set it to the URL to show them.
+export const BOOKING_URL: string | null = null;
+
 export type Item = {
   name: string;
   kind: string;

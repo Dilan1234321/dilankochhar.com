@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { track } from "@vercel/analytics";
 
 const SUBJECT = "Hey Dilan, found you on dilankochhar.com";
 // How long to wait for a mail app to take focus before assuming it never opened.
@@ -38,6 +39,7 @@ export default function EmailLink({
   }, [open]);
 
   function handleClick() {
+    track("contact_click");
     cleanup.current?.();
     let left = false;
     const markLeft = () => {
