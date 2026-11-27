@@ -137,6 +137,7 @@ export const websites: Item[] = [
     kind: "Restaurant & bar",
     year: "2026",
     blurb: "Custom site with menu, story, and visit pages.",
+    url: "https://nomibar.com",
   },
   {
     name: "Mu Epsilon Delta",
@@ -144,6 +145,7 @@ export const websites: Item[] = [
     kind: "Medical fraternity",
     year: "2026",
     blurb: "Institution-grade chapter site with leadership, events, and rush forms.",
+    url: "https://utampamed.com",
   },
   {
     name: "UTampa AKPsi",
