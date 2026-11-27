@@ -1,7 +1,7 @@
 import Image from "next/image";
 import EmailLink from "@/components/EmailLink";
 import Skills from "@/components/Skills";
-import { EMAIL, GITHUB, dilly, software, websites, services, type Item } from "@/lib/content";
+import { BOOKING_URL, EMAIL, GITHUB, dilly, software, websites, services, type Item } from "@/lib/content";
 
 function Arrow() {
   return (
@@ -96,12 +96,26 @@ export default function Home() {
         </p>
         <p className="mt-2 text-sm text-muted">Tampa, FL · New York, NY</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <EmailLink email={EMAIL} className="btn-3d btn-navy">
-            Get in touch
-          </EmailLink>
-          <a href="#work" className="btn-3d btn-white">
-            See my work
-          </a>
+          {BOOKING_URL ? (
+            <>
+              {/* With a booking link, the call is the primary action and email the secondary. */}
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-3d btn-navy">
+                Book a call
+              </a>
+              <EmailLink email={EMAIL} className="btn-3d btn-white">
+                Get in touch
+              </EmailLink>
+            </>
+          ) : (
+            <>
+              <EmailLink email={EMAIL} className="btn-3d btn-navy">
+                Get in touch
+              </EmailLink>
+              <a href="#work" className="btn-3d btn-white">
+                See my work
+              </a>
+            </>
+          )}
         </div>
       </section>
 
@@ -189,6 +203,14 @@ export default function Home() {
             </div>
           ))}
         </div>
+        {BOOKING_URL && (
+          <div className="mt-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
+            <p className="text-[15px] text-soft">Not sure what you need? Book a free 15-minute call.</p>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-3d btn-navy shrink-0">
+              Book a call
+            </a>
+          </div>
+        )}
       </section>
 
       {/* About */}
@@ -213,10 +235,15 @@ export default function Home() {
       {/* Contact */}
       <footer id="contact" className="scroll-mt-24 border-t border-line py-16 text-center">
         <h2 className="text-2xl font-semibold tracking-tight">Let&apos;s build something.</h2>
-        <div className="mt-6">
+        <div className="mt-6 flex flex-col items-center justify-center gap-5 sm:flex-row sm:gap-8">
           <EmailLink email={EMAIL} className="text-lg font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-accent">
             {EMAIL}
           </EmailLink>
+          {BOOKING_URL && (
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-3d btn-white">
+              Book a call
+            </a>
+          )}
         </div>
         <div className="mt-6 flex items-center justify-center gap-6 text-sm text-muted">
           <a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub" className="text-ink transition-opacity hover:opacity-70">
