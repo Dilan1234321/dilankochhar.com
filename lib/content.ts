@@ -2,6 +2,10 @@ import type { SkillKey } from "./skills";
 
 export const EMAIL = "dilan@hellodilly.com";
 export const GITHUB = "https://github.com/dilan1234321";
+export const LINKEDIN = "https://www.linkedin.com/in/dilan-k";
+
+// Shown as a small pill in the hero. Update this monthly.
+export const AVAILABILITY = "Booking new projects for January";
 
 // Public link for a free 15-minute intro call (e.g. a Calendly or Cal.com event page).
 // Leave as null to hide every "Book a call" button; set it to the URL to show them.
@@ -67,15 +71,6 @@ export const software: Item[] = [
     label: "In development",
   },
   {
-    name: "N+1 Talent engine",
-    skills: ["python", "programmaticSeo", "githubActions", "greenhouse", "structuredData", "aeo", "automation"],
-    kind: "SEO generator + outbound agent",
-    year: "2026",
-    blurb:
-      "Python generators that publish fifty-plus state and role pages from templates, plus a prospector that scans Greenhouse, Lever, and Ashby weekly and drafts outreach.",
-    url: "https://nplus1talent.com",
-  },
-  {
     name: "LeaseLogic AI",
     skills: ["python", "machineLearning", "xgboost", "sklearn", "pandas", "numpy", "fastapi"],
     kind: "Machine learning service",
@@ -105,19 +100,15 @@ export const websites: Item[] = [
   },
   {
     name: "N+1 Talent",
-    skills: ["html", "css", "js", "three", "programmaticSeo", "aeo", "structuredData", "web3forms", "vercel"],
+    skills: [
+      "html", "css", "js", "three", "programmaticSeo", "aeo", "structuredData", "web3forms", "vercel",
+      "python", "githubActions", "greenhouse", "automation",
+    ],
     kind: "Recruiting firm",
     year: "2026",
-    blurb: "Discovery-first site with programmatic SEO, AI search readiness, and a Three.js hero.",
+    blurb:
+      "Discovery-first site with AI search readiness and a Three.js hero, backed by Python generators that publish fifty-plus state and role pages from templates, plus a prospector that scans Greenhouse, Lever, and Ashby weekly and drafts outreach.",
     url: "https://nplus1talent.com",
-  },
-  {
-    name: "Sigma Marble Studio",
-    skills: ["next", "ts", "tailwind", "framerMotion", "maplibre", "radix", "motionDesign"],
-    kind: "Stone & tile",
-    year: "2026",
-    blurb: "Next.js rebuild with a full motion system and a live map of installed projects.",
-    url: "https://sigmamarble.vercel.app",
   },
   {
     name: "Erickson Flooring",
