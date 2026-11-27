@@ -72,7 +72,7 @@ function Row({ item }: { item: Item }) {
         <Skills skills={item.skills} />
         {study && (
           <Link href={`/work/${study.slug}`} className="text-[13px] font-medium text-accent hover:underline">
-            Case study →
+            How I built it →
           </Link>
         )}
       </div>
