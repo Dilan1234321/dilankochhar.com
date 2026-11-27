@@ -1,3 +1,5 @@
+import type { SkillKey } from "./skills";
+
 export const EMAIL = "dilan@hellodilly.com";
 export const GITHUB = "https://github.com/dilan1234321";
 
@@ -6,7 +8,7 @@ export type Item = {
   kind: string;
   year: string;
   blurb: string;
-  stack?: string;
+  skills: SkillKey[];
   url?: string;
   label?: string;
 };
@@ -40,6 +42,10 @@ export const dilly = {
       text: "Every skill becomes a puzzle piece. In the Workshop, pieces snap together into games, codes, and robot repairs.",
     },
   ],
+  skills: [
+    "productDesign", "learningDesign", "expo", "reactNative", "ts", "swift",
+    "fastapi", "python", "postgres", "jwt", "railway", "appStore",
+  ] as SkillKey[],
   facts: [
     { k: "Ages", v: "7 to 11" },
     { k: "Platform", v: "iPhone & iPad" },
@@ -49,43 +55,44 @@ export const dilly = {
 export const software: Item[] = [
   {
     name: "Sage",
+    skills: ["next", "ts", "postgres", "drizzle", "claude", "aiSdk", "stripe", "sentry", "tailwind", "zod", "vercel", "productDesign"],
     kind: "Agency operating system",
     year: "2026",
     blurb:
       "A full operating system for social media agencies: strategy, weekly planning, content calendar, shoots, client approvals, and analytics in one place.",
-    stack: "Next.js · TypeScript · PostgreSQL",
     label: "In development",
   },
   {
     name: "N+1 Talent engine",
+    skills: ["python", "programmaticSeo", "githubActions", "greenhouse", "structuredData", "aeo", "automation"],
     kind: "SEO generator + outbound agent",
     year: "2026",
     blurb:
       "Python generators that publish fifty-plus state and role pages from templates, plus a prospector that scans Greenhouse, Lever, and Ashby weekly and drafts outreach.",
-    stack: "Python · GitHub Actions · JSON-LD",
     url: "https://nplus1talent.com",
   },
   {
     name: "LeaseLogic AI",
+    skills: ["python", "machineLearning", "xgboost", "sklearn", "pandas", "numpy", "fastapi"],
     kind: "Machine learning service",
     year: "2026",
     blurb:
       "A lead-scoring model that predicts how likely a prospective tenant is to sign a lease, served as an API so leasing agents get an instant confidence score.",
-    stack: "Python · XGBoost · FastAPI",
   },
   {
     name: "Kochhar Foundation Learning Hub",
+    skills: ["next", "ts", "tailwind", "lucide", "vercel", "learningDesign"],
     kind: "Education platform",
     year: "2026",
     blurb:
       "Free, curated K–12 learning resources by grade and subject. Built for a computer classroom in Delhi, India, with no accounts, payments, or tracking.",
-    stack: "Next.js · TypeScript · Tailwind",
   },
 ];
 
 export const websites: Item[] = [
   {
     name: "N+1 Talent",
+    skills: ["html", "css", "js", "three", "programmaticSeo", "aeo", "structuredData", "web3forms", "vercel"],
     kind: "Recruiting firm",
     year: "2026",
     blurb: "Discovery-first site with programmatic SEO, AI search readiness, and a Three.js hero.",
@@ -93,6 +100,7 @@ export const websites: Item[] = [
   },
   {
     name: "Sigma Marble Studio",
+    skills: ["next", "ts", "tailwind", "framerMotion", "maplibre", "radix", "motionDesign"],
     kind: "Stone & tile",
     year: "2026",
     blurb: "Next.js rebuild with a full motion system and a live map of installed projects.",
@@ -100,6 +108,7 @@ export const websites: Item[] = [
   },
   {
     name: "Erickson Flooring",
+    skills: ["html", "css", "js", "formsubmit", "leadGen", "seo", "vercel"],
     kind: "Local business",
     year: "2026",
     blurb: "A high-end marketing site built to turn visitors into quote requests.",
@@ -107,6 +116,7 @@ export const websites: Item[] = [
   },
   {
     name: "Taken Time to Design",
+    skills: ["html", "css", "js", "brandDesign", "vercel"],
     kind: "Artist studio",
     year: "2026",
     blurb: "Gallery and commission site for an artist, designed brand-first.",
@@ -114,18 +124,21 @@ export const websites: Item[] = [
   },
   {
     name: "Nomi Bar",
+    skills: ["html", "css", "js", "brandDesign", "vercel"],
     kind: "Restaurant & bar",
     year: "2026",
     blurb: "Custom site with menu, story, and visit pages.",
   },
   {
     name: "Mu Epsilon Delta",
+    skills: ["next", "ts", "tailwind"],
     kind: "Medical fraternity",
     year: "2026",
     blurb: "Institution-grade chapter site with leadership, events, and rush forms.",
   },
   {
     name: "UTampa AKPsi",
+    skills: ["html", "css", "js", "formspree", "vercel"],
     kind: "Business fraternity",
     year: "2025",
     blurb: "Nine-page chapter site with directories, sponsorships, and donations.",
@@ -133,6 +146,7 @@ export const websites: Item[] = [
   },
   {
     name: "Kochhar Foundation",
+    skills: ["wordpress", "fundraising", "brandDesign"],
     kind: "Nonprofit · co-founder",
     year: "2023",
     blurb: "The public site for the charity I co-founded, which has raised over $22K.",
