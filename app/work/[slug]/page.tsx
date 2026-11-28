@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import EmailLink from "@/components/EmailLink";
 import { BOOKING_URL, EMAIL } from "@/lib/content";
@@ -134,6 +135,10 @@ export default function CaseStudyPage({ params }: Props) {
   const c = getCaseStudy(params.slug);
   if (!c) notFound();
 
+  const i = caseStudies.findIndex((x) => x.slug === c.slug);
+  const prev = caseStudies[(i - 1 + caseStudies.length) % caseStudies.length];
+  const next = caseStudies[(i + 1) % caseStudies.length];
+
   const host = c.url?.replace(/^https?:\/\/(www\.)?/, "");
   const pageUrl = `${SITE}/work/${c.slug}`;
 
@@ -244,7 +249,26 @@ export default function CaseStudyPage({ params }: Props) {
           </div>
         </section>
 
-        <p className="mt-12 text-center">
+        <nav aria-label="More projects" className="mt-12 grid gap-4 sm:grid-cols-2">
+          <Link
+            href={`/work/${prev.slug}`}
+            className="group rounded-2xl border border-line p-5 transition-colors hover:border-accent"
+          >
+            <span className="text-sm text-muted">← Previous</span>
+            <span className="mt-2 block font-medium text-ink transition-colors group-hover:text-accent">{prev.name}</span>
+            <span className="mt-1 block text-sm text-soft">{prev.kind}</span>
+          </Link>
+          <Link
+            href={`/work/${next.slug}`}
+            className="group rounded-2xl border border-line p-5 transition-colors hover:border-accent sm:text-right"
+          >
+            <span className="text-sm text-muted">Next →</span>
+            <span className="mt-2 block font-medium text-ink transition-colors group-hover:text-accent">{next.name}</span>
+            <span className="mt-1 block text-sm text-soft">{next.kind}</span>
+          </Link>
+        </nav>
+
+        <p className="mt-10 text-center">
           <a href="/#websites" className="text-sm text-soft hover:text-ink transition-colors">
             ← All work
           </a>

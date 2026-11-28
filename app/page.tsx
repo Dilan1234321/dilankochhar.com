@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { caseStudies } from "@/lib/caseStudies";
+import ContactForm from "@/components/ContactForm";
 import EmailLink from "@/components/EmailLink";
 import Skills from "@/components/Skills";
 import { AVAILABILITY, BOOKING_URL, EMAIL, GITHUB, LINKEDIN, dilly, software, websites, services, type Item } from "@/lib/content";
+
+// Rebuild daily so the availability month in the hero stays current.
+export const revalidate = 86400;
 
 function Arrow() {
   return (
@@ -250,10 +254,17 @@ export default function Home() {
       {/* Contact */}
       <footer id="contact" className="scroll-mt-24 border-t border-line py-16 text-center">
         <h2 className="text-2xl font-semibold tracking-tight">Let&apos;s build something.</h2>
-        <div className="mt-6 flex flex-col items-center justify-center gap-5 sm:flex-row sm:gap-8">
-          <EmailLink email={EMAIL} className="text-lg font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-accent">
-            {EMAIL}
-          </EmailLink>
+        <p className="mt-2 text-[15px] text-soft">Tell me a bit about the project and I&apos;ll get back to you.</p>
+        <div className="mx-auto mt-8 max-w-xl rounded-3xl border border-line p-6 text-left sm:p-8">
+          <ContactForm />
+        </div>
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
+          <p className="text-[15px] text-soft">
+            Or email me at{" "}
+            <EmailLink email={EMAIL} className="font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-accent">
+              {EMAIL}
+            </EmailLink>
+          </p>
           {BOOKING_URL && (
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-3d btn-white">
               Book a call
