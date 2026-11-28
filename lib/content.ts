@@ -190,3 +190,13 @@ export const services = [
     detail: "Security $45, maintenance $80, or both as Full Care for $100 a month.",
   },
 ];
+
+/**
+ * Hero stat, counted from the lists above so it never drifts. "Shipped" means live:
+ * anything labeled "In development" is left out, and Dilly counts as one.
+ */
+const shipped = [...websites, ...software].filter((i) => i.label !== "In development");
+const latestYear = String(Math.max(...shipped.map((i) => Number(i.year)), 2026));
+const shippedTotal = shipped.length + 1; // + Dilly
+const shippedLatest = shipped.filter((i) => i.year === latestYear).length + 1; // Dilly launched in 2026
+export const SHIPPED_STAT = `${shippedTotal} projects shipped · ${shippedLatest} in ${latestYear} alone`;

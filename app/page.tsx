@@ -3,11 +3,19 @@ import Link from "next/link";
 import { caseStudies } from "@/lib/caseStudies";
 import ContactForm from "@/components/ContactForm";
 import EmailLink from "@/components/EmailLink";
+import MobileMenu from "@/components/MobileMenu";
 import Skills from "@/components/Skills";
-import { AVAILABILITY, BOOKING_URL, EMAIL, GITHUB, LINKEDIN, dilly, software, websites, services, type Item } from "@/lib/content";
+import { AVAILABILITY, BOOKING_URL, SHIPPED_STAT, EMAIL, GITHUB, LINKEDIN, dilly, software, websites, services, type Item } from "@/lib/content";
 
 // Rebuild daily so the availability month in the hero stays current.
 export const revalidate = 86400;
+
+const NAV_LINKS = [
+  { href: "#websites", label: "Work" },
+  { href: "#services", label: "Services" },
+  { href: "#about", label: "About" },
+  { href: "#contact", label: "Contact" },
+];
 
 function Arrow() {
   return (
@@ -90,12 +98,12 @@ export default function Home() {
       {/* Nav */}
       <header className="flex items-center justify-between gap-4 py-8">
         <a href="/" className="font-medium tracking-tight">Dilan Kochhar</a>
-        <nav className="flex gap-3 sm:gap-6 text-[13px] sm:text-sm text-soft">
-          <a href="#websites" className="hover:text-ink transition-colors">Work</a>
-          <a href="#services" className="hover:text-ink transition-colors">Services</a>
-          <a href="#about" className="hover:text-ink transition-colors">About</a>
-          <a href="#contact" className="hover:text-ink transition-colors">Contact</a>
+        <nav className="hidden sm:flex gap-3 sm:gap-6 text-[13px] sm:text-sm text-soft">
+          {NAV_LINKS.map((link) => (
+            <a key={link.href} href={link.href} className="hover:text-ink transition-colors">{link.label}</a>
+          ))}
         </nav>
+        <MobileMenu siteName="Dilan Kochhar" links={NAV_LINKS} />
       </header>
 
       {/* Hero */}
@@ -113,6 +121,7 @@ export default function Home() {
           I build websites, software, and AI systems, and manage CRMs that turn leads into customers.
         </p>
         <p className="mt-2 text-sm text-muted">Tampa Bay, FL · Miami, FL · New York, NY</p>
+        <p className="mt-3 text-sm font-medium text-ink">{SHIPPED_STAT}</p>
         <p className="mt-5 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">{AVAILABILITY}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           {BOOKING_URL ? (
@@ -150,7 +159,7 @@ export default function Home() {
             </a>
           </div>
 
-          <h3 className="mt-8 text-3xl sm:text-4xl font-semibold tracking-tight text-balance">{dilly.headline}</h3>
+          <h2 className="mt-8 text-3xl sm:text-4xl font-semibold tracking-tight text-balance">{dilly.headline}</h2>
           <p className="mt-4 text-[17px] leading-relaxed text-soft max-w-2xl">
             <DillyLogo /> {dilly.lead}
           </p>
@@ -159,8 +168,7 @@ export default function Home() {
           <ul className="mt-8 grid grid-cols-6 gap-2 sm:gap-4">
             {dilly.companions.map((c) => (
               <li key={c.name} className="flex flex-col items-center text-center">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={c.src} alt={c.name} width={96} height={96} loading="lazy" className="h-12 w-12 sm:h-20 sm:w-20 object-contain transition-transform hover:-translate-y-1" />
+                <Image src={c.src} alt={c.name} width={96} height={96} sizes="(min-width: 640px) 80px, 48px" className="h-12 w-12 sm:h-20 sm:w-20 object-contain transition-transform hover:-translate-y-1" />
                 <span className="mt-1.5 text-[11px] sm:text-xs text-muted">{c.name}</span>
               </li>
             ))}
@@ -171,7 +179,7 @@ export default function Home() {
             {dilly.steps.map((step, i) => (
               <li key={step.title} className="rounded-2xl bg-[#F4F8FF] p-5">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1C6EF2] text-xs font-bold text-white">{i + 1}</span>
-                <h4 className="mt-3 font-semibold text-ink">{step.title}</h4>
+                <h3 className="mt-3 font-semibold text-ink">{step.title}</h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-soft">{step.text}</p>
               </li>
             ))}
@@ -284,7 +292,13 @@ export default function Home() {
           </a>
           <a href={dilly.url} target="_blank" rel="noreferrer" className="transition-opacity hover:opacity-80"><DillyLogo /></a>
         </div>
-        <p className="mt-12 text-xs text-muted">© {new Date().getFullYear()} Dilan Kochhar · University of Tampa</p>
+        <p className="mt-10 text-xs text-muted">
+          Web design in{" "}
+          <Link href="/web-design/tampa-bay" className="hover:text-ink underline-offset-4 hover:underline">Tampa Bay</Link> ·{" "}
+          <Link href="/web-design/miami" className="hover:text-ink underline-offset-4 hover:underline">Miami</Link> ·{" "}
+          <Link href="/web-design/new-york" className="hover:text-ink underline-offset-4 hover:underline">New York</Link>
+        </p>
+        <p className="mt-4 text-xs text-muted">© {new Date().getFullYear()} Dilan Kochhar · University of Tampa</p>
       </footer>
     </div>
   );
