@@ -109,7 +109,7 @@ export default function LocationPage({ params }: Props) {
 
       <header className="flex items-center justify-between py-8">
         <a href="/" className="font-medium tracking-tight">Dilan Kochhar</a>
-        <a href="/#websites" className="text-sm text-soft hover:text-ink transition-colors">
+        <a href="/#software" className="text-sm text-soft hover:text-ink transition-colors">
           ← All work
         </a>
       </header>
@@ -225,7 +225,7 @@ export default function LocationPage({ params }: Props) {
         </nav>
 
         <p className="mt-10 text-center">
-          <a href="/#websites" className="text-sm text-soft hover:text-ink transition-colors">
+          <a href="/#software" className="text-sm text-soft hover:text-ink transition-colors">
             ← All work
           </a>
         </p>

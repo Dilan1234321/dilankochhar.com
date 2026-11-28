@@ -23,13 +23,51 @@ export type CaseStudy = {
  */
 export const caseStudies: CaseStudy[] = [
   {
+    slug: "sage",
+    name: "Sage",
+    kind: "Agency operating system",
+    year: "2026",
+    summary:
+      "An **operating system for social media agencies**, built for Sage Marketing & Media: strategy, weekly planning, content calendar, shoots, client approvals, and analytics in one place. It is in development.",
+    challenge: [
+      "A social media agency juggles many clients, each with its own brand rules, content calendar, shoots, and rounds of approval, usually **spread across spreadsheets, chat threads, and shared drives**.",
+      "Sage puts all of that **in one app** with ==three kinds of users==: agency admins, account managers who only see their assigned clients, and a portal where clients review and approve their own content.",
+    ],
+    built: [
+      "**A Next.js App Router app** on PostgreSQL with Drizzle ORM, where every record belongs to an agency and one access layer decides which clients each user can see.",
+      "**Email and password auth** with signed session cookies, and a client portal for approvals.",
+      "**An AI weekly planner** on the Claude API. It is fed structured client data, its output is validated with Zod and checked against real client records, and ==nothing is ever published automatically==. If the AI is unavailable, a rules-based planner takes over.",
+      "**Planning tools**: brand kits, a content calendar, shoot planning, approvals that keep every round, and version history for content and strategy edits.",
+      "**A creative studio** that renders branded post and carousel templates to images.",
+      "**An approval-gated publishing queue** and an activity log that feeds dashboards and the client portal.",
+    ],
+    stack: ["next", "ts", "postgres", "drizzle", "claude", "aiSdk", "stripe", "sentry", "tailwind", "zod", "vercel", "productDesign"],
+  },
+  {
+    slug: "leaselogic-ai",
+    name: "LeaseLogic AI",
+    kind: "Machine learning service",
+    year: "2026",
+    summary:
+      "A **lead-scoring model** that predicts how likely a prospective tenant is to sign a lease, served as an API so leasing agents get an instant confidence score.",
+    challenge: [
+      "Leasing teams spend **the same time on every inquiry**, whether the person is ready to sign or not. A score at the top of each lead lets agents **call the most likely signers first**.",
+    ],
+    built: [
+      "**A data generator** that produces realistic synthetic leads, since real applicant data is private. The model is trained on that synthetic set, so this is a working proof of concept, not a model tuned on a real property's history.",
+      "**An XGBoost classifier** trained on ==five inputs==: credit score, monthly income, target rent, years at current employer, and prior evictions.",
+      "**A FastAPI service** with a predict endpoint that validates each lead and returns a signing probability, plus a health check.",
+    ],
+    stack: ["python", "machineLearning", "xgboost", "sklearn", "pandas", "numpy", "fastapi"],
+  },
+  {
     slug: "wine-and-shine",
     name: "Wine & Shine Co",
-    kind: "Shopify store with a wholesale portal",
+    kind: "Wholesale portal for Shopify",
     year: "2026",
     url: "https://wineandshineco.com",
     summary:
-      "A Shopify store for a wine-night wellness supplement, with a **wholesale portal** where retailers apply, get approved, sign in with a one-time code, and order by the case.",
+      "A **wholesale portal** built into the existing Shopify store of a wine-night wellness supplement, where retailers apply, get approved, sign in with a one-time code, and order by the case.",
     challenge: [
       "Wine & Shine sells a **nighttime supplement made for wine lovers**. The project came to me through Sage Marketing & Media, the agency that runs their marketing.",
       "Selling to shoppers was only half of it. They also wanted wine shops, wineries, restaurants, and boutiques to carry the product, and that meant **a second set of prices that regular customers should never see**, plus **a way to vet each store** before it could order.",
@@ -176,44 +214,6 @@ export const caseStudies: CaseStudy[] = [
       "**A dark mode toggle**.",
     ],
     stack: ["html", "css", "js", "formspree", "vercel"],
-  },
-  {
-    slug: "sage",
-    name: "Sage",
-    kind: "Agency operating system",
-    year: "2026",
-    summary:
-      "An **operating system for social media agencies**, built for Sage Marketing & Media: strategy, weekly planning, content calendar, shoots, client approvals, and analytics in one place. It is in development.",
-    challenge: [
-      "A social media agency juggles many clients, each with its own brand rules, content calendar, shoots, and rounds of approval, usually **spread across spreadsheets, chat threads, and shared drives**.",
-      "Sage puts all of that **in one app** with ==three kinds of users==: agency admins, account managers who only see their assigned clients, and a portal where clients review and approve their own content.",
-    ],
-    built: [
-      "**A Next.js App Router app** on PostgreSQL with Drizzle ORM, where every record belongs to an agency and one access layer decides which clients each user can see.",
-      "**Email and password auth** with signed session cookies, and a client portal for approvals.",
-      "**An AI weekly planner** on the Claude API. It is fed structured client data, its output is validated with Zod and checked against real client records, and ==nothing is ever published automatically==. If the AI is unavailable, a rules-based planner takes over.",
-      "**Planning tools**: brand kits, a content calendar, shoot planning, approvals that keep every round, and version history for content and strategy edits.",
-      "**A creative studio** that renders branded post and carousel templates to images.",
-      "**An approval-gated publishing queue** and an activity log that feeds dashboards and the client portal.",
-    ],
-    stack: ["next", "ts", "postgres", "drizzle", "claude", "aiSdk", "stripe", "sentry", "tailwind", "zod", "vercel", "productDesign"],
-  },
-  {
-    slug: "leaselogic-ai",
-    name: "LeaseLogic AI",
-    kind: "Machine learning service",
-    year: "2026",
-    summary:
-      "A **lead-scoring model** that predicts how likely a prospective tenant is to sign a lease, served as an API so leasing agents get an instant confidence score.",
-    challenge: [
-      "Leasing teams spend **the same time on every inquiry**, whether the person is ready to sign or not. A score at the top of each lead lets agents **call the most likely signers first**.",
-    ],
-    built: [
-      "**A data generator** that produces realistic synthetic leads, since real applicant data is private. The model is trained on that synthetic set, so this is a working proof of concept, not a model tuned on a real property's history.",
-      "**An XGBoost classifier** trained on ==five inputs==: credit score, monthly income, target rent, years at current employer, and prior evictions.",
-      "**A FastAPI service** with a predict endpoint that validates each lead and returns a signing probability, plus a health check.",
-    ],
-    stack: ["python", "machineLearning", "xgboost", "sklearn", "pandas", "numpy", "fastapi"],
   },
 ];
 

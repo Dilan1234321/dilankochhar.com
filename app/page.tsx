@@ -11,7 +11,7 @@ import { AVAILABILITY, BOOKING_URL, SHIPPED_STAT, EMAIL, GITHUB, LINKEDIN, dilly
 export const revalidate = 86400;
 
 const NAV_LINKS = [
-  { href: "#websites", label: "Work" },
+  { href: "#software", label: "Work" },
   { href: "#services", label: "Services" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
@@ -139,7 +139,7 @@ export default function Home() {
               <EmailLink email={EMAIL} className="btn-3d btn-navy">
                 Get in touch
               </EmailLink>
-              <a href="#websites" className="btn-3d btn-white">
+              <a href="#software" className="btn-3d btn-white">
                 See my work
               </a>
             </>
@@ -206,16 +206,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Websites */}
-      <section className="pb-20">
-        <SectionHead id="websites" title="Websites" note="Designed & built for clients" />
-        <ul>{websites.map((w) => <Row key={w.name} item={w} />)}</ul>
-      </section>
-
       {/* Software */}
       <section className="pb-20">
         <SectionHead id="software" title="Software" note="Products, tools & agents" />
         <ul>{software.map((s) => <Row key={s.name} item={s} />)}</ul>
+      </section>
+
+      {/* Websites */}
+      <section className="pb-20">
+        <SectionHead id="websites" title="Websites" note="Designed & built for clients" />
+        <ul>{websites.map((w) => <Row key={w.name} item={w} />)}</ul>
       </section>
 
       {/* Services */}
