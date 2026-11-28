@@ -11,6 +11,12 @@
 - [Work](https://www.dilankochhar.com/#work): Projects with first-person breakdowns of how each skill was used, including Dilly (SaaS/AI), N+1 Talent (recruiting site, programmatic SEO, outbound agent), Sage (agency operating system), LeaseLogic AI, UTampa AKPSI, Taken Time to Design, Kochhar Foundation, Erickson Flooring, Sigma Marble Studio, Nomi Bar, and Mu Epsilon Delta.
 - [Dilly](https://www.dilankochhar.com/#work): The company. An app that teaches kids to be AI-smart, not AI-dependent.
 
+## Locations
+
+- [Web design in Tampa Bay, FL](https://www.dilankochhar.com/web-design/tampa-bay): Based here. Studies at the University of Tampa and meets local clients in person.
+- [Web design in Miami, FL](https://www.dilankochhar.com/web-design/miami): Works with businesses across Miami-Dade and Broward, remotely and in person.
+- [Web design in New York, NY](https://www.dilankochhar.com/web-design/new-york): Born in New York. Works with New York businesses remotely.
+
 ## About
 
 - [About](https://www.dilankochhar.com/#about): 20 years old, self-taught, born in New York, based in Tampa Bay. Co-founded the Kochhar Foundation (raised $22K+).
