@@ -109,6 +109,7 @@ export default function Home() {
           I build websites, software, and AI systems, and manage CRMs that turn leads into customers.
         </p>
         <p className="mt-2 text-sm text-muted">Tampa Bay, FL · Miami, FL · New York, NY</p>
+        <p className="mt-5 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">{AVAILABILITY}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           {BOOKING_URL ? (
             <>
@@ -131,10 +132,6 @@ export default function Home() {
             </>
           )}
         </div>
-        <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-line px-3 py-1 text-sm text-muted">
-          <span aria-hidden className="h-2 w-2 rounded-full bg-emerald-500" />
-          {AVAILABILITY}
-        </p>
       </section>
 
       {/* Dilly */}
@@ -239,7 +236,7 @@ export default function Home() {
         <SectionHead id="about" title="About" />
         <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-soft">
           <p>
-            I&apos;m a student at the University of Tampa, originally from New York, and self-taught as an engineer.
+            I&apos;m 20, a student at the University of Tampa, originally from New York, and self-taught as an engineer.
             I design and code everything I ship, from the first sketch to the production deploy.
           </p>
           <p>
