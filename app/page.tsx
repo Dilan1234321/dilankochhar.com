@@ -122,7 +122,7 @@ export default function Home() {
         </p>
         <p className="mt-2 text-sm text-muted">Tampa Bay, FL · Miami, FL · New York, NY</p>
         <p className="mt-3 text-sm font-medium text-ink">{SHIPPED_STAT}</p>
-        <p className="mt-5 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">{AVAILABILITY}</p>
+        <p className="mt-5 rounded-full bg-[#F4F4F5] px-4 py-1.5 text-sm font-medium text-soft">{AVAILABILITY}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           {BOOKING_URL ? (
             <>
