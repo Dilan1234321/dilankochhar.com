@@ -122,7 +122,7 @@ export const locations: Location[] = [
       },
       crm,
     ],
-    featured: ["wine-and-shine", "n-plus-1-talent", "taken-time-to-design"],
+    featured: ["n-plus-1-talent", "erickson-flooring", "taken-time-to-design"],
   },
   {
     slug: "new-york",
@@ -159,7 +159,7 @@ export const locations: Location[] = [
         a: "Yes. New York projects run remotely over video calls, email, and shared previews, so you can review progress at every step. If meeting in person matters to you, tell me and we can plan for it.",
       },
     ],
-    featured: ["n-plus-1-talent", "wine-and-shine", "taken-time-to-design"],
+    featured: ["n-plus-1-talent", "taken-time-to-design", "nomi-bar"],
   },
 ];
 

@@ -14,7 +14,7 @@ export default function NotFound() {
     <div className="mx-auto max-w-3xl px-6">
       <header className="flex items-center justify-between py-8">
         <a href="/" className="font-medium tracking-tight">Dilan Kochhar</a>
-        <a href="/#websites" className="text-sm text-soft hover:text-ink transition-colors">
+        <a href="/#software" className="text-sm text-soft hover:text-ink transition-colors">
           ← All work
         </a>
       </header>
@@ -31,7 +31,7 @@ export default function NotFound() {
           <Link href="/" className="btn-3d btn-navy">
             Back home
           </Link>
-          <Link href="/#websites" className="btn-3d btn-white">
+          <Link href="/#software" className="btn-3d btn-white">
             See my work
           </Link>
         </div>

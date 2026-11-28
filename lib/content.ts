@@ -92,6 +92,15 @@ export const software: Item[] = [
       "A lead-scoring model that predicts how likely a prospective tenant is to sign a lease, served as an API so leasing agents get an instant confidence score.",
   },
   {
+    name: "Wine & Shine Co",
+    skills: ["shopify", "liquid", "wholesale", "klaviyo", "ecommerce"],
+    kind: "Shopify wholesale system",
+    year: "2026",
+    blurb:
+      "A wholesale portal built into an existing Shopify store: retailers apply, get approved, sign in with a one-time code, and order by the case at partner pricing.",
+    url: "https://wineandshineco.com",
+  },
+  {
     name: "Kochhar Foundation Learning Hub",
     skills: ["next", "ts", "tailwind", "lucide", "vercel", "learningDesign"],
     kind: "Education platform",
@@ -102,15 +111,6 @@ export const software: Item[] = [
 ];
 
 export const websites: Item[] = [
-  {
-    name: "Wine & Shine Co",
-    skills: ["shopify", "liquid", "wholesale", "klaviyo", "ecommerce"],
-    kind: "Shopify store",
-    year: "2026",
-    blurb:
-      "Shopify store with a wholesale portal: retailers apply, get approved, sign in with a one-time code, and order by the case at partner pricing.",
-    url: "https://wineandshineco.com",
-  },
   {
     name: "N+1 Talent",
     skills: [
