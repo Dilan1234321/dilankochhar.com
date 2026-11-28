@@ -13,6 +13,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dilankochhar.com"),
   alternates: { canonical: "/" },
+  verification: { google: "1RK4XfeCxPli0Q1Sf1taUvfYmzGyjAUxQ4Wnze0y-_I" },
   title: {
     default: "Dilan Kochhar | Founder of Dilly, software & web developer",
     template: "%s | Dilan Kochhar",

@@ -4,8 +4,21 @@ export const EMAIL = "dilan@hellodilly.com";
 export const GITHUB = "https://github.com/dilan1234321";
 export const LINKEDIN = "https://www.linkedin.com/in/dilan-k";
 
-// Shown as a small pill in the hero. Update this monthly.
-export const AVAILABILITY = "Booking new projects for January";
+/**
+ * Shown as a tag in the hero. Works itself out: before the 15th it names next month,
+ * from the 15th on it names the month after. The home page revalidates daily so it stays current.
+ * To pin a month by hand, replace this with a plain string.
+ */
+function nextOpening(now = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric", month: "numeric", day: "numeric" })
+    .formatToParts(now)
+    .reduce<Record<string, number>>((acc, p) => (p.type === "literal" ? acc : { ...acc, [p.type]: Number(p.value) }), {});
+  const ahead = parts.day >= 15 ? 2 : 1;
+  const target = new Date(Date.UTC(parts.year, parts.month - 1 + ahead, 1));
+  return target.toLocaleString("en-US", { month: "long", timeZone: "UTC" });
+}
+
+export const AVAILABILITY = `Booking new projects for ${nextOpening()}`;
 
 // Public link for a free 15-minute intro call (e.g. a Calendly or Cal.com event page).
 // Leave as null to hide every "Book a call" button; set it to the URL to show them.
