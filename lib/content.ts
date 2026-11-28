@@ -192,11 +192,18 @@ export const services = [
 ];
 
 /**
- * Hero stat, counted from the lists above so it never drifts. "Shipped" means live:
- * anything labeled "In development" is left out, and Dilly counts as one.
+ * Hero stat: projects shipped in the past year, counted from the lists above so it never drifts.
+ * Projects only carry a year, so "past year" means this calendar year, plus last year's
+ * projects during January to June (when they are still roughly within twelve months).
+ * Anything labeled "In development" is left out. Dilly launched in 2026 and counts as one.
+ * The home page revalidates daily, so this stays current on its own.
  */
-const shipped = [...websites, ...software].filter((i) => i.label !== "In development");
-const latestYear = String(Math.max(...shipped.map((i) => Number(i.year)), 2026));
-const shippedTotal = shipped.length + 1; // + Dilly
-const shippedLatest = shipped.filter((i) => i.year === latestYear).length + 1; // Dilly launched in 2026
-export const SHIPPED_STAT = `${shippedTotal} projects shipped · ${shippedLatest} in ${latestYear}`;
+function shippedPastYear(now = new Date()) {
+  const year = now.getFullYear();
+  const years = new Set([String(year)]);
+  if (now.getMonth() < 6) years.add(String(year - 1));
+  const items = [...websites, ...software, { year: "2026", label: undefined }];
+  return items.filter((i) => i.label !== "In development" && years.has(i.year)).length;
+}
+
+export const SHIPPED_STAT = `${shippedPastYear()} projects shipped in the past year`;
