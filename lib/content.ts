@@ -199,4 +199,4 @@ const shipped = [...websites, ...software].filter((i) => i.label !== "In develop
 const latestYear = String(Math.max(...shipped.map((i) => Number(i.year)), 2026));
 const shippedTotal = shipped.length + 1; // + Dilly
 const shippedLatest = shipped.filter((i) => i.year === latestYear).length + 1; // Dilly launched in 2026
-export const SHIPPED_STAT = `${shippedTotal} projects shipped · ${shippedLatest} in ${latestYear} alone`;
+export const SHIPPED_STAT = `${shippedTotal} projects shipped · ${shippedLatest} in ${latestYear}`;
